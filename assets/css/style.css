@@ -58,7 +58,7 @@ video{
 }
 
 .fix_bg .blur_bg{
-    background-color: rgba(0, 26, 99, 0.342);
+    background-color: rgba(1, 18, 63, 0.514);
     backdrop-filter: blur(130px);
 }
 
@@ -589,7 +589,7 @@ li a{
 
 #faq h2 span{
     font-weight: 800;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: .2px white;
 }
  
 
@@ -758,26 +758,10 @@ li a{
         filter: blur(.5rem);
     }
 
-    .phase{
-        width: 250px; 
+    /* faq */
+    #faq h2 span{ 
+        -webkit-text-stroke: 1px white;
     }
-
-    .phase._1{ 
-        margin-top: 6rem;
-    }
-
-    .phase._2{ 
-        margin-top: 9rem;
-    }
-
-    .phase._3{ 
-        margin-top: 12rem;
-    }
-
-    .phase._4{
-        margin-top: 15rem;
-    }
-    
 
 }
 
