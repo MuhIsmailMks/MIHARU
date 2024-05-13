@@ -23,7 +23,16 @@
 </head>
 <body>
 
-    <div class="container_site w-full max-w-[100%] overflow-hidden relative h-auto">
+    <div class="fix_bg fixed left-0 top-0 h-full w-full z-[0] max-w-[100%] overflow-hidden">
+        <div class="clr1 absolute w-[100%] h-[200px] top-0 left-[0%] bg-[#6DC5D1]"></div>
+        <div class="clr2 absolute w-[200px] h-[500px] top-0 left-[30%] bg-[#FC4100] z-[1]"></div>
+        <div class="clr3 absolute w-[500px] h-[200px] top-0 left-[30%] bg-[#640D6B] z-[2]"></div>
+        <div class="clr4 absolute w-[400px] h-[500px] top-0 right-[0%] bg-[#5aecff]"></div>
+
+        <div class="blur_bg absolute left-0 top-0 h-full w-full z-[9]"></div>
+    </div>
+
+    <div class="container_site w-full max-w-[100%] overflow-hidden relative h-auto z-[1]">
 
     <!-- loading site -->
     <div class="loading fixed z-[1000] w-full h-full flex justify-center items-center">  
@@ -46,7 +55,7 @@
             </div>
         </div>
      
-        <ul class="flex flex-col justify-center gap-5 absolute px-4 py-6 duration-200 ease-in-out z-[999] lg:relative lg:bg-transparent lg:flex-row lg:top-0">
+        <ul class="flex flex-col left-0 min-[1024px]:top-0 min-[1024px]:h-full items-center justify-center gap-5 absolute px-4 py-6 duration-200 ease-in-out z-[999] w-auto min-[1024px]:w-full lg:bg-transparent lg:flex-row lg:top-0  ">
             <li><a href="#home">Home</a></li>
             <li><a href="#service">Service</a></li>
             <li><a href="#feature">Feature</a></li>
@@ -637,12 +646,12 @@ data-aos-duration="400">
 
     </section>
 
-    <!-- frequently asket question  -->
+    <!-- frequently asked question  -->
     <section id="faq" class="w-full  relative h-auto my-[4rem] mx-auto max-w-[1700px]">
         <div class="font-bold text-[10vw] min-[400px]:text-[30px] lg:text-[64px] relative w-full text-center flex justify-center "> 
             <h2 class="text-white animated3"
             data-aos="fade-up"
-            data-aos-duration="500">Frequently Asket Question</h2>
+            data-aos-duration="500">Frequently <span class="text-transparent ">Asked</span> Question</h2>
         </div>
 
         <div class="faq_container relative w-full flex flex-col items-center px-[1rem] mt-[2rem] xl:px-[3rem] gap-[2rem]">
@@ -740,7 +749,7 @@ data-aos-duration="400">
                 </div>
             </div>
         </div> 
-        <div class="flex flex-col items-end gap-2 w-full"> 
+        <div class="flex flex-col items-end w-full"> 
             <img src="./assets/images/BOB2.png" alt="logo" class="w-[50px] xl:w-[100px] h-auto object-contain">
             <span class="font-semibold"
             data-aos="fade-right" data-aos-duration="400">Managed by <span class="font-black"
@@ -755,8 +764,8 @@ data-aos-duration="400">
                 </a>
             </div>
             <span class="text-sm"
-            data-aos="fade-right" data-aos-duration="400">© 2024 - $BOB  . All rights reserved.</span>
-            <span class="text-sm" >support@bet on base.tech
+             >© 2024 - $BOB  . All rights reserved.</span>
+            <span class="text-sm" >support@betOnBase.tech
             </span>
         </div>
 
