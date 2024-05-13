@@ -558,6 +558,26 @@ li a{
     width: 90%;
 }
 
+
+/* faq */
+.faq_btn.active img{
+    transform: rotate(180deg);
+}
+
+ 
+
+.answer{
+    height: 0;
+}
+
+.answer.active{
+    height: auto;
+}
+
+
+
+
+
 @media screen and (min-width:360px){
     /* .right_rounded{
         border-radius: 0 0 20px 20px ;

@@ -1,5 +1,6 @@
 md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]
-
+62CFF4
+ #2c67f2.
 
 <h4 class="my-[1rem] text-[#ffffffee] text-center md:text-left w-full text-[.9rem]">Foundation (Months 1-3)</h4>
 

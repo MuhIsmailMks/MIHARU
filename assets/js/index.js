@@ -5,6 +5,7 @@ menu_btn.addEventListener('click', () => {
     ul.classList.toggle('active')
 })
 document.querySelector('.loading').classList.add('show');
+
 // loader
 // document.addEventListener('DOMContentLoaded', function () { 
 //    setTimeout(() => {
@@ -13,14 +14,22 @@ document.querySelector('.loading').classList.add('show');
 // });
 
 // address  
+const copied = document.querySelector('.copied')
 let addressContainer = document.querySelector('.address_form'); 
 
 addressContainer.addEventListener('click', function() { 
     let addressText = addressContainer.querySelector('.address_form span').textContent;
- 
+
+    copied.classList.add('flex')
+    copied.classList.remove('hidden')
+    setInterval(() => {
+        copied.classList.add('hidden')
+        copied.classList.remove('flex')
+    },1000);
+
     navigator.clipboard.writeText(addressText)
         .then(function() { 
-            alert('Address has been copied!');
+            
         })
         .catch(function(error) { 
             alert('Cannot copy address:' + error);
@@ -77,12 +86,32 @@ document.addEventListener("DOMContentLoaded", function() {
 }); 
 
 
-
-
-
 // scroll reveal animation
 AOS.init({
     once: true
 });
+
+
+// faq
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+    const arrow_img = faq.querySelector('.faq_btn img')
+    const answer = faq.querySelector('.answer')
+    const faq_btn = faq.querySelector('.faq_btn')
+
+    faq_btn.addEventListener('click', () =>{
+        faq_btn.classList.toggle('active')
+        answer.classList.toggle('active')
+       
+        if(faq_btn.classList.contains("active")){
+            arrow_img.setAttribute('src', "./assets/images/faq_arrow_active.svg")
+        } else {
+            arrow_img.setAttribute('src', "./assets/images/faq_arrow.svg")
+        }
+    })
+
+  
+})
 
   
