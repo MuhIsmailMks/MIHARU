@@ -4,14 +4,7 @@ const ul = document.querySelector('nav ul');
 menu_btn.addEventListener('click', () => {
     ul.classList.toggle('active')
 })
-document.querySelector('.loading').classList.add('show');
 
-// loader
-// document.addEventListener('DOMContentLoaded', function () { 
-//    setTimeout(() => {
-//     document.querySelector('.loading').classList.add('show');
-//    }, 6000);
-// });
 
 // address  
 const copied = document.querySelector('.copied')

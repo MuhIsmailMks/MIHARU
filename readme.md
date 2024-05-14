@@ -2,6 +2,21 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
 62CFF4
  #2c67f2.
 
+ 
+data-aos="fade-up"
+
+data-aos="fade-right"
+data-aos-duration="400"
+data-aos-delay="200"
+
+data-aos="fade-down"
+data-aos="fade-left"
+data-aos="fade-right"
+
+data-aos-duration="400"
+data-aos-delay="200"
+data-aos="zoom-in"
+
 <h4 class="my-[1rem] text-[#ffffffee] text-center md:text-left w-full text-[.9rem]">Foundation (Months 1-3)</h4>
 
    <h3 class="text-[#ffffffee] text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Presale and Marketing</h3> 
