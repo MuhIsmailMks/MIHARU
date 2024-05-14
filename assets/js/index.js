@@ -5,6 +5,14 @@ menu_btn.addEventListener('click', () => {
     ul.classList.toggle('active')
 })
 
+// width 
+
+let widthWin = window.innerWidth
+if(widthWin >= 1024 ){
+    ul.setAttribute('data-aos', 'fade-down');
+    ul.setAttribute('data-aos-duration', '400');
+    ul.setAttribute('data-aos-delay', '200');
+}
 
 // address  
 const copied = document.querySelector('.copied')
