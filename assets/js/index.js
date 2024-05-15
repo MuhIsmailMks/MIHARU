@@ -19,14 +19,14 @@ if (!supportsWebMTransparency()) {
     webmSource.remove();
     videoElement.load();
 }
-// loader
-document.addEventListener('DOMContentLoaded', function () { 
-    setTimeout(() => {
-     document.querySelector('.loading').classList.add('show');
-    }, 9000);
- });
-
-
+// loader 
+ 
+  window.addEventListener('load', function() {
+    let loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+      loadingElement.style.display = 'none'; 
+    }
+  }); 
 
   
  
