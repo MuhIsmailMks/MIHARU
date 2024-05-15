@@ -1,16 +1,7 @@
 md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]
 62CFF4
  #2c67f2.
-
- .title_service h2{
-        text-shadow: 3px 3px 0px rgb(0, 0, 0);
-    }
  
- 
-#faq h2 span{
-    font-weight: 800;
-    -webkit-text-stroke: .2px white;
-}
  
  
 data-aos="fade-up"
