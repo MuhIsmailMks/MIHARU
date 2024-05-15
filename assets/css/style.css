@@ -718,7 +718,7 @@ nav ul li:hover a{
         width: 40%; 
     }
 
-    .title_service span:not(h2 span){
+    .title_service .bg_title_service{
         display: none;
     }
 
