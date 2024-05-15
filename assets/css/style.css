@@ -177,7 +177,7 @@ nav ul li:hover a{
 .home .text_home_title span{
      font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: .15px white;
+    -webkit-text-stroke: .25px white;
 } 
 
 .logo-text{
