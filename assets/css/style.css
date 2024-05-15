@@ -722,6 +722,10 @@ nav ul li:hover a{
         display: none;
     }
 
+    .title_service h2 span{ 
+        -webkit-text-stroke: .35px white;
+    }
+
     /* feature section */
     .features_container {  
         width: 80%;
@@ -812,5 +816,12 @@ nav ul li:hover a{
 
     .feature .feature_available{
         width: 405px; 
+    }
+}
+
+
+@media screen and (min-width:1500px) {
+    .title_service h2 span{ 
+        -webkit-text-stroke: .4px white;
     }
 }
