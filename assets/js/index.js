@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
      document.querySelector('.loading').classList.add('show');
     }, 3000);
  });
+
+//  window.addEventListener('load', function() {
+//     var loadingElement = document.getElementById('loading');
+    
+//     loadingElement.classList.add('hidden');
+      
+// });
+
   
  
 function updateAttributesBasedOnWidth() {
