@@ -152,12 +152,12 @@ li a{
     left: 0;
     width: 100%;
     height: 100%;
-
-    /* background: linear-gradient(145.61deg, #18668ab2 -10.25%, #1b03a31f 39.92%);  */
-    /* background: linear-gradient(145.61deg, #18668afb -10.25%, #1b03a338 39.92%);  */
+ 
 }
 
-
+.home .shadow_text{
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+}
 
 .logo-text{
     text-shadow: 0px 2px 6px #ffffff;
@@ -221,8 +221,7 @@ li a{
     background: #b3b3b334; 
 
     width: 95%; 
-    max-width: 940px; 
-    /* border: 1px solid #219AD2;  */
+    max-width: 940px;  
 }
 
 .glass-effect2{
@@ -660,7 +659,10 @@ li a{
         width: 170px; 
     }
  
- 
+    .home .shadow_text{
+        text-shadow: 1.5px 1.5px 0px rgb(0, 0, 0);
+    }
+    
 
     .content_about{
         height: 450px;

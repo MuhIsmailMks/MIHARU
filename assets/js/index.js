@@ -6,6 +6,13 @@ menu_btn.addEventListener('click', () => {
 })
 
 // width 
+// loader
+// document.addEventListener('DOMContentLoaded', function () { 
+//     setTimeout(() => {
+//      document.querySelector('.loading').classList.add('show');
+//     }, 500);
+//  });
+  
 
 // Fungsi untuk mengatur atribut berdasarkan lebar jendela
 function updateAttributesBasedOnWidth() {
