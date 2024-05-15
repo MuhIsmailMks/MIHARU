@@ -58,9 +58,10 @@ video{
 }
 
 .fix_bg .blur_bg{
-    background-color: rgba(1, 18, 63, 0.514);
-    backdrop-filter: blur(130px);
+    background-color: rgba(1, 18, 63, 0.514); 
     filter: blur(130px);
+    -webkit-backdrop-filter: blur(130px); 
+    backdrop-filter: blur(130px);
 }
 
 /* body */
