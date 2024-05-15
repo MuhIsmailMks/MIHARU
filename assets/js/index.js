@@ -19,7 +19,13 @@ if (!supportsWebMTransparency()) {
     webmSource.remove();
     videoElement.load();
 }
-// loader 
+// loader
+document.addEventListener('DOMContentLoaded', function () { 
+    setTimeout(() => {
+     document.querySelector('.loading').classList.add('show');
+    }, 9000);
+ });
+
  
   window.addEventListener('load', function() {
     let loadingElement = document.getElementById('loading');
