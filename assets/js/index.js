@@ -5,7 +5,20 @@ menu_btn.addEventListener('click', () => {
     ul.classList.toggle('active')
 })
 
-// width 
+// check loading video in browser
+const videoElement = document.getElementById('transparent-video');
+const webmSource = document.querySelector('source[type="video/webm"]');
+ 
+function supportsWebMTransparency() {
+    const elem = document.createElement('video');
+    return elem.canPlayType('video/webm; codecs="vp9"') === 'probably' ||
+           elem.canPlayType('video/webm; codecs="vp8, vorbis"') === 'probably';
+}
+
+if (!supportsWebMTransparency()) { 
+    webmSource.remove();
+    videoElement.load();
+}
 // loader
 document.addEventListener('DOMContentLoaded', function () { 
     setTimeout(() => {
@@ -13,12 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 9000);
  });
 
-//  window.addEventListener('load', function() {
-//     var loadingElement = document.getElementById('loading');
-    
-//     loadingElement.classList.add('hidden');
-      
-// });
+
 
   
  
