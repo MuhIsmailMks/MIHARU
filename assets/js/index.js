@@ -23,7 +23,7 @@ if (!supportsWebMTransparency()) {
 document.addEventListener('DOMContentLoaded', function () { 
     setTimeout(() => {
      document.querySelector('.loading').classList.add('show');
-    }, 90);
+    }, 9000);
  });
 
 
