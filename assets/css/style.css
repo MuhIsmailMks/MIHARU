@@ -108,6 +108,13 @@ li a{
     text-decoration: none;
 }
 
+nav ul li:hover a{
+    transform: scale(1.2);
+    scale: 1.2;
+    color: #219AD2;
+}
+
+
 .app-btn{  
     background: #219AD2;
      
@@ -136,7 +143,15 @@ li a{
 .app-btn span{
     background: -webkit-linear-gradient(180deg,#4D07C4,#219AD2);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+ 
+}
+
+.app-btn p{
+   opacity: 0;
+}
+.app-btn:hover p{
+    opacity: 1;
 }
 
 /* home section */
@@ -157,6 +172,10 @@ li a{
 
 .home .shadow_text{
     text-shadow: 1px 1px 0px rgb(0, 0, 0);
+}
+
+.text_shadow_title{
+    text-shadow: 3px 3px 0px rgb(0, 0, 0);
 }
 
 .logo-text{
@@ -340,10 +359,16 @@ li a{
     width: 1400px;  
 }
 
+
+
 .title_service span{
     background-image: linear-gradient(90deg,#0085ff,#8f00ff 50%,#17ffd5);
     width: 90%; 
     filter: blur(2rem);
+}
+
+.title_service h2{
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
 }
  
 .service p{
@@ -680,7 +705,9 @@ li a{
         padding: 0 4rem;
     }
 
- 
+    .title_service h2{
+        text-shadow: 3px 3px 0px rgb(0, 0, 0);
+    }
 
     .service .video{
         width: 400px; 
