@@ -28,8 +28,7 @@ video{
 /* loading */
 .loading{
     left: 0;
-    top: 0; 
-    /* background-color: #000000; */
+    top: 0;  
 }
 
 .loading img{

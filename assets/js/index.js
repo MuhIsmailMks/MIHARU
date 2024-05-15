@@ -10,7 +10,7 @@ menu_btn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function () { 
     setTimeout(() => {
      document.querySelector('.loading').classList.add('show');
-    }, 3000);
+    }, 9000);
  });
 
 //  window.addEventListener('load', function() {
