@@ -361,7 +361,7 @@ nav ul li:hover a{
     width: 1400px;  
 }
 
-.title_service span:not(.title_service h2 span){
+.title_service .bg_title_service{
     background-image: linear-gradient(90deg,#0085ff,#8f00ff 50%,#17ffd5);
     width: 90%; 
     filter: blur(2rem);
