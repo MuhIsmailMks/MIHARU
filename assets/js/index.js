@@ -7,31 +7,27 @@ menu_btn.addEventListener('click', () => {
 
 // width 
 // loader
-// document.addEventListener('DOMContentLoaded', function () { 
-//     setTimeout(() => {
-//      document.querySelector('.loading').classList.add('show');
-//     }, 500);
-//  });
+document.addEventListener('DOMContentLoaded', function () { 
+    setTimeout(() => {
+     document.querySelector('.loading').classList.add('show');
+    }, 3000);
+ });
   
-
-// Fungsi untuk mengatur atribut berdasarkan lebar jendela
+ 
 function updateAttributesBasedOnWidth() {
     let widthWin = window.innerWidth;
     if (widthWin >= 1024) {
         ul.setAttribute('data-aos', 'fade-down');
         ul.setAttribute('data-aos-duration', '400');
-        ul.setAttribute('data-aos-delay', '200');
+        ul.setAttribute('data-aos-delay', '4000');
     } else {
         ul.removeAttribute('data-aos');
         ul.removeAttribute('data-aos-duration');
         ul.removeAttribute('data-aos-delay');
     }
 }
-
-// Panggil fungsi sekali saat halaman dimuat untuk set awal
-updateAttributesBasedOnWidth();
-
-// Tambahkan event listener untuk meng-update atribut saat jendela diubah ukurannya
+ 
+updateAttributesBasedOnWidth(); 
 window.addEventListener('resize', updateAttributesBasedOnWidth);
 
 
