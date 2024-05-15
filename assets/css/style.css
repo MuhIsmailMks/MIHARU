@@ -174,7 +174,7 @@ nav ul li:hover a{
     text-shadow: 1px 1px 0px rgb(0, 0, 0);
 }
 
-.home h4 span{
+.home .text_home_title span{
      font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .15px white;
@@ -689,7 +689,7 @@ nav ul li:hover a{
         text-shadow: 1.5px 1.5px 0px rgb(0, 0, 0);
     }
 
-    .home h4 span{ 
+    .home .text_home_title span{ 
        -webkit-text-stroke: .35px white;
    } 
 
