@@ -40,6 +40,13 @@ video{
 }
 
 /* fix bg */ 
+.bg_background_desktop{
+    display: none;
+}
+.bg_background_mobile{
+    background: linear-gradient(120.07deg, #292929 -10.81%, #214753 -.8%, #1b3842 33.97%, #080319 89.54%); 
+}
+
 .fix_bg .clr1{
     clip-path: polygon(50% 0%, 100% 0, 56% 100%, 23% 100%, 0 0);
 }
@@ -659,6 +666,14 @@ nav ul li:hover a{
 }
 
 @media screen and (min-width:1024px) {
+    /* bg */
+    .bg_background_mobile{
+        display: none;
+    }
+
+    .bg_background_desktop{
+        display: block;
+    }
     /* navbar */
     nav{ 
         height: 80px; 
