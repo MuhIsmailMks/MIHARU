@@ -40,7 +40,7 @@ video{
     display: none;
 }
 
-/* fix bg */
+/* fix bg */ 
 .fix_bg .clr1{
     clip-path: polygon(50% 0%, 100% 0, 56% 100%, 23% 100%, 0 0);
 }
@@ -60,6 +60,7 @@ video{
 .fix_bg .blur_bg{
     background-color: rgba(1, 18, 63, 0.514);
     backdrop-filter: blur(130px);
+    filter: blur(130px);
 }
 
 /* body */
