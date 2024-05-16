@@ -89,9 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
  
-    for (let i = 0; i < videoServices.length; i++) {
-        let video = videoServices[i];
- 
+    for (let video of videoServices) { 
         video.addEventListener('play', function() {
             video.muted = true;
         });
@@ -104,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         video.controls = false;
     }
 });
+
 
 
 
