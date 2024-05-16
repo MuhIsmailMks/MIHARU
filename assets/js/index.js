@@ -80,7 +80,6 @@ addressContainer.addEventListener('click', function() {
 document.addEventListener("DOMContentLoaded", function() {
     let videoServices = document.querySelectorAll('.video_service');
 
-    // Fungsi untuk memutar video
     function playVideo(video) {
         if (video.paused) {
             video.play().catch(function(error) {

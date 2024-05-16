@@ -44,7 +44,8 @@ video{
     display: none;
 }
 .bg_background_mobile{
-    background: linear-gradient(120.07deg, #292929 -10.81%, #214753 -.8%, #1b3842 33.97%, #080319 89.54%); 
+    background: linear-gradient(120.07deg, #292929 -10.81%, #193881 -.8%, #132d6b 33.97%, #080319 89.54%); 
+    /* background: linear-gradient(120.07deg, #292929 -10.81%, #214753 -.8%, #1b3842 33.97%, #080319 89.54%);  */
 }
 
 .fix_bg .clr1{
