@@ -4,6 +4,8 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  
  
  
+ https://telegram.org/
+ 
 data-aos="fade-up"
 
 data-aos="fade-right"
