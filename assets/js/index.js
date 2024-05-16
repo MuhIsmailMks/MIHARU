@@ -76,8 +76,38 @@ addressContainer.addEventListener('click', function() {
         });
 });
 
-// chart
+// safari autoplay video
+document.addEventListener("DOMContentLoaded", function() {
+    let videoServices = document.querySelectorAll('.video_service');
 
+    // Fungsi untuk memutar video
+    function playVideo(video) {
+        if (video.paused) {
+            video.play().catch(function(error) {
+                console.error("Video play was prevented:", error);
+            });
+        }
+    }
+ 
+    for (let i = 0; i < videoServices.length; i++) {
+        let video = videoServices[i];
+ 
+        video.addEventListener('play', function() {
+            video.muted = true;
+        });
+ 
+        video.addEventListener('loadeddata', function() {
+            playVideo(video);
+        });
+ 
+        video.muted = true;
+        video.controls = false;
+    }
+});
+
+
+
+// chart
 let ctx = document.getElementById('myPieChart').getContext('2d');
 
 let myPieChart = new Chart(ctx, {
