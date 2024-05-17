@@ -68,8 +68,7 @@ video{
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 47% 100%, 59% 74%);
 }
 
-.fix_bg .blur_bg{
-    background-color: rgba(1, 18, 63, 0.514); 
+.fix_bg .blur_bg{ 
     filter: blur(130px);
     -webkit-backdrop-filter: blur(130px); 
     -webkit-filter: blur(130px); 
