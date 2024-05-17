@@ -426,7 +426,7 @@ nav ul li:hover a{
 
     border-width:  2px 1px 0px 1px;
     border-style: solid;
-    border-color:  #219AD2;
+    border-color:  #62CFF4;
 }
 
 .bg_feature{
@@ -471,8 +471,9 @@ nav ul li:hover a{
 
 
 .key_feature_container{
-    background: linear-gradient(267.82deg, #62d0f452 -21.42%, #000000 122.59%);
-    border: 1px solid #219AD2;
+    background: linear-gradient(267.82deg, #49c2cb2d -21.42%, #000000 122.59%);
+    border: 1px solid #62CFF4;
+     
 }
 
 .key_bg_blur{
