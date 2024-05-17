@@ -1,7 +1,7 @@
 md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]
 62CFF4
  #2c67f2.
- 
+ .app-btn span
  
 49C3CB
  

@@ -29,6 +29,7 @@ video{
 .loading{
     left: 0;
     top: 0;  
+    display: none;
 }
 
 .loading img{
@@ -51,28 +52,10 @@ video{
     filter: blur(20px); 
     z-index: -1;
 }
-
-.fix_bg .clr1{
-    clip-path: polygon(50% 0%, 100% 0, 56% 100%, 23% 100%, 0 0);
-}
-
-.fix_bg .clr2{
-    clip-path: polygon(50% 0%, 100% 0, 56% 100%, 0 100%, 16% 4%);
-}
-
-.fix_bg .clr3{
-    clip-path: polygon(10% 18%, 100% 0, 100% 100%, 47% 100%, 8% 57%);
-}
-
-.fix_bg .clr4{
-    clip-path: polygon(23% 0, 100% 0, 100% 100%, 47% 100%, 59% 74%);
-}
+ 
 
 .fix_bg .blur_bg{ 
-    filter: blur(130px);
-    -webkit-backdrop-filter: blur(130px); 
-    -webkit-filter: blur(130px); 
-    backdrop-filter: blur(130px);
+    background-color: black;
 }
 
 /* body */
@@ -152,7 +135,7 @@ nav ul li:hover a{
 }
 
 .app-btn span{
-    background: -webkit-linear-gradient(180deg,#4D07C4,#219AD2);
+    background: linear-gradient(90deg, #05FCFF 0%, #2C67F2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
  
