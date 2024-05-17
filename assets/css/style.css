@@ -80,8 +80,7 @@ video{
 body{ 
     font-family: "Urbanist", sans-serif; 
     background-color: black;
-    
-    /* background: linear-gradient(60.07deg, #292929 -10.81%, #41879e -10.8%, #1f0622 33.97%, #080319 89.54%); */ 
+     
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -90,8 +89,7 @@ body{
 nav{    
     width: 100%;
     height: 60px; 
-    background-color: transparent;
-    /* background: linear-gradient(105.61deg, #219ad2b0 -10.25%, #080319 71.57%); */
+    background-color: transparent; 
 
 }
 
@@ -200,7 +198,7 @@ nav ul li:hover a{
  
 .home  .title  h2{ 
     width: 100%;  
-    background: linear-gradient(90deg, #49C3CB 0%, #2C67F2 100%);
+    background: linear-gradient(90deg, #05FCFF 0%, #2C67F2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1;
@@ -220,7 +218,7 @@ nav ul li:hover a{
 }
 
 .content_about .presale{
-    background: linear-gradient(84.45deg, #49C3CB -37.48%, #000000 103.17%)
+    background: linear-gradient(90deg, #029da0 0%, #000833 100%);
 }
  
 .address{
@@ -228,7 +226,7 @@ nav ul li:hover a{
 }
 
 .address_form{ 
-    background: linear-gradient(84.45deg, #2c67f2 -37.48%, #000000 103.17%);
+    background: linear-gradient(90deg, #05fbff6c 0%, #2c67f293 100%);
 }
 
 .address_form span{
@@ -240,7 +238,7 @@ nav ul li:hover a{
 }
 
 .community button:nth-child(1){
-    background: linear-gradient(267.82deg, #219AD2 -21.42%, #5907BD 122.59%);
+    background: linear-gradient(90deg, #05fbff6c 0%, #4d4ddd93 100%);
 }
 
 .community button:nth-child(2){
