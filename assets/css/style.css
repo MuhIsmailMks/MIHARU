@@ -200,7 +200,7 @@ nav ul li:hover a{
  
 .home  .title  h2{ 
     width: 100%;  
-    background: linear-gradient(90deg, #62CFF4 0%, #2C67F2 100%);
+    background: linear-gradient(90deg, #49C3CB 0%, #2C67F2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1;
@@ -220,7 +220,7 @@ nav ul li:hover a{
 }
 
 .content_about .presale{
-    background: linear-gradient(84.45deg, #62CFF4 -37.48%, #000000 103.17%)
+    background: linear-gradient(84.45deg, #49C3CB -37.48%, #000000 103.17%)
 }
  
 .address{
@@ -455,7 +455,7 @@ nav ul li:hover a{
 .blur_effect_feature{
     width: 50px;
     height: 490px;
-    background-color: #62CFF4;
+    background-color: #49C3CB;
     filter: blur(4rem);
  
     top: 0;
@@ -477,7 +477,7 @@ nav ul li:hover a{
 
 .key_bg_blur{
     filter: blur(3rem);
-    background-color: #219AD2;
+    background-color: #49C3CB;
     
     width: 50%;
     height: 60px;

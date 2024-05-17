@@ -3,6 +3,7 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  #2c67f2.
  
  
+49C3CB
  
  https://telegram.org/
  
