@@ -152,7 +152,7 @@ nav ul li:hover a{
 }
 
 .app-btn span{
-    background: -webkit-linear-gradient(180deg,#4D07C4,#219AD2);
+    background: linear-gradient(90deg, #05FCFF 0%, #2C67F2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
  
