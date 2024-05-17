@@ -171,12 +171,7 @@ faqs.forEach(faq => {
     faq_btn.addEventListener('click', () =>{
         faq_btn.classList.toggle('active')
         answer.classList.toggle('active')
-       
-        if(faq_btn.classList.contains("active")){
-            arrow_img.setAttribute('src', "./assets/images/faq_arrow_active.svg")
-        } else {
-            arrow_img.setAttribute('src', "./assets/images/faq_arrow.svg")
-        }
+        
     })
 
   
