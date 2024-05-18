@@ -107,6 +107,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('.video_service');
+    video.addEventListener('canplaythrough', function() {
+        video.play();
+    }, true);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    let videos = document.querySelectorAll('.video_service');
+    videos.forEach(function(video) {
+        video.addEventListener('canplaythrough', function() {
+            video.play();
+        }, true);
+    });
+});
 
 
 
