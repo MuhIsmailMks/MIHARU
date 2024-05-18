@@ -26,26 +26,24 @@
     
 
       <!-- loading site -->
-      <div id="loading" class="loading fixed z-[999] w-full h-full flex justify-center items-center opacity-0 xl:opacity-[1]"> 
-        <div class="fix_bg bg-black fixed left-0 top-0 h-full w-full z-[0] max-w-[100%] overflow-hidden">
-            <div class="blur_bg absolute bg-black blur-[130px] left-0 top-0 h-full w-full z-[9]"></div>
- 
+      <div id="loading" class="loading fixed z-[999] w-full h-full flex justify-center items-center opacity-0 xl:opacity-[1] overflow-hidden"> 
+        <div class="fix_bg bg-black fixed left-0 top-0 h-full w-full z-[0] max-w-[100%] overflow-hidden"> 
      
         </div> 
         <video id="transparent-video" class="w-auto relative z-[1] h-[30%] max-h-[500px] object-contain rounded-lg " autoplay loop muted
                >
                     <source src="./assets/videos/loading_webM.webm" type="video/webm">  
                     <source src="./assets/videos/backupLoading.mp4" type="video/mp4">  
-                  </video>
+        </video>
     </div>
 
     <div class="container_site w-full max-w-[100%] overflow-hidden relative h-auto z-[1]">
 
 
     <!-- navbar -->
-    <nav class="px-6 relative flex justify-center w-full ">
+    <nav class="px-6  relative flex justify-center w-full ">
 
-       <div class="flex relative w-full items-center justify-between max-w-[1700px]">
+       <div class="flex relative   w-full items-center justify-between max-w-[1700px] xl:px-[10px]">
         <div class="acceesibility h-full flex items-center gap-4">
             <div class="menu-btn flex lg:hidden ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="white" fill-rule="evenodd" d="M1.5 3a.5.5 0 0 0 0 1h12a.5.5 0 0 0 0-1zM1 7.5a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5" clip-rule="evenodd"/></svg>
@@ -98,7 +96,7 @@
 
             <div class="about relative w-full py-[3rem] xl:py-[2rem] flex justify-center items-center xl:mt-32 lg:h-[60vw] xl:h-[50vw] 2xl:max-h-[1000px]"> 
 
-                <div class="bob_image  absolute max-w-[1900px]  w-full h-full left-[50%] top-[0%] translate-x-[-50%] flex items-center justify-between z-[1]">
+                <div class="bob_image  absolute max-w-[1900px]  w-full h-full left-[50%] top-[0%] translate-x-[-50%] flex items-center justify-between z-[1] opacity-0 md:opacity-[1]">
                     <img src="./assets/images/bob.png" alt="bob" class="h-auto absolute w-[450px] xl:w-[600px] min-[1500px]:w-[700px] left-[-60%] top-0 xl:top-auto xl:left-[-20%] opacity-[.7]" data-aos="fade-right"
                     data-aos-duration="500"
                     data-aos-delay="200"
@@ -261,7 +259,7 @@
             <div class="about_service relative flex flex-col justify-center items-center lg:items-start gap-4 w-full lg:w-[50%]   animated3">
                 <div class="title_service flex items-center relative ">
                    
-                    <h2 class="z-10  text-2xl text-center xl:text-left text-white xl:text-[54px] leading-[1] min-[1500px]:text-[55px] font-bold tracking-wide"
+                    <h2 class="z-10  text-2xl text-center xl:text-left text-white xl:text-[54px] min-[1500px]:text-[55px] leading-[1]  font-bold tracking-wide"
                     data-aos="fade-right"
                     data-aos-duration="500">Crypto <span>Jackpots</span> and Tournaments</h2>
                 </div>
@@ -462,7 +460,7 @@
     </section>
 
     <!-- tokenomics -->
-    <section id="tokenomics" class="tokenomics  relative max-w-[100%] my-32 w-full  h-auto">
+    <section id="tokenomics" class="tokenomics  relative max-w-[100%] my-16 xl:my-32 w-full  h-auto">
 
    
 
@@ -473,7 +471,7 @@
                 data-aos="fade-up"
                 data-aos-duration="500">Tokenomics</h2>
             </div>
-            <p class="text-[#ffffffc2] w-full md:w-[70%] text-center text-xs md:text-base xl:text-lg animated2"
+            <p class="text-[#ffffffc2] max-w-[1400px] w-full md:w-[70%] text-center text-xs md:text-base xl:text-lg min-[1600px]:text-[1.2rem] animated2"
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="200">
@@ -484,7 +482,7 @@
             
                 <!-- total suply -->
                 <div class="suply w-full max-w-[99%] xl:w-[50%] z-[99] h-full rounded-[20px] animated4 border-[1.5px] border-[#62CFF4]">
-                    <div class="title w-full text-white text-center py-1 text-base md:text-[20px] font-bold rounded-[20px]"
+                    <div class="title w-full text-white text-center py-1 text-base md:text-[20px] xl:text-[25px] font-bold rounded-[20px] xl:mt-[1.5rem] xl:mb-[1rem]"
                     ><h3 data-aos="fade-down" data-aos-duration="400">Total Supply 1.000.000.000 $BOB </h3></div>
                     <div class="chart w-full flex justify-center">
                         <canvas id="myPieChart">
@@ -540,7 +538,7 @@
                 </div>
       
                   <!--texation-->
-                <div class="texation z-10  max-w-[99%] relative w-full h-auto  lg:h-[800px] rounded-[20px] text-center border-[1.5px] border-[#62CFF4] flex flex-col items-center  p-4 gap-[40px] xl:w-[50%] md:min-w-[35%] animated3">
+                <div class="texation z-10  max-w-[99%] relative w-full h-auto  lg:h-[840px] rounded-[20px] text-center border-[1.5px] border-[#62CFF4] flex flex-col items-center  p-4 gap-[40px] xl:w-[50%] md:min-w-[35%] animated3">
 
                     <h3 class="font-bold text-white text-[30px]"
                     data-aos="fade-down" data-aos-duration="400">Details</h3>
