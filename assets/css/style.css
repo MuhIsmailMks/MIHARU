@@ -595,7 +595,9 @@ nav ul li:hover a{
 
 /* roadmap */
 .roadmap_container{
-    background: linear-gradient(38.88deg, #219ad2c7 -6.34%, #080319 41.98%);
+    background: linear-gradient(83.57deg, #1099EB 9.28%, #4017B4 102.03%);
+
+    /* background: linear-gradient(38.88deg, #219ad2c7 -6.34%, #080319 41.98%); */
 
     backdrop-filter: blur(3px);
     
