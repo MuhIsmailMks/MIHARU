@@ -224,7 +224,37 @@ nav ul li:hover a{
 .content_about .presale{
     background: linear-gradient(90deg, #029da0 0%, #000833 100%);
 }
- 
+
+.box_neon{
+    box-shadow: 0px 4px 45.5px 9px #6B66FF; /
+}
+
+.box_neon_inset{
+    box-shadow: inset 0px 0px 34.5px 2px #6B66FF;;
+}
+
+.mirror_img {
+    transform: scaleX(-1); 
+}
+
+
+
+.join_btn_animation {
+    animation: joinbBtnWithDelay 1.5s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes joinbBtnWithDelay {
+    0%, 32.5%,64%, 100% {
+        transform: translateY(0%);
+    }
+    12.4% {
+        transform: translateY(10%);
+    }
+}
+
+
+
 .address{
     width: 100%; 
 }
