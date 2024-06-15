@@ -6,9 +6,21 @@
     outline: none;
 }
 
+@font-face {
+    font-family: "cosmic";
+    src: url('../fonts/CosmicOcto-Bold.ttf') format('truetype');
+}
+ 
+
 :root{
     --primary-clr:#0D1833;
     --white-clr:white;
+
+    --font-cosmic: "cosmic", cursive;
+}
+
+.font_cosmic{
+    font-family:var(--font-cosmic);
 }
 
 html{
