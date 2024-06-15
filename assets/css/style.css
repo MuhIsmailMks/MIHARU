@@ -230,7 +230,8 @@ nav ul li:hover a{
 }
 
 .address_form{ 
-    background: linear-gradient(90deg, #05fbff6c 0%, #2c67f293 100%);
+    background: #193B68;
+    /* background: linear-gradient(90deg, #003681 0%, #2c67f293 100%); */
 }
 
 .address_form span{
