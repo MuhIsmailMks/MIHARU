@@ -43,6 +43,7 @@ video{
 .title_text_section{
     color: #193B68;
     -webkit-text-stroke: .75px white;
+     font-family:var(--font-cosmic);
 }
  
 
@@ -241,13 +242,13 @@ nav ul li:hover a{
 }
 
 .community button:nth-child(1){
-    background: linear-gradient(90deg, #05fbff6c 0%, #4d4ddd93 100%);
+    /* background: linear-gradient(90deg, #05fbff6c 0%, #4d4ddd93 100%); */
 }
 
 .community button:nth-child(2){
-    border: 1px solid #219AD2;
+    /* border: 1px solid #219AD2;
     background-color: transparent;
-    background-attachment: var(--primary-clr);
+    background-attachment: var(--primary-clr); */
 }
   
 
