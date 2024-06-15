@@ -421,15 +421,15 @@ nav ul li:hover a{
 
 /* feature section */
 .feature{
-    background: rgb(50,71,92);
-    background: linear-gradient(267.82deg, #2c67f25e -21.42%, #000000 122.59%);
+    /* background: rgb(50,71,92);
+    background: linear-gradient(267.82deg, #2c67f25e -21.42%, #000000 122.59%); */
 
 
-    background-size: cover; 
+    /* background-size: cover; 
 
     border-width:  2px 1px 0px 1px;
     border-style: solid;
-    border-color:  #62CFF4;
+    border-color:  #62CFF4; */
 }
 
 .bg_feature{
