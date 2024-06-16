@@ -9,17 +9,19 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  
 data-aos="fade-up"
 
-data-aos="fade-right"
-data-aos-duration="400"
-data-aos-delay="200"
 
+
+
+data-aos="fade-right"
 data-aos="fade-down"
 data-aos="fade-left"
 data-aos="fade-right"
 
 data-aos-duration="400"
 data-aos-delay="200"
-data-aos="zoom-in"
+
+ <img src="./assets/images/plus.png" alt="" class="absolute right-[5%] top-[5%] h-auto object-contain w-[40px]">
+
 
 <h4 class="my-[1rem] text-[#ffffffee] text-center md:text-left w-full text-[.9rem]">Foundation (Months 1-3)</h4>
 
