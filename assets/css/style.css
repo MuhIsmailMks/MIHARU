@@ -45,6 +45,11 @@ video{
     -webkit-text-stroke: .75px white;
      font-family:var(--font-cosmic);
 }
+
+.img_text{ 
+    -webkit-text-stroke: .75px #193B68;
+     font-family:var(--font-cosmic);
+}
  
 
 /* loading */
@@ -222,7 +227,7 @@ nav ul li:hover a{
 }
 
 .content_about .presale{
-    background: linear-gradient(90deg, #029da0 0%, #000833 100%);
+    background: linear-gradient(90deg, #4292FF 0%, #000833 100%);
 }
 
 .box_neon{
@@ -712,6 +717,10 @@ nav ul li:hover a{
     .title_text_section{
         color: #193B68;
         -webkit-text-stroke: 2.25px white;
+    }
+
+    .img_text{ 
+        -webkit-text-stroke: 2.75px #193B68; 
     }
 
     /* navbar */

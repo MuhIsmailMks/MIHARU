@@ -39,7 +39,7 @@
 
 
     <!-- navbar -->
-    <nav class="px-6  relative flex justify-center w-full ">
+    <nav class="px-6  z-[9999] absolute left-0 top-0 flex justify-center w-full ">
 
        <div class="flex relative   w-full items-center justify-between max-w-[1700px] xl:px-[10px]">
         <div class="acceesibility h-full flex items-center gap-4">
@@ -74,11 +74,15 @@
     </nav>
 
     <!-- home section -->
-    <section id="home" class="home  h-auto relative text-center classad pt-8 max-w-full"> 
-        <div class="gradients absolute"></div>
-        <div class="content relative w-full h-auto z-20">
+    <section id="home" class="home overflow-hidden h-[600px] md:h-auto relative text-center classad  pt-[100px] max-w-full"> 
+        <img src="./assets/images/home.png" alt="bob" class="h-auto w-full  object-cover absolute top-[60px] xl:top-[100px] left-0 z-[4] bg-[#4292FF] "  
+        >
+        <div class="absolute bottom-0 left-0 bg-[#4292FF] z-[1] w-full h-[30%]"></div>
+        <div class="gradients absolute  "></div>
+        <div class="content relative  w-full h-auto z-20">
     
             <div class="flex flex-col items-center gap-10 xl:gap-5 mb-10">
+
                 <div class="title  flex flex-col items-center max-[1024px]:gap-[2.5rem] gap-[3rem]">
                     <!-- <h4 class="text_home_title text-[2.5rem] mx-auto leading-[1]  xl:w-auto md:text-5xl xl:text-[44px] font-normal animated1slow m " data-aos="fade-up"
                     data-aos-duration="500"
@@ -93,24 +97,25 @@
               
             </div>
 
-            <div class="about relative w-full py-[3rem] xl:py-[2rem] flex justify-center items-center xl:mt-32 lg:h-[60vw] xl:h-[50vw] 2xl:max-h-[1000px]"> 
+            <div class="about relative w-full overflow-hidden flex justify-center items-center h-full lg:h-[50vw] xl:h-[700px] 2xl:max-h-[1000px]"> 
 
-                <div class="bob_image  absolute max-w-[1900px]  w-full h-full left-[50%] top-[0%] translate-x-[-50%] flex items-center justify-between z-[1] opacity-0 md:opacity-[1]">
-                    <img src="./assets/images/bob.png" alt="bob" class="h-auto absolute w-[450px] xl:w-[600px] min-[1500px]:w-[700px] left-[-60%] top-0 xl:top-auto xl:left-[-20%] opacity-[.7]" data-aos="fade-right"
+                <div class="bob_image  absolute max-w-[1900px]  w-full h-full left-[50%] top-[0%] translate-x-[-50%] bg-[#4292FF] flex items-center justify-between z-[1] opacity-0 md:opacity-[1]">
+                
+                    <img src="./assets/images/bob.png" alt="bob" class="h-auto absolute w-[450px] xl:w-[450px] min-[1500px]:w-[500px] left-[-60%] top-0 xl:top-auto xl:left-[-2%] " data-aos="fade-right"
                     data-aos-duration="500"
                     data-aos-delay="200"
                     >
-                    <img src="./assets/images/bob_right.png" alt="bob" class="h-auto absolute w-[400px] xl:w-[600px] min-[1500px]:w-[700px] right-[-50%] bottom-[-10%] xl:bottom-auto xl:right-[-20%] opacity-[.7]" data-aos="fade-left"
-                    data-aos-duration="500"
-                    data-aos-delay="200"
+                    <h2 class="absolute left-[5%] bottom-0 text-white text-[100px] img_text">$BOB</h2>
+                    <!-- <img src="./assets/images/bob_right.png" alt="bob" class="h-auto absolute w-[400px] xl:w-[600px] min-[1500px]:w-[700px] right-[-50%] bottom-[-10%] xl:bottom-auto xl:right-[-20%] opacity-[.7]"   -->
+                     
                     >
                 </div>
  
-                <div class="bg_animation absolute w-[400px] h-[400px] xl:w-[1000px] xl:h-[1000px] max-w-[99%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center "> 
-                    <img src="./assets/images/rotate_hero.png" alt="" class="absolute select-none  w-[400px] h-[400px] xl:[1000px] xl:w-[1000px] object-cover opacity-[80%]"> 
+                <div class="bg_animation absolute w-[300px] z-[3] h-[300px] xl:w-[500px] xl:h-[500px] max-w-[99%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center "> 
+                    <img src="./assets/images/rotate_hero.png" alt="" class="absolute select-none  w-[300px] h-[300px] xl:[500px] xl:w-[500px] object-cover opacity-[80%]"> 
                 </div>
 
-                <div class="content_about z-30 overflow-hidden relative max-w-[90%] glass-effect rounded-lg flex items-center flex-col px-4 py-5 gap-5 lg:px-6 lg:mt-10 last:py-10 h-auto lg:rounded-2xl ">
+                <div class="content_about z-30 overflow-hidden relative w-[400px]  xl:w-[600px] max-w-[90%] glass-effect rounded-lg flex items-center flex-col px-4  gap-5 lg:px-6 lg:mt-10 last:py-10 h-auto lg:rounded-2xl ">
 
                     <p class="text-xs shadow_text hidden text-[1.05rem] xl:text-[1.2rem] min-[1700px]:text-[1.4rem] md:text-base  animated1"
                     data-aos="fade-down"
@@ -203,19 +208,19 @@
         <!-- content -->
          <div class="relative  w-full flex justify-center items-center flex-wrap h-auto mt-[70px] max-[1024px]:mt-[50px]">
             
-           <div class="w-full xl:w-[520px] xl:pr-[20px] relative  flex justify-center xl:justify-end items-center">
+           <div class="w-full sm:w-[500px] xl:w-[520px] xl:pr-[20px] relative  flex justify-center xl:justify-end items-center">
 
-            <div class="h-[450px] bg-black relative w-[450px] rounded-[90px] box_neon flex justify-center items-center">
-                <div class="h-[98%] bg-[#0101FD] relative w-[98%] rounded-[90px]  flex justify-center items-center">
-                    <div class="h-[98%] bg-[#fff] relative w-[98%] rounded-[90px]  flex justify-center items-center">
-                        <div class="h-[97%] bg-[#0101FD] relative w-[97%] rounded-[90px]  flex justify-center items-center">
-                            <div class="h-[98%] bg-black relative w-[98%] rounded-[90px]  flex justify-center items-center">
-                                <div class="h-[98%] bg-[#4292FF] relative w-[98%] rounded-[90px]  flex justify-center items-center box_neon_inset flex-col gap-[2rem">
-                                    <p class="text-center opacity-[0.5] font-bold  text-[1.9rem] mb-[2rem]">The Only <br>
+            <div class="h-[400px] xl:h-[450px] bg-black relative w-[90%] xl:w-[450px] rounded-[90px] box_neon flex justify-center items-center">
+                <div class="h-[99%] xl:h-[98%] bg-[#0101FD] relative w-[99%] xl:w-[98%] rounded-[90px]  flex justify-center items-center">
+                    <div class="h-[99%] xl:h-[98%] bg-[#fff] relative w-[99%] xl:w-[98%] rounded-[90px]  flex justify-center items-center">
+                        <div class="h-[98%] xl:h-[97%] bg-[#0101FD] relative w-[98%] xl:w-[97%] rounded-[90px]  flex justify-center items-center">
+                            <div class="h-[99%] xl:h-[98%] bg-black relative w-[99%] xl:w-[98%] rounded-[90px]  flex justify-center items-center">
+                                <div class="h-[99%] xl:h-[98%] bg-[#4292FF] relative w-[99%] xl:w-[98%] rounded-[90px]  flex justify-center items-center box_neon_inset flex-col gap-[2rem">
+                                    <p class="relative z-[2] text-center opacity-[0.5] font-bold  text-[1.9rem] mb-[2rem]">The Only <br>
                                         BET-ON-BASE  <br>
                                         Token You Will Ever <br> Need!</p>
-                                    <button class="w-[230px] relative h-[90px] flex justify-center items-center ]">
-                                        <img src="./assets/images/join_text.png" alt="" class="z-[4] h-[80px] object-contain w-auto absolute">
+                                    <button class="w-[230px] relative h-[70px] xl:h-[90px] flex justify-center items-center ]">
+                                        <img src="./assets/images/join_text.png" alt="" class="z-[4] h-[50px] xl:h-[80px] object-contain w-auto absolute">
                                         <span class="bg-[#174B74] w-full h-full absolute rounded-full z-[1] join_btn_animation"></span>
                                         <span class="bg-[#F944BF] w-full h-full absolute rounded-full z-0 bottom-[-15%]"></span>
                                     </button>
