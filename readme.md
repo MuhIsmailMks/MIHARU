@@ -4,7 +4,7 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  .app-btn span
  https://www.canva.com/design/DAGIMPuf_AU/VJ2mDxQF8bFwT-_Gzza-Dw/edit
 49C3CB
- 
+ max-[1024px]:text-center
  https://telegram.org/
  
 data-aos="fade-up"
