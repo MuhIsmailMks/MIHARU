@@ -7,6 +7,22 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  max-[1024px]:text-center
  https://telegram.org/
  
+
+Services
+Exclusive Crypto Gaming
+Provably Fair Gaming
+Crypto Jackpots and Tournaments
+Smart Contract Gaming
+Anonymous Betting
+
+Link
+Telegram
+Twitter
+BaseScan
+Dextools
+logof
+
+
 data-aos="fade-up"
 
 
