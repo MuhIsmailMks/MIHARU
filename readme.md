@@ -8,6 +8,11 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
  https://telegram.org/
  
 
+ data-aos="fade-left" data-aos-duration="400"
+data-aos="fade-left" data-aos-duration="400"
+data-aos="fade-left" data-aos-duration="400"
+
+
 Services
 Exclusive Crypto Gaming
 Provably Fair Gaming
