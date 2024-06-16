@@ -10,7 +10,10 @@ md:w-full text-[#ffffffab] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem
 data-aos="fade-up"
 
 
-
+data-aos="zoom-in"
+data-aos="fade-up"
+data-aos-duration="600"
+data-aos-delay="200"
 
 data-aos="fade-right"
 data-aos="fade-down"
