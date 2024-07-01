@@ -32,15 +32,16 @@ data-aos="fade-up"
 
 
 data-aos="zoom-in"
-data-aos="fade-up"
 data-aos-duration="600"
 data-aos-delay="200"
 
 data-aos="fade-right"
-data-aos="fade-down"
 data-aos="fade-left"
 data-aos="fade-right"
 
+data-aos="fade-down"
+data-aos="fade-up"
+data-aos="zoom-in"
 data-aos-duration="400"
 data-aos-delay="200"
 
