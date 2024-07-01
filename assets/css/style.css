@@ -23,7 +23,13 @@
     font-family:var(--font-cosmic);
 }
 
+.text_bold{
+    -webkit-text-stroke: 3px inherit;
+}
 
+.text_medium{
+    -webkit-text-stroke: 2x inherit;
+}
 
 html{
     scroll-behavior: smooth;
@@ -44,6 +50,10 @@ video{
     color: #193B68;
     -webkit-text-stroke: .75px white;
      font-family:var(--font-cosmic);
+}
+
+.title_text_section span{
+    color:#4292FF;
 }
 
 .img_text{ 
@@ -215,7 +225,8 @@ nav ul li:hover a{
  
 
 .home p:not(.presale p){ 
-    color: var(--white-clr);  
+    /* color: var(--white-clr);   */
+    
 }
 
 .content_about{
@@ -276,17 +287,7 @@ nav ul li:hover a{
 .address_form p{
     letter-spacing: .4px;
 }
-
-.community button:nth-child(1){
-    /* background: linear-gradient(90deg, #05fbff6c 0%, #4d4ddd93 100%); */
-}
-
-.community button:nth-child(2){
-    /* border: 1px solid #219AD2;
-    background-color: transparent;
-    background-attachment: var(--primary-clr); */
-}
-  
+ 
 
 .glass-effect{
     backdrop-filter: blur(7px);

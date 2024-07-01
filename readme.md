@@ -44,29 +44,19 @@ data-aos="fade-right"
 data-aos-duration="400"
 data-aos-delay="200"
 
- <img src="./assets/images/plus.png" alt="" class="absolute right-[5%] top-[5%] h-auto object-contain w-[40px]">
 
 
-<h4 class="my-[1rem] text-[#ffffffee] text-center md:text-left w-full text-[.9rem]">Foundation (Months 1-3)</h4>
+Utility: More than a Token and Crypto betting platform, it is the 1st real-world utility on Base! 
 
-   <h3 class="text-[#ffffffee] text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Presale and Marketing</h3> 
+#1 GambleFi Platform on Base is Live: Ready and waiting for our $BOB token holders like you.
 
-   
-                        <div class="glass-effect2 animated1  relative rounded-xl flex flex-col  items-center gap-3 py-4"
-                        data-aos="fade-right"
-                        data-aos-duration="400" data-aos-delay="400">
-                            <div class="bg w-full rounded-xl absolute z-10 h-full "></div>
-                            <div class="borders absolute w-full h-full">
-                                <span class="w-10 h-10 z-[1] absolute rounded-xl"></span>
-                                <span class="w-10 h-10 z-[1] absolute rounded-xl"></span>
-                                <span class="w-10 h-10 z-[1] absolute rounded-xl"></span>
-                                <span class="w-10 h-10 z-[1] absolute rounded-xl"></span>
-                               
-                            </div> 
-                            <div class="icon flex justify-center z-10">
-                               <div class="w-[90%]">
-                                <img src="./assets/videos/ServerRentals.gif">
-                               </div>
-                             </div>
-                             <p class="text-xs md:text-sm z-20">AI Server Rentals</p>
-                        </div>
+
+///////////////////////////////////////
+ 
+
+
+
+Stay in Touch to Get Your Airdrop of $BOB Token: Will be sent to your wallet after the presale ends.
+
+Register for News & WIN: 
+
