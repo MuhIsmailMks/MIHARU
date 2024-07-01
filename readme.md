@@ -53,10 +53,7 @@ Utility: More than a Token and Crypto betting platform, it is the 1st real-world
 
 ///////////////////////////////////////
  
+ 
+For those seeking even greater thrills, Betting on Base offers Token holders a 100% sign up bonus, hosts exclusive crypto jackpots and tournaments with massive global prize pools. 
 
-
-
-Stay in Touch to Get Your Airdrop of $BOB Token: Will be sent to your wallet after the presale ends.
-
-Register for News & WIN: 
-
+Players can compete against each other for a chance to win substantial amounts of cryptocurrency, adding an extra dimension of excitement and competition to the casino gaming experience.
