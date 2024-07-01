@@ -56,8 +56,8 @@
      
         <ul class="flex flex-col left-0 min-[1024px]:top-0 min-[1024px]:h-full items-center justify-center gap-5 absolute px-4 py-6 duration-200 ease-in-out z-[999] w-auto min-[1024px]:w-full lg:bg-transparent lg:flex-row">
             <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#home">Home</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#service">Service</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#feature">Feature</a></li>
+            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#about">About</a></li>
+            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#howTo">How To</a></li>
             <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#tokenomics">Tokenomics</a></li>
             <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#roadmap">Roadmap</a></li>
         </ul> 
@@ -95,11 +95,14 @@
                     data-aos="fade-up"
                     data-aos-duration="600"
                     data-aos-delay="200">Bet On Base</h2>
-                    <p class=" leading-[1.2] text-[1rem] xl:text-[2rem] font-bold w-[100%] xl:w-[990px] flex flex-col items-center" data-aos="fade-up"
+                    <p class=" leading-[1.2] text-[1rem] xl:text-[2rem] font-bold w-[90%] xl:w-[990px] flex flex-col items-center" data-aos="fade-up"
                     data-aos-duration="600"
                     data-aos-delay="400">
-                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem]">#1 GambleFi Token On Base Chain with 10,000 Games in</span>
-                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem]">Your Pocket</span>
+                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] hidden lg:block">#1 GambleFi Token On Base Chain with 10,000 Games in</span>
+                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] hidden lg:block">Your Pocket</span>
+                        
+                        <!-- for mobile -->
+                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] lg:hidden">#1 GambleFi Token On Base Chain with 10,000 Games in Your Pocket</span> 
                     </p>
                 </div>
               
@@ -185,10 +188,10 @@
             <source src="./assets/videos/Bet_on_Base.2.mp4" type="video/mp4"> 
           </video>
         <div class="btns flex justify-center items-center w-full relative z-10 gap-[2rem]">
-            <button class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold">
+            <button class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold  duration-150 hover:scale-105">
                 JOIN NOW
             </button>
-            <button class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#4292FF] text-[#fff] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold uppercase">
+            <button class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#4292FF] text-[#fff] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold uppercase  duration-150 hover:scale-105">
                 whitepaper
             </button>
         </div>
@@ -201,7 +204,7 @@
     </section>
 
     <!-- about -->
-    <section class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
+    <section id="about" class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
         <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
         data-aos="fade-up"
         data-aos-duration="600"
@@ -222,7 +225,7 @@
                 data-aos-duration="500">
                      <img src="./assets/images/about_bob_image.png" alt="" class="w-full h-auto object-contain ">
                   </div>
-                <button class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px] duration-200 hover:scale-110 flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]">
+                <button class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px] duration-200 hover:scale-110 flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]  duration-150 hover:scale-105">
                    JOIN NOW
                 </button>
             </div>
@@ -271,16 +274,16 @@
     </section>
 
     <!-- why bob --> 
-    <section class=" h-auto relative w-full py-[3rem] max-w-full text-center flex flex-col items-center max-[1024px]:px-[2rem]">
-     <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full  uppercase" data-aos="fade-up"
+    <section class=" h-auto relative w-full py-[3rem] max-w-full  flex flex-col items-center max-[1024px]:px-[2rem]">
+     <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full text-center uppercase" data-aos="fade-up"
     data-aos-duration="600"
     data-aos-delay="200">WHY <span>$BOB</span></h2>
-    <p class="text-[#00FFF2] text-[1.25rem] xl:text-[2rem] font-bold xl:w-[1080px] " data-aos="fade-up"
+    <p class="text-[#00FFF2] text-[1.25rem] xl:text-[2rem] font-bold text-center xl:w-[1080px] " data-aos="fade-up"
     data-aos-duration="600"
     data-aos-delay="300">#1 GambleFi on Base Chain - We Are First, Social and Connected</p>
  
     <!-- content -->
-     <div class="flex relative w-full justify-center  xl:px-[5rem] gap-[2rem] items-center  text-white flex-wrap max-[1024px]:flex-col-reverse mt-[3rem] max-w-[1900px]">
+     <div class="flex relative w-full justify-center  xl:px-[5rem] gap-[2rem] items-center lg:items-start  text-white flex-wrap max-[1024px]:flex-col-reverse mt-[3rem] max-w-[1900px]">
 
       
         <div class="w-full xl:w-[50%] relative text-center xl:text-left flex flex-col items-center gap-[2rem]" data-aos="fade-left"
@@ -291,22 +294,22 @@
 
             <img src="./assets/images/num1.png" alt="" class="w-[50px] h-auto object-contain">
             <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[2.25rem] font-bold">We Are First</h4>
+                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold">We Are First</h4>
                 <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         First is always the best and biggest opportunity. 
                     </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         $BOB is the first Utility Token on the Base Chain
                     </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         The first social generation of gambling.
 
                     </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         Pioneer for AI crypto-betting assistance.</li>
                 </ul>
@@ -317,18 +320,18 @@
           <div class="w-full relative flex items-start gap-[.5rem]">
             <img src="./assets/images/num2.png" alt="" class="w-[50px] h-auto object-contain">
             <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[2.25rem] font-bold"> Socialization and Engagement
+                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold"> Socialization and Engagement
                 </h4>
                 <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         At the heart of $BOB is a social community. 
                     </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
                         <p class="w-[90%]">We have a social-first approach to nurture, engage, connect grow and reward.</p>
                     </li>
-                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
                         <p class="w-[90%]">
                             Social, digital and crypto marketing specialists to create buzz, and excitement to thrive at the intersection of luck, fortune and tokenisation.
@@ -343,17 +346,17 @@
 
             <img src="./assets/images/num3.png" alt="" class="w-[50px] h-auto object-contain">
             <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[2.25rem] font-bold">Community Connected Gaming</h4>
+                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold">Community Connected Gaming</h4>
                 <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
                         <p class="w-[90%]">We simplify gambling across borders, accept digital and fiat currencies for smooth onboarding.</p>
                     </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
                         <p class="w-[90%]">Buy, HODL, Share, Play-to-win games, loyalty rewards, referral and staking bonuses, and more!</p>
                     </li>
-                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.2rem]"> 
+                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
                         <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
                         <p class="w-[90%]">
                             Building a based network of crypto enthusiasts and gamers.
@@ -370,14 +373,14 @@
 
         <div class="flex flex-col w-full xl:w-[45%] items-center gap-[1rem]"data-aos="fade-right"
         data-aos-duration="500">
-        <div class="video w-full h-auto flex justify-center mb-[2rem]"> 
-            <video class="video_service w-auto relative z-[1] h-[150px] xl:h-[300px] max-h-[300px] object-contain rounded-lg opacity-[0.7]" 
+        <div class="video w-full h-auto flex justify-center mb-[2rem]  "> 
+            <video class="video_service w-auto relative z-[1] h-[150px] md:h-[300px] xl:h-[360px] min-[1500px]:h-[380px] min-[1800px]:h-[500px] max-h-[500px] object-contain rounded-lg opacity-[0.7]" 
             autoplay loop muted playsinline
             >
                 <source src="./assets/videos/golden_video.mp4" type="video/mp4"> 
             </video>
         </div>
-        <button class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold">
+        <button class="w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold duration-150 hover:scale-105">
             JOIN NOW
         </button>
        </div>
@@ -411,7 +414,7 @@
             data-aos-duration="500">
                 <source src="./assets/videos/presale_video.mp4" type="video/mp4"> 
               </video>
-                <button class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px] duration-200 hover:scale-110 flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]">
+                <button class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px] duration-200 hover:scale-110 flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]  duration-150 hover:scale-105">
                    JOIN NOW
                 </button>
             </div>
@@ -459,7 +462,7 @@
     </section>
 
     <!-- how to buy presale -->
-    <section class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
+    <section id="howTo" class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
         <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
         data-aos="fade-up"
         data-aos-duration="600"
@@ -718,29 +721,41 @@
     </section>
 
 
+
+
+
+
     <!-- tokenomics -->
-    <section id="tokenomics" class="tokenomics  relative max-w-[100%] my-16 xl:my-32 w-full  h-auto">
+    <section id="tokenomics" class="tokenomics  relative max-w-[100%] my-16 xl:my-32 w-full  h-auto flex flex-col items-center">
 
-   
-
-        <div class="about_tokenomics z-[10]  relative flex flex-col items-center gap-6 px-7">
+        <div class="tilte_tokenomics z-[10]  relative flex flex-col items-center gap-6 px-7 mb-[2rem] xl:mb-[4rem]">
 
             <div class="font-bold text-[40px] lg:text-[64px] relative w-full text-center flex justify-center "> 
                 <h2 class="title_text_section animated3 font_cosmic"
                 data-aos="fade-up"
-                data-aos-duration="500">Tokenomics</h2>
+                data-aos-duration="500"><span>Token</span>omics</h2>
             </div>
-            <h2 class="text-white uppercase text-[1.75rem] font-bold xl:text-[3rem]"
+            <h2 class="text-[#00FFF2] uppercase text-[1.75rem] font-bold xl:text-[3rem]"
             data-aos="fade-up"
             data-aos-duration="500">$bob token</h2>
-            <p class="text-[#ffffffc2] max-w-[1400px] w-full md:w-[70%] text-center text-xs md:text-base xl:text-lg min-[1600px]:text-[1.2rem] animated2"
-            data-aos="fade-up"
-            data-aos-duration="500"
-            data-aos-delay="200">
-                The bet on base platform is driven by the $BOB  token, an intrinsic utility token pivotal to the ecosystem's functionality. Engineered with a focus on encouraging sustained ownership, fostering platform growth, and implementing a deflationary strategy, $BOB  tokenomics aim to bolster the project's sustainability and vitality over time.
-            </p>
+        
 
-            <div class="flex flex-col gap-4 lg:flex-row-reverse justify-center items-center  h-auto xl:w-[80%] 2xl:w-[1000px]">
+          
+
+        </div>
+
+        <div class="about_tokenomics w-full flex-col xl:flex-row flex h-auto justify-center items-start max-w-[2000px] max-[1290px]:gap-[2rem] px-[2rem] xl:px-[5rem]">
+            
+            <div class="about_token w-full xl:w-[40%] flex justify-center items-center xl:pr-[1rem]">
+                <p class="text-[#fff] font-bold w-full text-center text-[1.1rem] md:text-[1.2rem] xl:text-[1.4rem] min-[1600px]:text-[1.7rem] "
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200">
+                    The bet on base platform is driven by the $BOB  token, an intrinsic utility token pivotal to the ecosystem's functionality. Engineered with a focus on encouraging sustained ownership, fostering platform growth, and implementing a deflationary strategy, $BOB  tokenomics aim to bolster the project's sustainability and vitality over time.
+                </p>
+            </div>
+
+            <div class="tokenomics_container flex flex-col   gap-4 lg:flex-row-reverse justify-center items-center  h-auto w-full xl:w-[60%] 2xl:w-[1000px]">
             
                 <!-- total suply -->
                 <div class="suply w-full max-w-[99%] xl:w-[50%] z-[99] h-full rounded-[20px] animated4 border-[1.5px] border-[#62CFF4]">
@@ -750,7 +765,7 @@
                         <canvas id="myPieChart">
                         </canvas>
                     </div>
-
+    
                     <div class="charts flex text-white">
                         <div class="flex  items-center w-full justify-between flex-wrap gap-3">
                         <div class=" min-h-[168px] suply_1bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
@@ -773,7 +788,7 @@
                         </div>
                     </div>
                     </div>
-
+    
                     <div class="charts mt-[2rem] flex text-white">
                      <div class="flex  items-center w-full justify-between flex-wrap gap-3">
                         <div class="max-[500px]:rounded-br-xl rounded-bl-xl xl:rounded-bl-2xl min-h-[168px] suply_4bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
@@ -796,15 +811,15 @@
                         </div>
                      </div>
                     </div>
-
+    
                 </div>
       
                   <!--texation-->
                 <div class="texation z-10  max-w-[99%] relative w-full h-auto  lg:h-[840px] rounded-[20px] text-center border-[1.5px] border-[#62CFF4] flex flex-col items-center  p-4 gap-[40px] xl:w-[50%] md:min-w-[35%] animated3">
-
+    
                     <h3 class="font-bold text-white text-[30px]"
                     data-aos="fade-down" data-aos-duration="400">Details</h3>
-
+    
                     <div class="texation-token_container flex flex-col justify-between relative w-full xl:w-[90%] h-[500px] lg:h-full  py-[2rem] gap-[1.5rem] lg:gap-4 xl:gap-[4rem] ">
                  
                         <div class="texation-container relative h-[45px] md:h-[50px] xl:h-[55px] rounded-[15px] md:rounded-[20px] xl:rounded-[25px] w-full"
@@ -843,16 +858,27 @@
                             </div>
                         </div>
                   
-
+    
                     </div>
-
+    
                 </div>
            
             </div>
 
+
         </div>
 
+      
+
     </section>
+
+
+
+
+
+
+
+
 
     <!-- roadmap -->
     <section id="roadmap" class="roadmap relative flex justify-center items-center flex-col  px-5">
