@@ -623,6 +623,10 @@ nav ul li:hover a{
     background: linear-gradient(180deg,#07529833,#8DECB4);
 }
 
+.suply_7bg{ 
+    background: linear-gradient(180deg,#07529833,#FF7F3E);
+}
+
 
 .texation{
     background: linear-gradient(4.45deg, #62d0f462 -37.48%, #000000 103.17%);

@@ -124,9 +124,9 @@ let ctx = document.getElementById('myPieChart').getContext('2d');
 let myPieChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ["Tokens 30% LP", "Token Sale", "Casino Treasury","Staking", "Rewards", "Team"],
+        labels: ["Invesor Launch", "Pre-Sale", "LP","Casino Pool / Treasury", "Staking", "Rewards","Team"],
         datasets: [{
-            data: [30,30,20,10,5,5],
+            data: [35,10,20,10,10,5,10],
             backgroundColor: [
                 '#16c1ec',
                 '#8B93FF', 
@@ -134,6 +134,7 @@ let myPieChart = new Chart(ctx, {
                 '#EBF400',
                 '#7469B6',
                 '#8DECB4',
+                '#FF7F3E',
             ],
             borderWidth: 0
         }]
@@ -160,11 +161,7 @@ let myPieChart = new Chart(ctx, {
     }
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
  
- 
-}); 
 
 
 // scroll reveal animation
