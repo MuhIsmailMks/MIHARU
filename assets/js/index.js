@@ -72,7 +72,7 @@ addressContainer.addEventListener('click', function() {
         copied.classList.remove('flex')
     },1000);
 
-    navigator.clipboard.writeText(addressText)
+    navigator.clipboard.writeText('0x627cC788f67B4113622E01DAda7F25998d7B6825')
         .then(function() { 
             
         })
