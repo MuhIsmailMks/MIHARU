@@ -156,22 +156,25 @@
                 
                 <!-- image -->
                  <div class="flex items-center w-full md:w-[80%] lg:w-[55%] lg:ml-[1vw]">
-                    <img src="./static/images/about_image.png" alt="" class="w-full h-auto object-contain lg:ml-[-2vw]">
+                    <img src="./static/images/about_image.png" alt="" class="w-full h-auto object-contain lg:ml-[-2vw] float_animation" style="animation-duration: 12s;">
                  </div>
                  
                 <!-- about content -->
                  <div class="flex_center flex-col w-[90%] lg:w-[45%] h-[90%] mt-6 gap-6 lg:ml-[-10vw]">
 
-                    <img src="./static/images/about_casper.png" alt="" class="w-[70vw] lg:w-[30vw] h-auto object-contain lg:ml-[-10vw]">
+                    <img src="./static/images/about_casper.png" alt="" class="w-[70vw] lg:w-[30vw] h-auto object-contain lg:ml-[-10vw] shake_animation ">
 
-                    <p class="text-center text-white w-[80%] text-[20px] xl:text-[1.3vw]" data-aos="fade-up"
+                    <p class="text-center text-white w-[300px] xl:w-[80%] text-[20px] xl:text-[1.3vw]" data-aos="fade-up"
                     data-aos-duration="600"
                     data-aos-delay="100">
-                        Meet Casper, Vitalik’s very own Memecoin creation: a logo for the Casper consensus algorithm (an implementation of proof of stake consensus algorithm in development for the Ethereum platform) inspired by Casper the Ghost who shares the same name. This is Vitalik’s very first Memecoin.
-                        <br>
-                        <br>
-                        CA : 
+                        Meet Casper, Vitalik’s very own Memecoin creation: a logo for the Casper consensus algorithm (an implementation of proof of stake consensus algorithm in development for the Ethereum platform) inspired by Casper the Ghost who shares the same name. This is Vitalik’s very first Memecoin. 
                     </p>
+
+                    <div class="flex_center justify-start copy-box  text-white text-[20px] xl:text-[1.3vw] gap-6 border-b-white border-b-[1px] cursor-pointer">
+                        <p> CA : </p>
+                        <span class="text-ellipsis max-w-[70%] overflow-hidden copy-box__text copy-box__btn"> 000000000000000000000dead</span>
+                        <img src="./static/images/copy.svg" alt="" class="w-[30px] h-auto object-contain">
+                    </div>
 
                     <!-- media social -->
                      <div class="flex_center gap-6 w-full relative z-10" data-aos="fade-up"
