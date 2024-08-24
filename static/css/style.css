@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Jomhuria";
+  src: url("../fonts/Jomhuria-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Jomhuria", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px;  
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #76D1FF;  
+  border-radius: 5px;  
+  border: 2px solid white;
+} 
+
+html{
+    scroll-behavior: smooth;
+}
+
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header{
+  background-image: url('../images/br_nav.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.gradient_btn{
+  background: linear-gradient(169.45deg, #99FFFF 6.69%, #4A95FF 91.07%);
+}
+
+.menu-button span{
+  transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -ms-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+}
+
+.menu-button.active span:first-child,
+.menu-button.active span:last-child{
+  opacity: 0;
+}
+
+.menu_container{
+  top: 50%;
+  opacity: 0;
+  z-index: -999;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+/* hero */
+.hero_section{
+  background-image: url('../images/hero_image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+
+.marquee {
+  display: flex;
+  flex-direction: row; 
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.marquee.bordered {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--shadow-primary);
+  background-color: var(--text-blue);
+  border-bottom: 2px solid var(--shadow-primary);
+  border-top: 2px solid var(--shadow-primary);
+  color: var(--text-blue);
+  font-family: var(--heading);
+  padding-bottom: var(--gutter);
+  padding-top: var(--gutter);
+  text-shadow: -2px 3px 0 var(--shadow-primary);
+  text-transform: uppercase
+}
+
+
+.marquee-el {
+  align-items: center;
+  animation: scroll 5s linear infinite;
+  animation-delay: 0s;
+  animation-play-state: running;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  min-width: 100%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  z-index: 1;
+  -webkit-animation: scroll 5s linear infinite;
+}
+
+.marquee-right .marquee-el {
+  animation-direction: normal
+}
+
+.marquee-left .marquee-el {
+  animation-direction: reverse
+}
+
+
+@keyframes scroll {
+  0% {
+      transform: translateX(-100px)  ;
+      -webkit-transform: translateX(-100px)  ;
+      -moz-transform: translateX(-100px)  ;
+      -ms-transform: translateX(-100px)  ;
+      -o-transform: translateX(-100px)  ;
+} 
+
+  to {
+      transform: translateX(630px)  ;
+      -webkit-transform: translateX(630px)  ;
+      -moz-transform: translateX(630px)  ;
+      -ms-transform: translateX(630px)  ;
+      -o-transform: translateX(630px)  ;
+  }
+}
+
+/* about */
+.about_section{
+  background-image: url('../images/bg_about.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Inter", sans-serif; 
+}
+
+
+/* media screen */
+@media screen and (max-width:1023px) {
+  
+
+  .menu_container.active{
+    top: 100%;
+    opacity: 1;
+    z-index: 999;
+  }
+ 
+ 
+@keyframes scroll {
+  0% {
+      transform: translateX(-100px)  ;
+      -webkit-transform: translateX(-100px)  ;
+      -moz-transform: translateX(-100px)  ;
+      -ms-transform: translateX(-100px)  ;
+      -o-transform: translateX(-100px)  ;
+} 
+
+  to {
+      transform: translateX(580px)  ;
+      -webkit-transform: translateX(580px)  ;
+      -moz-transform: translateX(580px)  ;
+      -ms-transform: translateX(580px)  ;
+      -o-transform: translateX(580px)  ;
+}
+}
+
+  .about_section{ 
+    background-size: cover;
+    background-position: right; 
+  }
+  
+}
+
+
+/* animation */

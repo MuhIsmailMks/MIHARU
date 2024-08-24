@@ -2,1184 +2,196 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/BOB2.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/logo.png">  
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- aos animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
-    <!-- google fonts links -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <!-- chart js --> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <!-- tailwind css CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- AOS scroll effect cdn --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- css link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <title> Bet On Base</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Casper</title>
 </head>
-<body>
+<body> 
 
-    
-      <!-- loading site -->
-      <div id="loading" class="loading fixed z-[-999] xl:z-[999] w-full h-full flex justify-center max-[1024px]:hidden items-center opacity-0 xl:opacity-[1] overflow-hidden"> 
-        <div class="fix_bg bg-black fixed left-0 top-0 h-full w-full z-[0] max-w-[100%] overflow-hidden"> 
-     
-        </div> 
-        <video id="transparent-video" class="w-auto relative z-[1] h-[30%] max-h-[500px] object-contain rounded-lg " autoplay loop muted
-               >
-                    <source src="./assets/videos/loading_webM.webm" type="video/webm">  
-                    <source src="./assets/videos/backupLoading.mp4" type="video/mp4">  
-        </video>
-    </div>
-
-    <div class="container_site w-full max-w-[100%] overflow-hidden relative h-auto z-[1] bg-[#193B68]">
-
-
-    <!-- navbar -->
-    <nav class="px-6  z-[9999] absolute left-0 top-0 flex justify-center w-full ">
-
-       <div class="flex relative   w-full items-center justify-between max-w-[1700px] xl:px-[10px]">
-        <div class="acceesibility h-full flex items-center gap-4">
-            <div class="menu-btn flex lg:hidden ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="white" fill-rule="evenodd" d="M1.5 3a.5.5 0 0 0 0 1h12a.5.5 0 0 0 0-1zM1 7.5a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1h-12a.5.5 0 0 1-.5-.5" clip-rule="evenodd"/></svg>
-            </div>
-            <div class="logo h-full lg:w-auto    flex justify-center items-center rounded-lg overflow-hidden gap-4" data-aos="fade-right"
-            data-aos-duration="500"
-            data-aos-delay="4000">
-                <img src="./assets/images/BOB2.png" alt="logo" class="w-auto object-contain h-[40px] xl:h-[55px] min-[1500px]:h-[65px] ">
-                <p class="logo-text text-[white] text-[1rem] xl:text-[1.5rem]">Bet On Base</p>
-            </div>
-        </div>
-     
-        <ul class="flex flex-col left-0 min-[1024px]:top-0 min-[1024px]:h-full items-center justify-center gap-5 absolute px-4 py-6 duration-200 ease-in-out z-[999] w-auto min-[1024px]:w-full lg:bg-transparent lg:flex-row">
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#home">Home</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#about">About</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#howTo">How To</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#tokenomics">Tokenomics</a></li>
-            <li><a class="text-[1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]" href="#roadmap">Roadmap</a></li>
-        </ul> 
-
-        <button class="app-btn cursor-pointer relative flex items-center justify-center z-[1000]" data-aos="fade-left"
-        data-aos-duration="500"
-        data-aos-delay="4000">
-            <span class="z-10 font-bold">DApp</span> 
-            <p class="absolute duration-300 top-[-.5rem] text-[#fff] right-[-1rem] text-[.85rem] tracking-[1px] font-normal uppercase">soon</p>
-        </button>
- 
-       </div>
+    <div class="w-full min-h-[100vh] h-auto   max-w-[100%] relative overflow-hidden">
         
-    </nav>
+        <!-- navbar -->
+         <header class="absolute left-0 top-0 w-full h-[10vw] min-h-[80px]  xl:h-[7vw] flex_center z-[99]">
 
-    <!-- home section -->
-    <section id="home" class="home overflow-hidden h-[800px]  xl:h-[1000px] lg:h-[900px] relative text-center classad  pt-[100px] max-w-full max-[500px]:pb-[50px]"> 
-        <!-- bg top -->
-        <img src="./assets/images/home.png" alt="bob" class="h-auto w-full   object-cover absolute top-[60px] xl:top-[100px] left-0 z-[4] bg-[#4292FF] max-h-[800px] "  
-        >
-        <!-- bg color -->
-        <div class="absolute bottom-0 left-0 bg-[#4292FF] z-[1] w-full h-[80%]"></div>
-        <div class="gradients absolute  "></div>
+            <nav class="max-w-[2000px] w-[90%] lg:w-[80%] h-full flex_between">
 
-        <!-- content -->
-        <div class="content relative  w-full h-auto z-20">
-    
-            <div class="flex flex-col items-center gap-10 xl:gap-5 mb-10">
-
-                <div class="title  flex flex-col items-center max-[1024px]:gap-[2.5rem] gap-[3rem]">
-                    <!-- <h4 class="text_home_title text-[2.5rem] mx-auto leading-[1]  xl:w-auto md:text-5xl xl:text-[44px] font-normal animated1slow m " data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="4000">Unlocking <span>Seamless</span> Gambling</h4> -->
-                    <h2 class="font-bold title_text_section tracking-wide text-4xl md:text-7xl xl:text-[6rem] animated1slow"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="200">Bet On Base</h2>
-                    <p class=" leading-[1.2] text-[1rem] xl:text-[2rem] font-bold w-[90%] xl:w-[990px] flex flex-col items-center" data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="400">
-                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] hidden lg:block">#1 GambleFi Token On Base Chain with 10,000 Games in</span>
-                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] hidden lg:block">Your Pocket</span>
-                        
-                        <!-- for mobile -->
-                        <span class="text-[#00FFF2] bg-[#193B68] rounded-lg py-[.5rem] px-[.5rem] lg:hidden">#1 GambleFi Token On Base Chain with 10,000 Games in Your Pocket</span> 
-                    </p>
-                </div>
-              
-            </div>
-
-            <div class="bob_image  absolute max-w-[1900px]  w-full xl:w-[1200px] h-full left-[50%] top-[0%] translate-x-[-50%]   flex items-center justify-between z-[12] opacity-0 xl:opacity-[1]">
-                
-                <img src="./assets/images/bob_home.png" alt="bob" class="h-auto absolute w-[250px] xl:w-[450px] min-[1700px]:w-[500px] xl:left-[-50px] bottom-0 xl:bottom-[13rem]   " data-aos="fade-right"
-                data-aos-duration="500"
-                data-aos-delay="200"
-                >
-                <h2 class="absolute left-0 bottom-[10%] text-white text-[40px] xl:text-[80px] img_text">$BOB</h2> 
-                  
-            </div>
-
-            <div class="about relative w-full z-[8]   flex justify-center flex-col  items-center h-[450px] xl:h-[600px] 2xl:max-h-[1000px] z-[999]"> 
-
-            
- 
-                <div class="bg_animation absolute w-[400px] z-[3] h-[400px] xl:w-[630px] xl:h-[630px] max-w-[99%] left-[50%] top-[35%] xl:top-[40%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center "> 
-                    <img src="./assets/images/rotate_hero.png" alt="" class="absolute select-none  w-[400px] h-[400px] xl:h-full xl:w-full object-cover opacity-[80%]"> 
-                </div>
-
-                <div class="content_about  overflow-hidden relative w-[400px]  xl:w-[600px] max-w-[90%] glass-effect rounded-lg flex items-center flex-col px-4  gap-5 lg:px-6 lg:mt-10 last:py-10 h-auto lg:rounded-2xl py-[40px] z-[999]">
-
-                    <p class="text-xs shadow_text hidden text-[1.05rem] xl:text-[1.2rem] min-[1700px]:text-[1.4rem] md:text-base  animated1"
-                    data-aos="fade-down"
-                    data-aos-duration="400"
-                    >
-                    The 1st Real-World Utility on the Base Chain with 10,000 Games in Your Pocket.
-                    </p>
-
-                    <div class="relative flex max-w-full gap-5 flex-wrap items-center justify-center w-full h-auto z-[999]">
-                        <div class="presale h-[150px] xl:h-[200px] w-full rounded-[15px] flex flex-col justify-center items-center gap-[1rem] xl:gap-[1.5rem] px-[2rem]  " data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="200">
-                            <a href="#howTo" class="bg-[#00FFF2] text-[#193B68]  px-[1.5rem] text-[1.3rem] xl:text-[1.75rem] font-bold rounded-lg hover:scale-110 cursor-pointer" >Buy Presale Now</a>
-                            <div class="bar relative bg-white border-white border-t-[3px] border-b-[3px] h-[30px] xl:h-[40px] w-full flex justify-center items-center">
-                                <span class="absolute left-0 top-0 bg-[#4ba0bd] h-full w-[93%]"></span>
-                                <p class="uppercase relative z-[1] text-black text-[.85rem] xl:text-[1.5rem] font-[700]">$BOB Bought: 0 / 300.000.000</p>
-                            </div>
-                            <h3 class="text-white font-[800] text-[1rem] xl:text-[1.4rem]">$USD RAISED: <b id="usdRaised">$0</b></h3>
-                        </div>
-                    </div>
- 
-                </div>
-                
-                <p class="font-bold about_text_home leading-[1.6] xl:leading-[1.3] min-[1600px]:leading-[1.4] text-[#193B68] absolute bottom-0 md:bottom-[3%]  w-[80%] xl:w-[50%] min-[1600px]:w-[700px]  text-[1.15rem] md:text-[1.5rem] xl:text-[1.6rem] min-[1700px]:text-[1.8rem] md:text-base  animated1 "
-                    data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="200">
-                    Get Ready To Step Into The Thrilling World of GambleFi.
-                    Hurry, Strictly Limited Supply
-                    </p> 
-
-            </div>
-
-           
-
-        </div>
-
-    </section>
-
-
-    <!-- games -->
-    <section class=" h-auto xl:h-[900px] min-[1600px]:h-[1100px] relative w-full py-[3rem] max-w-full text-center justify-center flex flex-col items-center max-[1024px]:px-[2rem] mt-[50px] xl:mt-[100px]">
-        
-        <img src="./assets/images/game_bg.png" alt="" class="w-[100%]   h-auto object-contain mb-[2rem] opacity-[0.8] relative xl:hidden">
-
-        <h2 class="title_text_section uppercase relative z-10 text-[30px] sm:text-[45px] xl:text-[65px] xl:w-[1000px] "  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200"><span >#1 based</span> gambling</h2>
-        <h5 class="text-[#00FFF2] text_bold font-bold relative z-10 text-[1rem] sm:text-[1.4rem] xl:text-[2rem] max-[1000px]:my-[.75rem]" data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="200">$BOB Token unlocks 10,000 Games In Your Pocket</h5>
-        <p class="text-white font-bold xl:text-[1.5rem] relative z-10 xl:w-[850px] "  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Get ready for a very 1st time, the $100 billion betting industry collides with the $2.5 trillion crypto market on Base Chain!</p>
-        <video class="video_service h-auto relative z-[1] w-full md:w-[450px] xl:w-[550px] my-[2rem] object-contain rounded-lg opacity-[0.7]" 
-        autoplay loop muted playsinline
-        data-aos="fade-right"
-        data-aos-duration="500">
-            <source src="./assets/videos/Bet_on_Base.2.mp4" type="video/mp4"> 
-          </video>
-        <div class="btns flex justify-center items-center w-full relative z-10 gap-[2rem]">
-            <a href="#howTo" class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold  duration-150 hover:scale-105" data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="200">
-                JOIN NOW
-            </a>
-            <a href="https://drive.google.com/file/d/1sec8IrG1spJRDiCpxUdoI3jvhDkg7scZ/view?usp=sharing" target="_blank" class=" w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#4292FF] text-[#fff] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold uppercase  duration-150 hover:scale-105" data-aos="fade-left"
-            data-aos-duration="400"
-            data-aos-delay="200">
-                whitepaper
-            </a>
-        </div>
-
-
-        <!-- bg -->
-        <div class="bg w-full h-full z-0 absolute left-0 bottom-0 flex justify-center items-center  max-[1280px]:opacity-0">
-                    <img src="./assets/images/game_bg.png" alt="" class="w-[95%] max-w-[1800px] h-auto object-contain mb-[5rem] opacity-[0.3]">
+                <!-- left -->
+                 <div class="flex_center gap-10">
+                    <!-- logo -->
+                     <img src="./static/images/logo.png" alt="" class="h-auto object-contain w-[70px] lg:w-[8vw] mb-[-6vw] max-w-[400px]">
+                    <!-- links -->
+                     <ul class="flex_center gap-6 max-lg:hidden">
+                        <li><a class="duration-300 hover:text-white text-[20px] xl:text-[35.82px]" href="#home">HOME</a></li>
+                        <li><a class="duration-300 hover:text-white text-[20px] xl:text-[35.82px]" href="#about">ABOUT US</a></li>
+                     </ul>
                  </div>
-    </section>
 
-    <!-- about -->
-    <section id="about" class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
-        <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">ABOUT <span>$BOB</span> TOKEN</h2>
-        <p class="text-[#00FFF2] xl:text-[2rem] font-bold xl:w-[1080px]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Licensed Mega Crypto Gambling Ecosystem</p>
+                <!-- right -->
+                 <div class="flex_center gap-6">
+                   
+                    <a href="#telegram" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] max-lg:hidden">
+                        <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
+                            <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
+                        </div> 
+                   </a>
 
-        <!-- content --> 
-        <div class="flex relative w-full justify-center  px-[2rem]  xl:px-[5rem] gap-[2rem] items-center xl:items-start  text-white flex-wrap mt-[2rem] max-w-[1900px]">
+                    <a href="#twitter" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] max-lg:hidden">
+                        <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
+                            <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
+                        </div> 
+                   </a>
 
-            <div class="flex flex-col w-full xl:w-[40%] items-center justify-center gap-[2rem]" data-aos="fade-right"
-            data-aos-duration="600"
-            data-aos-delay="200"> 
-                <div class="video_service h-auto relative z-[1] w-full md:w-[450px] object-contain rounded-lg opacity-[0.7]"  
-                data-aos="fade-right"
-                data-aos-duration="500">
-                     <img src="./assets/images/about_bob_image.png" alt="" class="w-full h-auto object-contain ">
+                   <!-- buy btn -->
+                   <a href="#buy" class="gradient_btn duration-200 hover:scale-105 flex_center rounded-md w-[140.08px] h-[56.08px] max-lg:h-[45px] relative  border-black border-[2px] pt-2"> 
+                    <span class="text-[37.95px]">BUY CASPER</span>
+                   </a>
+
+                   <!-- menu btn -->
+                    <div class="menu-button duration-200 hover:scale-105 flex_center flex-col gap-1 rounded-md w-[45px] h-[45px] relative bg-[#71C9FF] border-black border-[1px] lg:hidden">
+                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
+                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
+                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
+                    </div>
+
+                 </div>
+
+                 <!-- menu -->
+                  <div class="menu_container absolute   left-[50%] translate-x-[-50%] w-[95%] h-auto bg-[#76D1FF] rounded-lg border-black border-[2px] py-6">
+                    <ul class="flex_center gap-6 flex-col">
+                        <li><a href="#home" class="text-[38px]">HOME</a></li>
+                        <li><a href="#about" class="text-[38px]">ABOUT US</a></li>
+                        <li class="flex_center gap-6">
+                            <a href="#telegram" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] ">
+                                <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
+                                    <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
+                                </div> 
+                           </a>
+        
+                            <a href="#twitter" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] ">
+                                <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
+                                    <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
+                                </div> 
+                           </a>
+                        </li>
+                    </ul>
                   </div>
-                <a href="#howTo" class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px] flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]  duration-150 hover:scale-105">
-                   JOIN NOW
-                </a>
-            </div>
 
-            <div class="w-full xl:w-[45%] leading-[1] text-left text-[1.1rem] xl:text-[1.35rem] min-[1600px]:text-[1.5rem]" data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="200">
+            </nav>
+
+         </header>
+
+         <!-- hero -->
+          <section class="hero_section w-full h-[400px] sm:h-[500px] lg:h-[60vw] relative flex_center"></section>
+
+          <!-- marquee -->
+           <section class="w-full h-auto overflow-hidden max-w-[100%] bg-[#BFD1FF] py-8">
+            <div class="marquee bordered  w-[100vw]">
+                <div class="marquee-el flex_center gap-30 w-[100vw]" > 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
+                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
+                </div>   
+              </div>
+           </section>
+
+           <!-- about -->
+            <section id="about" class="about_section w-full h-[55.2vw] flex_center max-lg:flex-col max-lg:h-auto max-lg:py-9 lg:justify-start">
+                
+                <!-- image -->
+                 <div class="flex items-center w-full md:w-[80%] lg:w-[55%] lg:ml-[1vw]">
+                    <img src="./static/images/about_image.png" alt="" class="w-full h-auto object-contain lg:ml-[-2vw]">
+                 </div>
+                 
+                <!-- about content -->
+                 <div class="flex_center flex-col w-[90%] lg:w-[45%] h-[90%] mt-6 gap-6 lg:ml-[-10vw]">
+
+                    <img src="./static/images/about_casper.png" alt="" class="w-[70vw] lg:w-[30vw] h-auto object-contain lg:ml-[-10vw]">
+
+                    <p class="text-center text-white w-[80%] text-[20px] xl:text-[1.3vw]">
+                        Meet Casper, Vitalik’s very own Memecoin creation: a logo for the Casper consensus algorithm (an implementation of proof of stake consensus algorithm in development for the Ethereum platform) inspired by Casper the Ghost who shares the same name. This is Vitalik’s very first Memecoin.
+                        <br>
+                        <br>
+                        CA : 
+                    </p>
+
+                    <!-- media social -->
+                     <div class="flex_center gap-6 w-full relative z-10">
+                        
+                        <a href="#twitter" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
+                            <img src="./static/images/twitter2.png" alt="" class="w-[60%] h-auto object-contain">
+                        </a>
+
+                        <a href="#telegram" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
+                            <img src="./static/images/telegram2.png" alt="" class="w-[60%] h-auto object-contain">
+                        </a>
+
+                        <a href="#dextools" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
+                            <img src="./static/images/dextools.png" alt="" class="w-[60%] h-auto object-contain">
+                        </a>
+
+                        <a href="#dexscreen" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
+                            <img src="./static/images/dexscreen.png" alt="" class="w-[60%] h-auto object-contain">
+                        </a>
 
-                <p class="font-bold mb-[2rem]">Join us at the intersection of luck and destiny, where legends are born and fortunes are made! $BOB Token unlocks amazing benefits;</p>
-
-                <div class="about_list flex items-center gap-[1rem] w-full xl:w-[600px] mb-[1rem]">
-                    <img src="./assets/images/tick.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">Mega Entertainment:</span> It’s 10,000 Games in your pocket.</p>
-                </div>
-
-                <div class="about_list flex items-center gap-[1rem] w-full xl:w-[600px] mb-[1rem]">
-                    <img src="./assets/images/tick.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">Based Social Community:</span>Seamless tokenised play with connected gambling action.</p>
-                </div>
-
-                <div class="about_list flex items-center gap-[1rem] w-full xl:w-[600px] mb-[1rem]">
-                    <img src="./assets/images/tick.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">Active and Passive Rewards:</span> Simply buy, deposit, stake, wager, and play to WIN.</p>
-                </div>
-
-                <div class="about_list flex items-center gap-[1rem] w-full xl:w-[600px] mb-[1rem]">
-                    <img src="./assets/images/tick.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">Mega BuyBacks:</span>  10% Nett Gaming Revenues and 1% Taxes. Win, even if you lose.</p>
-                </div>
-
-                <div class="about_list flex items-center gap-[1rem] w-full xl:w-[600px] mb-[1rem]">
-                    <img src="./assets/images/tick.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">100% Legal:</span>Experienced team, global branded games, safe, auto payouts and trustless.</p>
-                </div>
-
-            </div>
-
-         </div>
-
-         <div class="text-center w-[90%] leading-[1] text-[1.2rem] xl:text-[1.75rem] min-[1800px]:text-[1.9rem] mt-[2rem]">
-            <p class="text-[#4292FF] font-[700] max-[1024px]:mb-[.85rem]" 
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="200">  $BOB - The Only Base Betting Token You Will Ever Need!</p>
-         <p class="text-[#FF40BD] italic" 
-         data-aos="fade-up"
-         data-aos-duration="400"
-         data-aos-delay="300"> However, DO NOT DELAY - Strictly Limited Time and Going FAST.</p>
-         </div>
-
-
-    </section>
-
-    <!-- why bob --> 
-    <section class=" h-auto relative w-full py-[3rem] max-w-full  flex flex-col items-center max-[1024px]:px-[2rem]">
-     <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full text-center uppercase" data-aos="fade-up"
-    data-aos-duration="600"
-    data-aos-delay="200">WHY <span>$BOB</span></h2>
-    <p class="text-[#00FFF2] text-[1.25rem] xl:text-[2rem] font-bold text-center xl:w-[1080px] " data-aos="fade-up"
-    data-aos-duration="600"
-    data-aos-delay="300">#1 GambleFi on Base Chain - We Are First, Social and Connected</p>
- 
-    <!-- content -->
-     <div class="flex relative w-full justify-center  xl:px-[5rem] gap-[2rem] items-center lg:items-start  text-white flex-wrap max-[1024px]:flex-col-reverse mt-[3rem] max-w-[1900px]">
-
-      
-        <div class="w-full xl:w-[50%] relative text-center xl:text-left flex flex-col items-center gap-[2rem]" data-aos="fade-right"
-        data-aos-duration="600"
-        data-aos-delay="200">
-            
-          <div class="w-full relative flex items-start gap-[.5rem]">
-
-            <img src="./assets/images/num1.png" alt="" class="w-[50px] h-auto object-contain">
-            <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold">We Are First</h4>
-                <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        First is always the best and biggest opportunity. 
-                    </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        $BOB is the first Utility Token on the Base Chain
-                    </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        The first social generation of gambling.
-
-                    </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        Pioneer for AI crypto-betting assistance.</li>
-                </ul>
-            </div>
-
-          </div>
-
-          <div class="w-full relative flex items-start gap-[.5rem]">
-            <img src="./assets/images/num2.png" alt="" class="w-[50px] h-auto object-contain">
-            <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold"> Socialization and Engagement
-                </h4>
-                <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        At the heart of $BOB is a social community. 
-                    </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
-                        <p class="w-[90%]">We have a social-first approach to nurture, engage, connect grow and reward.</p>
-                    </li>
-                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
-                        <p class="w-[90%]">
-                            Social, digital and crypto marketing specialists to create buzz, and excitement to thrive at the intersection of luck, fortune and tokenisation.
-                        </p>
-
-                    </li> 
-                </ul>
-            </div>
-          </div>
-
-          <div class="w-full relative flex items-start gap-[.5rem]">
-
-            <img src="./assets/images/num3.png" alt="" class="w-[50px] h-auto object-contain">
-            <div>
-                <h4 class="text-blue-500 w-full text-[1.75rem] xl:text-[1.9rem] min-[1600px]:text-[2.25rem] font-bold">Community Connected Gaming</h4>
-                <ul class="w-full text-white flex flex-col items-start mt-[1rem] text-left leading-[1.1]">
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white"></span>
-                        <p class="w-[90%]">We simplify gambling across borders, accept digital and fiat currencies for smooth onboarding.</p>
-                    </li>
-                    <li class="flex items-center gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
-                        <p class="w-[90%]">Buy, HODL, Share, Play-to-win games, loyalty rewards, referral and staking bonuses, and more!</p>
-                    </li>
-                    <li class="flex items-start gap-[1rem] text-[1.1rem] xl:text-[1.3rem] min-[1800px]:text-[1.5rem]"> 
-                        <span class="h-[7px] w-[7px] rounded-full bg-white mt-[.75rem]"></span>
-                        <p class="w-[90%]">
-                            Building a based network of crypto enthusiasts and gamers.
-                        </p>
-
-                    </li> 
-                </ul> 
-
-            </div>
-          </div>
-
-        </div
-        >
-
-        <div class="flex flex-col w-full xl:w-[45%] items-center gap-[1rem]"data-aos="fade-left"
-        data-aos-duration="500">
-        <div class="video w-full h-auto flex justify-center mb-[2rem]  "> 
-            <video class="video_service w-auto relative z-[1] h-[150px] md:h-[300px] xl:h-[360px] min-[1500px]:h-[380px] min-[1800px]:h-[500px] max-h-[500px] object-contain rounded-lg opacity-[0.7]" 
-            autoplay loop muted playsinline
-            >
-                <source src="./assets/videos/golden_video.mp4" type="video/mp4"> 
-            </video>
-        </div>
-        <a href="#howTo" class="w-[150px] md:w-[200px] h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] xl:text-[1.2rem] font-bold duration-150 hover:scale-105">
-            JOIN NOW
-        </a>
-       </div>
-
-     </div>
-
-
-
-    </section>
-    
-    <!-- why buy presale -->
-     <section class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
-        <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">WHY BUY  <span>$BOB</span> AT PRE$ALE</h2>
-        <p class="text-[#00FFF2] xl:text-[2rem] font-bold xl:w-[1080px]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">The #1 GambleFi Platform is LIVE - Best Ever Price To BUY is NOW!</p>
-
-        <!-- content --> 
-        <div class="flex relative w-full justify-center  px-[2rem]  xl:px-[5rem] gap-[2rem] items-center xl:items-start  text-white flex-wrap mt-[2rem] max-w-[1900px]">
-
-            <div class="flex flex-col w-full xl:w-[40%] items-center justify-center gap-[2rem]" data-aos="fade-right"
-            data-aos-duration="600"
-            data-aos-delay="200"> 
-            <video class="video_service h-auto relative z-[1] w-full md:w-[450px] xl:w-[550px] mb-[2rem] object-contain rounded-lg opacity-[0.7]" 
-            autoplay loop muted playsinline
-            data-aos="fade-right"
-            data-aos-duration="500">
-                <source src="./assets/videos/presale_video.mp4" type="video/mp4"> 
-              </video>
-                <a href="#howTo" class="rounded-full text-[#193B68] bg-[#00FFF2] h-[50px] w-[210px]  flex justify-center items-center uppercase font-bold tracking-[1px] text-[1.5rem]  duration-150 hover:scale-105">
-                   JOIN NOW
-                </a>
-            </div>
-
-            <div class="flex flex-col gap-[1.5rem] w-full xl:w-[45%] leading-[1] text-left text-[1.1rem] xl:text-[1.35rem] min-[1600px]:text-[1.5rem]" data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="200">
- 
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">Utility:</span> More than a Token and Crypto betting platform, it is the 1st real-world utility on Base! </p>
-                </div>
-
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p  ><span class="font-bold">#1 GambleFi Platform on Base is Live: </span>Ready and waiting for our $BOB token holders like you. </p>
-                </div>
-
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p><span class="font-bold">Exclusive Token Holder Benefits: </span>Rewards and Buy Backs</p>
-                </div>
-
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p><span class="font-bold">World-Renowned Gambling Developer: </span>Award winning software with top-tier branded games.</p>
-                </div>
-
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p><span class="font-bold">Based:  </span> Powered by an experienced Based Team in crypto and gambling entertainment.</p>
-                </div>
-
-                <div class="presale_list flex items-center gap-[1rem] w-full xl:w-[500px]">
-                    <img src="./assets/images/tick_presale.svg" alt="" class="w-[30px] xl:w-[40px] h-auto object-contain">
-                    <p><span class="font-bold">Team Success: </span>2 x 130m Market Cap Tokens and multiple 8 figure project launches</p>
-                </div>
- 
-            </div>
-
-         </div>
- 
-
-
-    </section>
-
-    <!-- how to buy presale -->
-    <section id="howTo" class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
-        <h2 class="title_text_section text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">HOW TO BUY  <span>$BOB</span> AT PRE$ALE</h2>
-        <p class="text-[#00FFF2] text-[1.75rem] xl:text-[2.3rem] font-bold xl:w-[1080px]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Official Token Purchasing Instructions</p>
-
-
-        <div class="w-full flex flex-col items-center gap-[1.5rem] mt-[2rem] leading-[1] text-center xl:text-left text-white text-[1.2rem]  xl:text-[1.5rem] min-[1800px]:text-[1.8rem]">
-            <p class="w-[90%] md:w-[550px]" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="200">
-                <span class="font-bold">How Much? </span>
-                Determine how much $BOB you want to buy. Minimum 0.5 ETH and Maximum 3 ETH
-            </p>
-            <p class="w-[90%] md:w-[550px]" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="300">
-                <span class="font-bold">Currency Accepted:</span>
-                Get the desired amount in USDT, USDC or ETH to complete your purchase. 
-            </p>
-            <p class="w-[90%] md:w-[550px]" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="400">
-                <span class="font-bold">Enter Exclusive Presale: </span>
-                Send the same amount in one of accepted currencies to our wallet below.
-            </p>
-        </div>
-
-
-       <div class="contract_container mt-[2.25rem] px-[1rem] py-[.5rem] rounded-[20px] bg-[#4292FF]">
-
-        <div class="address z-20 relative flex flex-col justify-center lg:flex-row  items-center gap-2  ">
-            <div class="text-white  address_form rounded-xl relative flex flex-col items-start px-5 py-2 text-left cursor-pointer max-w-full overflow-hidden lg:px-7 lg:rounded-2xl animated3"
-            data-aos="fade-right"
-            data-aos-duration="700">
-               <p class="copied hidden absolute left-0 top-0 h-full w-full text-[1rem] xl:text-[1.5rem]  justify-center items-center font-[100] bg-[#193B68] ">Copy to Keyboard</p>
-                <p class="text-[.7rem] md:text-sm">Wallet Address</p>
-                <span class="text-[.7rem] md:text-sm xl:text-xl" >0x627cC788f67B4113622E01DAda7F25998d7B6825</span>
-            </div>
-         
-        </div>
-
-       </div>
-
-       <div class="text-white text-[1.2rem] xl:text-[2rem] mt-[1.5rem] font-bold">
-        <p data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="200">Congratulations! You are now a $BOB Token Holder.</p>
-        <p class="text-[#FABD03]" data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="300">BUT Wait There is MORE - Register Now to WIN.</p>
-       </div>
-
-
-    </section>
-
-
-    <!-- register -->
-    <section class=" h-auto   relative w-full py-[3rem] max-w-full text-center flex flex-col items-center">
-        <h2 class="title_text_section uppercase text-[40px] xl:text-[65px] xl:w-full mb-[1rem]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">Register for  <span>news & win</span></h2>
-        <p class="text-[#00FFF2] text-[1.75rem] xl:text-[2.3rem] font-bold xl:w-[1080px]  max-[1024px]:px-[2rem]"  
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Keep Up With The Latest From Bet On Base</p>
-
-        <!-- step -->
-         <div class="flex flex-col items-center gap-[1.75rem] my-[2rem] w-[90%] md:w-[700px] relative text-left text-white text-[1.25rem] xl:text-[1.75rem]">
-           
-            <div class="flex gap-[1.75rem] w-full" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="200">
-                <img src="./assets/images/num4.svg" alt="" class="h-[45px] md:h-[60px] w-auto object-contain">
-                <p><span class="font-bold">Stay in Touch to Get Your Airdrop of $BOB Token:</span> Will be sent to your wallet after the presale ends.</p>
-            </div>
-
-            <div class="flex gap-[1.75rem] w-full" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="300">
-                <img src="./assets/images/num5.svg" alt="" class="h-[45px] md:h-[60px] w-auto object-contain">
-                <p><span class="font-bold">Register for News & WIN:</span>Access crucial info about the launch and get a FREE Wheel Spin.</p>
-            </div>
-
-            <div class="flex gap-[1.75rem] w-full" data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="400">
-                <img src="./assets/images/num6.svg" alt="" class="h-[45px] md:h-[60px] w-auto object-contain">
-                <p><span class="font-bold">Join Our Community:</span>  Connect on Twitter and Telegram groups and turn on notifications.</p>
-            </div>
-
-         </div>
-
-        <!-- join -->
-         <div class="flex justify-between items-center px-[1rem] md:px-[2rem] w-[90%] md:w-[600px] font_cosmic h-[80px] md:h-[100px] bg-black border-[2px] border-[#4292FF]" data-aos="fade-up"
-         data-aos-duration="400"
-         data-aos-delay="200">
-
-            <img src="./assets/images/connect_text.png" alt="" class="h-[15px] md:h-[30px] w-auto object-contain">
-
-            <div class="flex items-center gap-[0.5rem] h-full">
-                <a href="#tele" class="h-full flex justify-center items-center duration-100 ease-in hover:scale-110 cursor-pointer">
-                    <img src="./assets/images/telegram.svg" alt="" class="h-[80%] w-auto object-contain">
-                </a>
-                <a href="#twitter"  class="h-full flex justify-center items-center duration-100 ease-in hover:scale-110 cursor-pointer">
-                    <img src="./assets/images/twitter.svg" alt="" class="h-[80%] w-auto object-contain">
-                </a>
-            </div>
-
-         </div>
-    
-
-      
-        <!-- text -->
-        <p class="font-bold text-[#FABD03] my-[2rem] text-[1.35rem] md:text-[1.5rem] xl:text-[1.95rem]" data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="200">Share the #1 GambleFi Now.</p>
-
-       <div class="w-[90%] xl:w-[1000px] text-white text-[1.15rem] xl:text-[1.45rem] min-[1700px]:text-[1.85rem]  font-bold" data-aos="fade-up"
-       data-aos-duration="400"
-       data-aos-delay="300">
-         <p>Development is finished and LIVE, this project is not something that might happen, it is Team funded, real world utility, mega buyback and burn program! It is here, ready for play.... take a look</p>
-       </div>
-
-
-    </section>
-
-
-    
-     <!-- ready to play -->
-     <section class=" h-auto xl:h-[700px] min-[1400px]:mt-[5rem]  min-[1600px]:h-[900px]  min-[1800px]:h-[1000px] relative w-full  max-w-full text-center justify-start flex flex-col items-center max-[1024px]:px-[2rem] ">
- 
-        <img src="./assets/images/ready.png" alt="" class="w-[100%]   h-auto object-contain mb-[2rem] opacity-[0.6] relative xl:hidden" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">
-
-        <h2 class="title_text_section leading-[1] relative z-10 text-[40px] xl:text-[75px] min-[1600px]:text-[85px] xl:w-full  uppercase" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200"><span>are you ready</span> to play</h2>
-
-        <p class="text-[#00FFF2] relative z-10 py-[1.75rem] text-[1.25rem] xl:text-[3rem] font-bold xl:w-[1150px] leading-[1]" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">With 10,000 Games In Your Pocket!</p>
-
-        <p class="text-white font-bold relative z-10 text-[1.2rem] xl:text-[1.5rem] min-[1800px]:text-[1.85rem] w-full  xl:w-[1150px]   leading-[1] max-[1024px]:leading-[1.2] max-[1024px]:my-[2rem]" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">
-            Check out our new gambling entertainment Once You Receive Your $BOB Token, It Is Simple To Play! 
-            First, head to our Bet on Base site for our new gambling entertainment centre.
-            Next, connect your wallet and get started.
-        </p>
-
-
-        <!-- images -->
-         <div class="flex flex-wrap w-full relative z-[1] md:w-[600px] min-[1700px]:w-[900px] items-center justify-center gap-[2rem] mt-[1.75rem]">
-            <img src="./assets/images/CASINO-ICON.png" alt="" class="w-[30%] md:w-[150px] min-[1700px]:w-[240px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-            <img src="./assets/images/PORKER.png" alt="" class="w-[30%] md:w-[150px] min-[1700px]:w-[240px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-            <img src="./assets/images/LIVE_CASINO.png" alt="" class="w-[30%] md:w-[150px] min-[1700px]:w-[240px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-            <img src="./assets/images/SPORT.png" alt="" class="w-[30%] md:w-[150px] min-[1700px]:w-[240px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-            <img src="./assets/images/VR_GLASSES.png" alt="" class="w-[30%] md:w-[150px] min-[1700px]:w-[240px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-         </div>
-
-        <!-- links -->
-        <a href="https://www.betonbase.net/" target="_blank" class="text-[#FABD03] underline italic relative xl:absolute z-[1] xl:bottom-[8%] min-[1600px]:bottom-[15%] text-[20px] xl:text-[30px] font-bold" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">
-        Don’t forget to claim your 100% Bonus on Sign Up - Here! 
-        </a>
-     
-
-        <!-- bg -->
-     <div class="bg w-full h-full z-0 absolute left-0 bottom-0 flex justify-center items-center  max-[1280px]:opacity-0">
-        <img src="./assets/images/ready.png" alt="" class="w-[95%] max-w-[1800px] h-auto object-contain mb-[5rem] opacity-[0.3]">
-     </div>
-
-
-
-    </section>
-
-        
-    <!-- jackpots -->    
-    <section class=" h-auto xl:h-[900px] min-[1600px]:h-[1000px] relative w-full py-[3rem] max-w-full text-center justify-center flex flex-col items-center max-[1024px]:px-[2rem]  min-[1500px]:mt-[5rem] min-[1700px]:mt-[100px] ">
- 
-            <img src="./assets/images/jackpots.png" alt="" class="w-[100%]   h-auto object-contain mb-[2rem] opacity-[0.6] relative xl:hidden" data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="200">
-
-            <h2 class="title_text_section relative z-10 text-[40px] xl:text-[85px] xl:w-full  uppercase leading-[1]" data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="200">global <span>jackpots</span></h2>
-            <p class="text-[#00FFF2] relative  z-10 text-[1.25rem] xl:text-[2.8rem] min-[1800px]:text-[3rem] font-bold xl:w-[1080px] " data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="300">Crypto Jackpots and Tournaments</p>
-
-              <!-- for desktop -->
-            <p class="text-white hidden lg:block leading-[1] relative z-10 text-[1.2rem] xl:text-[1.85rem] w-full mt-[2rem] xl:mt-[5rem] min-[1280px]:mb-[14rem]" data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="200">
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                For those seeking even greater thrills, Betting on Base offers Token holders a 
-            </span> <br>
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                100% sign up bonus, hosts exclusive crypto jackpots and tournaments with 
-            </span> <br>
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                massive global prize pools.  
-            </span> 
-            <br> 
-            <br> 
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                    Players can compete against each other for a chance to win substantial 
-            </span>  <br>  
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                amounts of cryptocurrency, adding an extra dimension of excitement and 
-            </span>     <br>  
-            <span class="bg-[#193B68] rounded-lg px-[1rem]">
-                competition to the casino gaming experience.
-            </span>    
-           
-             </p>
-
-             <!-- for mobile -->
-            <p class="text-white block lg:hidden leading-[1] relative z-10 text-[1.2rem] w-full mt-[2rem]  " data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="200"> 
-                <span >  
-                    For those seeking even greater thrills, Betting on Base offers Token holders a 100% sign up bonus, hosts exclusive crypto jackpots and tournaments with massive global prize pools. 
-                </span>
-                <br>
-                <br>
-                <span>
-                    Players can compete against each other for a chance to win substantial amounts of cryptocurrency, adding an extra dimension of excitement and competition to the casino gaming experience.
-                </span>
-             </p>
-         
-
-            <!-- bg -->
-         <div class="bg w-full h-full z-0 absolute left-0 bottom-0 flex justify-center items-center  max-[1280px]:opacity-0">
-            <img src="./assets/images/jackpots.png" alt="" class="w-[95%] max-w-[1800px] h-auto object-contain mb-[5rem] opacity-[0.3]">
-         </div>
-    
-    
-    </section>
-
-
-    <!-- whitepaper section -->
-    <section id="whitepaper" class="overflow-hidden  relative w-full  flex flex-col items-center py-[2rem] xl:py-[5rem]  text-center"> 
-
-        
-        <h2 class="title_text_section relative z-10 text-[40px] xl:text-[85px] xl:w-full  uppercase leading-[1]" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="200">white<span>paper</span></h2>
-
-        <p class="text-[#00FFF2] relative  z-10 text-[1.25rem] xl:text-[1.8rem] min-[1800px]:text-[3rem] font-bold xl:w-[1080px] my-[2rem]" data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Want to know more about $BOB and Bet On Base Casino?</p>
-
-        <p class="text-[#fff] relative  z-10 text-[1.25rem] xl:text-[1.8rem] min-[1800px]:text-[3rem] font-bold xl:w-[1080px] " data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="300">Our whitepaper has everything you need to know and you can check it out by clicking below!</p>
-
-        <img src="./assets/images/whitepaper.png" alt="" class="w-[90%] md:w-[70%] xl:w-[500px] min-[1800px]:w-[700px] h-auto relative object-contain my-[1.2rem]" data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="200">
-
-        <div class="relative w-full flex justify-center"  data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="200">
-            <a  href="https://drive.google.com/file/d/1sec8IrG1spJRDiCpxUdoI3jvhDkg7scZ/view?usp=sharing" target="_blank"  class=" w-[90%] md:w-[200px] xl:w-[800px] min-[1800px]:w-[1000px]  h-[50px] flex justify-center items-center rounded-full bg-[#00FFF2] text-[#18365f] tracking-[1px] text-[1rem] md:text-[1.2rem] xl:text-[1.4rem] font-bold uppercase duration-200 hover:scale-105">
-                whitepaper
-            </a>
-        </div>
-
-    </section>
-
-
-    <!-- tokenomics -->
-    <section id="tokenomics" class="tokenomics  relative max-w-[100%] my-16 xl:my-32 w-full  h-auto flex flex-col items-center">
-
-        <div class="tilte_tokenomics z-[10]  relative flex flex-col items-center gap-6 px-7 mb-[2rem] xl:mb-[4rem]">
-
-            <div class="font-bold text-[40px] lg:text-[64px] relative w-full text-center flex justify-center "> 
-                <h2 class="title_text_section animated3 font_cosmic"
-                data-aos="fade-up"
-                data-aos-duration="500"><span>Token</span>omics</h2>
-            </div>
-            <h2 class="text-[#00FFF2] uppercase text-[1.75rem] font-bold xl:text-[3rem]"
-            data-aos="fade-up"
-            data-aos-duration="500">$bob token</h2>
-        
-
-          
-
-        </div>
-
-        <div class="about_tokenomics w-full flex-col xl:flex-row flex h-auto justify-center items-start max-w-[2000px] max-[1290px]:gap-[2rem] px-[2rem] xl:px-[5rem]">
-            
-            <div class="about_token w-full xl:w-[40%] flex justify-center items-center xl:pr-[1rem]">
-                <p class="text-[#fff] font-bold w-full text-center text-[1.1rem] md:text-[1.2rem] xl:text-[1.4rem] min-[1600px]:text-[1.7rem] "
-                data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="200">
-                    The bet on base platform is driven by the $BOB  token, an intrinsic utility token pivotal to the ecosystem's functionality. Engineered with a focus on encouraging sustained ownership, fostering platform growth, and implementing a deflationary strategy, $BOB  tokenomics aim to bolster the project's sustainability and vitality over time.
-                </p>
-            </div>
-
-            <div class="tokenomics_container flex flex-col   gap-4 lg:flex-row-reverse justify-center max-[1023px]:items-center  h-auto w-full xl:w-[60%] 2xl:w-[1000px]">
-            
-                <!-- total suply -->
-                <div class="suply w-full max-w-[99%] xl:w-[50%] z-[99] h-full rounded-[20px] animated4 border-[1.5px] border-[#62CFF4]">
-                    <div class="title w-full text-white text-center py-1 text-base md:text-[20px] xl:text-[25px] font-bold rounded-[20px] xl:mt-[1.5rem] xl:mb-[1rem]"
-                    ><h3 data-aos="fade-down" data-aos-duration="400">Total Supply 1.000.000.000 $BOB </h3></div>
-                    <div class="chart w-full flex justify-center">
-                        <canvas id="myPieChart">
-                        </canvas>
-                    </div>
-    
-                    <div class="charts flex text-white">
-                        <div class="flex  items-center w-full justify-between flex-wrap gap-3">
-                        <div class=" min-h-[168px] suply_1bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="200">
-                            <span>Invesor Launch</span>
-                            <span class="text-5xl">35%</span>
-                        </div>
-                        <div class="center_rounded min-h-[168px] suply_2bg justify-between flex-1 md:w-[30%]  p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="300">
-                            <span>Pre-sale</span>
-                            <span class="text-5xl">10%</span>
-                        </div>
-                        <div class=" min-h-[168px] suply_3bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="400">
-                            <span class="w-[50%]">LP</span>
-                            <span class="text-5xl">20%</span>
-                        </div>
-                    </div>
-                    </div>
-    
-                    <div class="charts mt-[2rem] flex text-white">
-                     <div class="flex  items-center w-full justify-between flex-wrap gap-3">
-                        <div class=" min-h-[168px] suply_4bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="500">
-                            <span>Casino Pool / Treasury  </span>
-                            <span class="text-5xl">10%</span>
-                        </div>
-                        <div class="center_rounded min-h-[168px] suply_5bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="600">
-                            <span>Staking</span>
-                            <span class="text-5xl">10%</span>
-                        </div>
-                        <div class="  min-h-[168px] suply_6bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                        data-aos-duration="400"
-                        data-aos-delay="700">
-                            <span class="w-[100%]">Rewards</span>
-                            <span class="text-5xl">5%</span>
-                        </div>
                      </div>
-                    </div>
 
-                    <div class="charts mt-[2rem] flex text-white">
-                        <div class="flex  items-center w-full justify-between flex-wrap gap-3">
-                           <div class="rounded-bl-[20px] rounded-br-[20px]  min-h-[168px] suply_7bg justify-between flex-1 md:w-[30%] p-6 flex flex-col font-bold text-center items-center" data-aos="zoom-in"
-                           data-aos-duration="400"
-                           data-aos-delay="500">
-                               <span>Team</span>
-                               <span class="text-5xl">10%</span>
-                           </div> 
-                        </div>
-                       </div>
-    
-                </div>
-      
-                  <!--texation-->
-                <div class="texation z-10  max-w-[99%] relative w-full h-auto  lg:h-[840px] rounded-[20px] text-center border-[1.5px] border-[#62CFF4] flex flex-col items-center  p-4 gap-[40px] xl:w-[50%] md:min-w-[35%] animated3">
-    
-                    <h3 class="font-bold text-white text-[30px]"
-                    data-aos="fade-down" data-aos-duration="400">Details</h3>
-    
-                    <div class="texation-token_container flex flex-col justify-between relative w-full xl:w-[90%] h-[500px] lg:h-full  py-[2rem] gap-[1.5rem] lg:gap-4 xl:gap-[4rem] ">
-                 
-                        <div class="texation-container relative h-[45px] md:h-[50px] xl:h-[55px] rounded-[15px] md:rounded-[20px] xl:rounded-[25px] w-full"
-                        data-aos="fade-right" data-aos-duration="400">
-                            <div class="w-full h-full flex items-center relative text-white">
-                                <p class="w-[50%] relative">Token Name</p>
-                                <div class="texation-result w-[50%] relative h-full flex items-center justify-center rounded-[13px] md:rounded-[15px] xl:rounded-[20px]">Bet On Base
-                                </div>
-                            </div>
-                        </div>
-                 
-                        <div class="texation-container relative h-[45px] md:h-[50px] xl:h-[55px] rounded-[15px] md:rounded-[20px] xl:rounded-[25px] w-full"
-                        data-aos="fade-right" data-aos-duration="400">
-                            <div class="w-full h-full flex items-center relative text-white">
-                                <p class="w-[50%] relative">Token Symbol </p>
-                                <div class="texation-result w-[50%] relative h-full flex items-center justify-center rounded-[13px] md:rounded-[15px] xl:rounded-[20px]">$BOB
-                                </div>
-                            </div>
-                        </div>
-                 
-                        <div class="texation-container relative h-[45px] md:h-[50px] xl:h-[55px] rounded-[15px] md:rounded-[20px] xl:rounded-[25px] w-full"
-                        data-aos="fade-right" data-aos-duration="400">
-                            <div class="w-full h-full flex items-center relative text-white">
-                                <p class="w-[50%] relative">Total supply</p>
-                                <div class="texation-result w-[50%] relative h-full flex items-center justify-center rounded-[13px] md:rounded-[15px] xl:rounded-[20px]">1.000.000.000
-                                </div>
-                            </div>
-                        </div>
-                 
-                        <div class="texation-container relative h-[45px] md:h-[50px] xl:h-[55px] rounded-[15px] md:rounded-[20px] xl:rounded-[25px] w-full"
-                        data-aos="fade-right" data-aos-duration="400">
-                            <div class="w-full h-full flex items-center relative text-white">
-                                <p class="w-[50%] relative">Chain </p>
-                                <div class="texation-result w-[50%] relative h-full flex items-center justify-center rounded-[13px] md:rounded-[15px] xl:rounded-[20px]">Base
-                                </div>
-                            </div>
-                        </div>
-                  
-    
-                    </div>
-    
-                </div>
-           
-            </div>
+                 </div>
 
+            </section>
 
-        </div>
+            <!-- footer -->
+             <footer class="w-full h-[15vw] xl:h-[10vw] flex_center">
 
-      
+                <img src="./static/images/footer_title.png" alt="" class="w-[20%] h-auto object-contain">
 
-    </section>
+                <!-- left -->
+                <img src="./static/images/footer_left.png" alt="" class="w-[50%] lg:w-[23%] h-auto object-contain left-[-12%] lg:left-[-9%] bottom-[-8%] absolute">
 
+                <!-- right -->
+                <img src="./static/images/footer_right.png" alt="" class="w-[42%] lg:w-[29%] h-auto object-contain right-[-8%] lg:right-[-3%] bottom-[-3%] absolute">
 
-
-
-
-
-
-
-
-    <!-- roadmap -->
-    <section id="roadmap" class="roadmap relative flex justify-center items-center flex-col  px-5">
-        <h2 class="roadmap_title font_cosmic relative text-[2rem] xl:text-[54px] title_text_section text-center md:text-left md:pl-[2rem]"
-        data-aos="fade-up" data-aos-duration="400">ROAD<span>MAP</span></h2>
-        <div class="roadmap_container rounded-[20px] border-[1px] border-[#62CFF4] mt-[2rem] py-[1.5rem] 2xl:max-w-[1500px]">
-
-            <div class="roadmap-wrap relative w-full h-auto md:h-[1000px] lg:h-[800px] xl:h-[63vw] 2xl:h-[900px]">
-                <div class="roadmaps-container">
-
-                    <div class="roadmap-image relative md:left-0 md:mt-[10rem] lg:mt-[2rem] min-[1400px]:mt-[3rem] min-[1500px]:mt-[5rem] w-full h-auto">
-                        <img src="./assets/images/roadmap.svg" alt="" class="w-full h-auto object-cover relative xl:absolute xl:top-[-50px] min-[1500px]:top-[-80px]">
-                    </div>
-
-                    <div class="roadmap-steps-container h-auto flex items-center flex-col gap-[1.3rem]">
-
-                        <!-- step1 -->
-                        <div class="step relative w-full md:absolute md:left-[1rem] md:top-[46vw] lg:top-[26vw] md:w-[14vw] 2xl:w-[250px] 2xl:top-[400px]"
-                        data-aos="fade-up" data-aos-duration="400">
-                            <h3 class="text-[#F17B49] font-bold text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Presale and Marketing</h3> 
-                            <div class="phase-text relative w-full text-center md:text-left px-[1.85rem] md:px-0 flex items-center flex-col gap-[.3rem] md:gap-[.7rem]">
-                                <p class="md:w-full text-[#fff] opacity-[0.8] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]"> $BOB starts on a level playing field with a fair presale. The team will allocate a portion of funds raised towards a professional marketing strategy.</p> 
-                            </div>
-                        </div>
-
-                        <!-- step2 -->
-                        <div class="step relative w-full md:absolute md:left-[36vw] md:top-[61vw] lg:top-[40vw]  md:w-[23vw] 2xl:w-[350px] 2xl:top-[600px] 2xl:left-[580px]"
-                        data-aos="fade-up" data-aos-duration="400">
-                            <h3 class="text-[#F17B49] font-bold text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Presale Token Claiming</h3>  
-                            <div class="phase-text relative w-full text-center md:text-left px-[1.85rem] md:px-0 flex items-center flex-col gap-[.3rem] md:gap-[.7rem] text-[#ffffffab]">
-                                <p class="md:w-full text-[#fff] opacity-[0.8] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]">To ensure a fair launch for  $BOB, presale buyers will be able to claim their tokens from the website at the same time as the DEX listing.</p> 
-                            </div>
-                        </div>
-
-                        <!-- step3 -->
-                        <div class="step relative w-full md:absolute md:left-[28vw] md:top-[20vw] md:w-[30vw] lg:top-[0vw] xl:w-[28vw] 2xl:left-[500px] 2xl:w-[320px]"
-                        data-aos="fade-up" data-aos-duration="400">
-                            <h3 class="text-[#F17B49] font-bold text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Allocated Liquidity Provision</h3> 
-                            <div class="phase-text relative w-full text-center md:text-left px-[1.85rem] md:px-0 flex items-center flex-col gap-[.3rem] md:gap-[.7rem]">
-                                <p class="md:w-full text-[#fff] opacity-[0.8] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]">The  $BOB team will add a substantial liquidity pool. For this purpose, 10% of the total token supply has been set aside.</p> 
-                            </div>
-                        </div>
-
-                        <!-- step4 -->
-                        <div class="step relative w-full md:absolute md:right-[20%] md:top-[72vw] md:w-[16vw] lg:top-[50vw] lg:right-[150px] lg:w-[24vw] 2xl:top-[760px] 2xl:right-[150px] 2xl:w-[450px] "
-                        data-aos="fade-up" data-aos-duration="400">
-                            <h3 class="text-[#F17B49] font-bold text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Early Staking Incentive</h3> 
-                            <div class="phase-text relative w-full text-center md:text-left px-[1.85rem] md:px-0 flex items-center flex-col gap-[.3rem] md:gap-[.7rem]">
-                                <p class="md:w-full text-[#fff] opacity-[0.8] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]">Presale buyers of  $BOB will be able to stake their tokens into the smart contract before listing day to benefit from the high early rewards opportunity.
-
-                                </p> 
-                            </div>
-                        </div>
-
-                          <!-- step5 -->
-                          <div class="step relative w-full md:absolute md:right-[.5rem] md:top-[39vw] md:w-[16vw] lg:top-[20vw] lg:w-[17vw] 2xl:top-[300px] 2xl:w-[270px] "
-                          data-aos="fade-up" data-aos-duration="400">
-                              <h3 class="text-[#F17B49] font-bold text-[1.25rem] xl:text-[1.4rem] mb-[1rem] text-center md:text-left">Early Staking Incentive</h3> 
-                              <div class="phase-text relative w-full text-center md:text-left px-[1.85rem] md:px-0 flex items-center flex-col gap-[.3rem] md:gap-[.7rem]">
-                                  <p class="md:w-full text-[#fff] opacity-[0.8] text-[.7rem] xl:text-[1rem] min-[1600px]:text-[1.2rem]">Presale buyers of  $BOB will be able to stake their tokens into the smart contract before listing day to benefit from the high early rewards opportunity.
-  
-                                  </p> 
-                              </div>
-                          </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- frequently asked question  -->
-    <section id="faq" class="w-full  relative h-auto my-[4rem] mx-auto max-w-[1700px] flex flex-col items-end justify-center">
-        <div class="font-bold  relative w-full text-center flex justify-center flex-col"> 
-            <h2 class="  animated3 title_text_section font_cosmic text-[10vw] min-[400px]:text-[30px] lg:text-[54px]"
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="200"
-            > <span>ask</span> bob</h2>
-            <h4 class="text-[#4292ff] font-bold text-[20px] xl:text-[40px]">Frequently Asked Questions</h4> 
-        </div>
-
-        <img src="./assets/images/bob_ask.png" alt="" class="w-[70px] xl:w-[400px] object-contain absolute h-auto left-[5%] top-0 xl:top-[30%]" data-aos="fade-left"
-        data-aos-duration="600"
-        data-aos-delay="200">
-        <img src="./assets/images/bob_right.png" alt="" class="w-[100px] xl:w-[500px] object-contain absolute h-auto right-[0%] top-0 xl:top-[30%] xl:hidden mirror_img" data-aos="fade-right"
-        data-aos-duration="600"
-        data-aos-delay="200">
-
-        <div class="faq_container relative w-full xl:w-[70%] flex flex-col items-center px-[1rem] mt-[2rem] xl:px-[3rem] gap-[2rem]">
-
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-            data-aos-duration="500"
-            data-aos-delay="200"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]">What is a presale?</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]">A presale represents a unique opportunity in the cryptocurrency realm where investors are granted the chance to purchase a new token or cryptocurrency before its official release to the broader market. This early access phase allows participants to invest in a project's potential from its inception.</p>
-                </div>
-            </div>
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-            data-aos-duration="500"
-data-aos-delay="300"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]"> What is Betting on Base</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]"> BOB Casino is a cutting-edge online platform that offers an extensive range of top-tier casino games, sports betting options, and more, tailored for the modern gambler. Beyond just a gaming site, $BOB is dedicated to fostering a community where loyalty is valued and rewarded. Through the integration of the $BOB token, it introduces a unique ecosystem where players can enjoy exclusive benefits, including revenue sharing and enhanced rewards. bet on base stands out by combining the thrill of gaming with the benefits of cryptocurrency innovation, ensuring a rewarding experience for all its users.</p>
-                </div>
-            </div>
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-data-aos-duration="500"
-data-aos-delay="400"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]">What is $BOB token?</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]">At bet on base, not only do you get to enjoy the best online casino games, sportsbooks, and more, but we're also focused on building a loyalty-driven ecosystem. In line with our commitment, we're redistributing a share of our casino's revenue back to our community through the buyback of the $BOB token. It's our way of saying thank you: play, earn, and reap the rewards!
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-data-aos-duration="500"
-data-aos-delay="500"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]">How can I get $BOB airdrop?</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]">To become eligible for the $BOB airdrop, there are several pathways designed to reward our community's engagement and loyalty. Participants who maintain activity on bet on base within 21 days and achieve a total wagering volume of $5,000 USD can qualify for an airdrop, showcasing our appreciation for your consistent play. Additionally, for those actively wagering in any cryptocurrency from the onset of the presale to the official launch of the $BOB token, an exclusive airdrop awaits. Furthermore, a special airdrop is reserved for users who choose to wager in $BOB or $ tokens during the same timeframe, further enriching their investment in our community. Engage with us through these avenues to not only enjoy the exhilarating bet on base experience but also to secure your share of the $BOB airdrop rewards.</p>
-                </div>
-            </div>
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-data-aos-duration="500"
-data-aos-delay="600"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]">What benefits does $BOB offer?</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]">bet on base offers the flexibility to play using the leading cryptocurrencies, yet it's the exclusive $BOB token that unlocks remarkable benefits, including staking rewards and additional perks simply for possessing it. Although not mandatory for participation in the casino's various games, $BOB serves as an additional currency option for wagering, standing out with its unique advantages.</p>
-                </div>
-            </div>
-            <div class="faq relative w-full h-auto" data-aos="fade-right"
-data-aos-duration="500"
-data-aos-delay="700"
->
-                <div class="faq_btn w-full h-[50px] flex justify-between items-center">
-                    <h3 class="text-white text-[1.4rem] md:text-[1.7rem] xl:text-[2rem] cursor-pointer font-[800] duration-150 hover:text-[#62CFF4]">How do I contact support?</h3>
-                    <img src="./assets/images/faq_arrow.svg" alt="arrow" class="h-auto relative w-[40px] md:w-[50px] xl:w-[60px] duration-150 ">
-                </div>
-                <div class="answer w-full   overflow-hidden flex justify-center">
-                    <p class="text-[#d3d3d3] w-[90%] tracking-[.5px] xl:tracking-[1px] text-[1rem] md:text-[1.1rem] xl:text-[1.2rem]">The presale will be open until the hard cap is reached. The soft cap for the presale is 5 million USD.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- footer section -->
-    <footer class="footer text-white w-full  mt-10 px-5 flex flex-col lg:flex-row lg:justify-between lg:px-40 py-10 max-w-[1700px] mx-auto xl:pb-[3rem]">
- 
-        <div class="links w-full flex justify-between lg:justify-start gap-4 max-[1024px]:flex-wrap">
-            <div class="flex flex-col w-auto items-start ">
-                <span class="text-[24px] font-bold"
-                data-aos="fade-right" data-aos-duration="600">Services</span>
-                <div class="flex items-start flex-col gap-1 mt-4 2xl:text-[1.15rem]" data-aos="fade-right"
-                data-aos-duration="600" >
-                    <a class="w-fit hover:border-b-white border border-transparent duration-150" href="/"
-                    >Exclusive Crypto Gaming</a><a class="w-fit hover:border-b-white border border-transparent duration-150" href="/"
-                    >Provably Fair Gaming</a><a class="w-fit hover:border-b-white border border-transparent duration-150" href="/"
-                    >Crypto Jackpots and Tournaments</a>
-                    <a class="w-fit hover:border-b-white border border-transparent duration-150" href="/"
-                   >Smart Contract Gaming</a>
-                    <a class="w-fit hover:border-b-white border border-transparent duration-150" href="/"
-                   >Anonymous Betting</a>
-                </div>
-            </div>
-            <div class="flex flex-col items-start">
-                <span class="text-[24px] font-bold"
-                data-aos="fade-left" data-aos-duration="400">Link</span>
-                <div class="flex items-start flex-col gap-1 mt-4 2xl:text-[1.15rem]" data-aos="fade-left" data-aos-duration="400">
-                <a class="w-fit hover:border-b-white border border-transparent duration-150" target="_blank" href="https://telegram.org/"
-                >Telegram</a>
-                <a class="w-fit hover:border-b-white border border-transparent duration-150" target="_blank" href="https://twitter.com"
-                >Twitter</a>
-                <a class="w-fit hover:border-b-white border border-transparent duration-150" href="https://basescan.org/" target="_blank"
-                >BaseScan </a>
-                <a class="w-fit hover:border-b-white border border-transparent duration-150" href="https://www.dextools.io/app/en/ether" target="_blank">Dextools </a>  
-            </div>
-        </div> 
-
-        <div class="flex flex-col items-end w-full"> 
-            <img src="./assets/images/BOB2.png" alt="logo" class="w-[50px] xl:w-[100px] h-auto object-contain" data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200">
-            <span class="font-semibold"
-            data-aos="fade-right" data-aos-duration="400">Managed by <span class="font-black"
-                data-aos="fade-right" data-aos-duration="400"
-                > $BOB </span></span>
-            <div class="social_media flex items-center gap-3">
-
-                <!-- twitter -->
-                <a class="w-fit hover:bg-blue-950 hover:scale-90 hover:text-black rounded-full p-1 duration-150" href="https://twitter.com" target="_blank" data-aos="fade-right" data-aos-duration="400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="white" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
-                </a>
-
-                <!-- telegram -->
-                <a class="w-fit hover:bg-blue-950 hover:scale-90 hover:text-black rounded-full p-1 duration-150"  href="https://telegram.org/" target="_blank" data-aos="fade-right" data-aos-duration="400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="white"/></svg>
-                </a>
-
-            </div>
-            <span class="text-sm"
-             >© 2024 - $BOB  . All rights reserved.</span> 
-            <span class="text-sm">support@betonbase.wtf
-            </span>
-        </div>
-        </div>
-        
-
-    </footer>
+             </footer>
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.0.0/scrollReveal.js" integrity="sha512-C5vaj0THdudBZn7DvfkEb/Bt12RDCn2oPOyWN1bsH6NPSw4xJ1eA8NE5QsgURl6cCAd7pvvqtrums8iGcoJU6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- aos js library animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ 
+    <script src="./static/js/index.js"></script>
 
-    
-    <!-- aos js scroll animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- scripts -->
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/rate.js?v=1.0.2"></script>
 </body>
 </html>
