@@ -1,10 +1,10 @@
-document.addEventListener('mousemove', function (event) {
-  const x = event.clientX - window.innerWidth / 2;
-  const y = event.clientY - window.innerHeight / 2;
+// document.addEventListener('mousemove', function (event) {
+//   const x = event.clientX - window.innerWidth / 2;
+//   const y = event.clientY - window.innerHeight / 2;
 
-  document.body.style.setProperty('--mouse-x', x + 'px');
-  document.body.style.setProperty('--mouse-y', y + 'px');
-});
+//   document.body.style.setProperty('--mouse-x', x + 'px');
+//   document.body.style.setProperty('--mouse-y', y + 'px');
+// });
 
 // const enterBtn = document.querySelector('.enter__btn');
 // const enterScreen = document.querySelector('.enter');

@@ -179,6 +179,8 @@ button {
 
 .wrapper {
   min-height: 100vh;
+  max-width: 100%;
+
   overflow-x: hidden;
 
   background: url("../images/background.svg");
@@ -1298,6 +1300,8 @@ background-size: 100%;
   align-items: center;
   justify-content: center; 
   padding: 100px 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .final__col {
@@ -1648,9 +1652,13 @@ a {
 
 /* media screen */
 @media screen and (max-width:1000px) {
+  .final__container{
+    max-width: 100%;
+    
+  }
   .join_container{
     width: 80%;
-    height: 80vw; 
+    height: 80vw;  
   }
 }
 
