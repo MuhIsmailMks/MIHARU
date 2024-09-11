@@ -552,6 +552,10 @@ button {
   .hero__title {
     font-size: 48px;
   }
+
+  .hero{
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
