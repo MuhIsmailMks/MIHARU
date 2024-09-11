@@ -1514,15 +1514,6 @@ a {
   -webkit-animation: rotateImg 10s infinite linear;
 }
 
-@keyframes rotateImg {
-  100%{
-    transform: rotate(1turn);
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-}
-}
  
 .hero_img::after{
   content: "";
@@ -1574,10 +1565,20 @@ a {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
 
+
+}
+
+.join_container::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
   background-image: url('../images/Ellipse.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: rotateImg 10s infinite linear;
 }
 
 .join_social{
@@ -1708,4 +1709,16 @@ a {
     -ms-transform: translateY(1vw);
     -o-transform: translateY(1vw);
   }
+}
+
+
+
+@keyframes rotateImg {
+  100%{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
 }
