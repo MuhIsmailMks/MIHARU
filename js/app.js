@@ -46,3 +46,37 @@ function toggleMobileNav() {
 // window.onload = () => audio.play();
 // window.onclick = () => audio.play();
 // window.onscroll = () => audio.play();
+
+   // typed animation
+   let elements = document.querySelectorAll('.writingAnimated');
+
+   elements.forEach(element => {
+       let typed = new Typed(element, {
+           strings: [element.dataset.typedStrings],
+           typeSpeed: 50,
+           smartBackspace: false,
+           loop: true
+       });
+   });
+
+   const news_images = document.querySelectorAll('.news_image');
+   const popUp_container = document.querySelector('.popUp_container');
+   const image_popUp_container = document.querySelector('.popUp_container .image_popUp');
+
+   news_images.forEach(news_image => {
+news_image.addEventListener('click', () => {
+const img = news_image.querySelector('img').src;
+console.log(img);
+
+image_popUp_container.src = img
+
+popUp_container.classList.add('flex')
+popUp_container.classList.remove('hidden')
+})
+})
+
+popUp_container.addEventListener('click', () =>{
+popUp_container.classList.remove('flex')
+popUp_container.classList.add('hidden')
+})
+

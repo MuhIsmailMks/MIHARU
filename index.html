@@ -8,11 +8,12 @@
   <style data-merge-styles="true"></style>
   <style data-merge-styles="true"></style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="120x120" href="./images/logo.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.jpg">
-  <link rel="mask-icon" href="./images/logo.jpg" color="#5bbad5">
-  <link rel="shortcut icon" href="./images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+  <link rel="mask-icon" href="./images/logo.png" color="#5bbad5">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="./images/logo.png">
   <title>Hemule </title>
   <link rel="stylesheet" href="css/main.css"> 
 </head>
@@ -24,14 +25,14 @@
     <header class="header">
       <div class="header__container container">
         <a class="header__logo logo" >
-          <img class="logo__icon" src="./images/logo.jpg" alt="">
+          <img class="logo__icon" src="./images/logo.png" alt="">
           <div class="logo__text">
             Popdog
             <sub></sub>
           </div>
         </a>
         <div class="header__contract">
-          <p class="">
+          <p class="copyContract">
             000000000000000000000000000000DEAD</p>
             <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
         </div>
@@ -103,7 +104,7 @@
         <div class="fan__body">
           <div class="fan__item">
             <div class="fan__subtitle text-outlined">Learn</div>
-            <a target="_blank"><img src="./images/logo.jpg" alt="learn" class="fan__img"></a>
+            <a target="_blank"><img src="./images/logo.png" alt="learn" class="fan__img"></a>
             <a target="_blank" class="fan__link">Fandom</a>
           </div>
           <div class="fan__item">
@@ -119,7 +120,7 @@
         </div>
 
         <div class="fan__contract">
-          <p class="">  000000000000000000000000000000DEAD</p>
+          <p class="copyContract">  000000000000000000000000000000DEAD</p>
           <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
         </div>
        
@@ -128,7 +129,7 @@
       </div>
     </section>
 
-    <section id="about-us" class="about">
+    <section id="about-us" class="about" style="display: none;">
       <!-- <img class="about__background" src="images/background.svg" alt=""> -->
       <div class="about__container container">
         <h2 class="about__title text-outlined">About Vitalik’s Cat<span>?</span></h2>
@@ -145,6 +146,259 @@
       </div>
     </section>
 
+  <!-- about -->
+  <section id="about" class="w-full h-auto relative pt-[100px] pb-[100px] lg:pt-[300px] text-white flex flex-col items-center text-center gap-[3rem] ">
+ 
+ 
+        <!-- browser -->
+    <div class="w-[97%]  max-w-[1800px] relative h-auto  bg-[#B7B7B7] mx-auto rounded-[30px] lg:rounded-[50px] flex justify-center items-center flex-col px-[1rem] lg:px-[2rem]  gap-[1rem] max-[1023px]:py-[2rem] pb-[2rem]  delius_font z-10">
+            
+        <!-- title browser -->
+        <div class="flex relative justify-between items-center w-full">
+        <p class="text-black text-[24px] font-bold">Browser</p>
+
+        <div class="flex justify-center items-center gap-[1rem]">
+
+        <span class="rounded-full h-[28px] w-[28px] bg-[#60BF89] border-[3px] border-[#181818]"></span>
+        <span class="rounded-full h-[28px] w-[28px] bg-[#FFC374] border-[3px] border-[#181818]"></span>
+        <span class="rounded-full h-[28px] w-[28px] bg-[#FF8080] border-[3px] border-[#181818]"></span>
+
+        </div>
+
+        </div>
+
+        <!-- content -->
+        <div  class="flex relative justify-between items-center w-full flex-col  h-uto bg-[#FFFFFF]     ">
+
+        <!-- top -->
+        <div class="flex justify-between items-center flex-wrap w-full bg-[#509624] h-[160px] md:h-[100px]   px-[1rem]">
+            
+            <!-- logo -->
+            <div class="flex justify-center items-center">
+                <p class="genty_font about_title text-left leading-[1] text-[25px] lg:text-[34px]">Vitalik’s Cat </p>
+            </div>
+
+            <!-- searching desktop -->
+            <div class="w-[70%] hidden xl:w-[740px] h-[52px] bg-[#FAF460] rounded-[20px] px-[.65rem] md:flex justify-between items-center ">
+
+                <div class="text-black font-bold flex items-center gap-[.5rem] text-[10px] md:text-[12.5px] pl-[.5rem] text-wrap w-full">
+                    blog.threadless.com/artist-matt-furie-has-teamed-up-with-save-the-frogs-to-savepepe-artist-shop-spotlight/
+                </div>
+
+                
+                <div class="relative cursor-pointer duration-150 hover:scale-105 ">
+                    <a href="https://blog.threadless.com/artist-matt-furie-has-teamed-up-with-save-the-frogs-to-savepepe-artist-shop-spotlight/" target="_blank" class="bg-[#F17878] rounded-[15px] w-[90px] h-[40px] border-[3px] border-black flex justify-center items-center">
+                        <img src="./assets/images/searching_text.svg" alt="" class="h-auto object-contain w-[90%]">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- buy -->
+            <a href="https://etherscan.io/token/0x407b574d34d1b967d1a6c927c58b6b76b7f9202f" target="_blank" class="relative w-auto h-auto">
+                <img src="./assets/images/etherscan_dextools.png" alt="ether" class="w-[200px] h-auto object-contain hover:scale-110">
+            </a>
+
+            
+
+        </div>
+
+        <!-- content -->
+        <div  class="flex justify-center items-start flex-col lg:flex-row h w-full h-auto xl:h-[90%]  overflow-auto max-[1023px]:p-[.65rem] pt-[2rem]">
+            
+            <!-- left -->
+            <div class="max-w-[100%] flex  items-center flex-col w-full lg:w-[25%] h-full  gap-[1rem] pt-[1rem]  lg:pr-[1rem]">
+                
+                <!-- image -->
+                <div class="w-full h-auto py-[1rem] border-[10px] rounded-xl border-[#F17878] bg-[#FAF460] flex justify-center items-center  ">
+                    <img src="./images/logo.png" alt="" class="object-contain h-auto w-[60%] md:w-[250px] lg:w-[90%] rounded-[30px]">
+                </div>
+
+                <!-- name -->
+                <div class="w-full h-auto flex justify-center items-center flex-col gap-[.6rem] text-[13px] min-[1400px]:text-[14px] uppercase font-bold">
+                    <div class="w-full text-black  flex justify-between items-center ">
+                        <p class="text-[#828282]">Name :</p>
+                        <p >flight of the peacefrog</p>
+                    </div>
+                    <div class="w-full text-black  flex justify-between items-center ">
+                        <p class="text-[#828282]">code :</p>
+                        <p>$FROG</p>
+                    </div>
+                    <div class="w-full text-black  flex justify-between items-center  cursor-pointer copy_btns">
+                        <p class="text-[#828282]">contract :</p>
+                        <p class="copy_btn contract_address">0x4. . . 202F</p>
+                        <!-- <p>0x4. . . 202F</p> -->
+                    </div>
+                    <div class="w-full text-black  flex justify-between items-center ">
+                        <p class="text-[#828282]">looking for :</p>
+                        <p>1B marketcap</p>
+                    </div>
+                </div>
+
+                <!-- images -->
+                    <div class="flex flex-wrap justify-center gap-[.95rem] overflow-hidden h-auto  relative ">
+
+                    <div class="relative duration-100 news_image select-none w-[40.3%] h-auto cursor-pointer">
+                        <img src="./web2.png" alt="" class="object-cover  h-auto xl:h-[1300px] max-h-[130px] w-[100%] relative rounded-[1rem] border-black border-[1px]">
+                    </div>
+                    <div class="relative duration-100 news_image select-none w-[40.3%] h-auto cursor-pointer">
+                        <img src="./web5.png" alt="" class="object-cover  h-auto xl:h-[1300px] max-h-[130px] w-[100%] relative rounded-[1rem] border-black border-[1px]">
+                    </div>
+                    <div class="relative duration-100 news_image select-none w-[40.3%] h-auto cursor-pointer">
+                        <img src="./web4.png" alt="" class="object-cover  h-auto xl:h-[1300px] max-h-[130px] w-[100%] relative rounded-[1rem] border-black border-[1px]">
+                    </div>
+                    <div class="relative duration-100 news_image select-none w-[40.3%] h-auto cursor-pointer">
+                        <img src="./web6.png" alt="" class="object-cover  h-auto xl:h-[1300px] max-h-[130px] w-[100%] relative rounded-[1rem] border-black border-[1px]">
+                    </div>
+                        
+
+                    </div>
+
+            </div>
+
+            <!-- center -->
+                <div  class="max-w-[100%] flex justify-start items-center flex-col w-full lg:w-[52%] h-full  pt-[2rem]  lg:px-[1rem] bg-[#509624] max-[1023px]:my-[2rem]">
+            
+                <!-- image -->
+                <div class="w-full md:w-[500px] h-auto relative bg-white rounded-full overflow-hidden mb-[2rem] flex justify-center">
+                    <img src="./images/logo.png" alt="" class="object-cover h-[330px] w-auto relative ">
+                </div>
+
+                <!-- message -->
+                <div class="  w-full h-auto flex justify-center items-center flex-col gap-[2rem] mb-[1rem] font-bold">
+                
+                    <!-- 1 -->
+                    <div class="w-[98%] lg:w-[90%] h-auto xl:h-[55px] relative border-[2px] border-[#181818] rounded-[20px] bg-[#FAF460] flex justify-between items-center lg:pl-[.75rem]  max-[1023px]:pt-[.5rem]">
+
+                        <!-- by -->
+                        <div class="rounded-[7px] bg-[#BAFFC9] h-[23px] w-[72px] border-black border-[2px] max-[1024px]:ml-[1rem] px-[.2rem]">
+                        <p class="text-[#067EBA]  text-[12px]">MICHAEL</p>
+                        </div>
+                        <!-- mess -->
+                        <p class="w-full text-left  lg:w-[86%] max-[1023px]:px-[.5rem] lg:pr-[1.5rem] leading-[1] text-black max-[400px]:text-[3vw] text-[11.5px] lg:text-[15px] pl-[.5rem]" > 
+                            <!-- First things first. Matt, what is Pepe’s origin story? -->
+                            <span class="writingAnimated w-full" data-typed-strings="  First things first. Matt, what is Pepe’s origin story?"></span>
+                        </p>
+
+                        <button class="h-auto w-auto relative pr-[.35rem] duration-100 hover:scale-90">
+                            <img src="./assets/images/send_btn1.png" alt="" class="h-[50px] w-auto object-contain">
+                        </button>
+
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="w-[98%] h-auto relative border-[2px] border-[#181818] rounded-[20px] bg-[#BAFFC9] flex justify-between items-center lg:pl-[.75rem]  max-[1023px]:pt-[.5rem] py-[.65rem]">
+
+                        <!-- by -->
+                        <div class="rounded-[7px] bg-[#FAF460] h-[23px] w-[72px] border-black border-[2px] max-[1024px]:ml-[1rem] px-[.2rem]">
+                        <p class="text-[#509624]  text-[12px]">MATT</p>
+                        </div>
+                        
+                        <!-- mess -->
+                        <p class="w-full h-auto text-left  lg:w-[86%] max-[1023px]:px-[.5rem] lg:pr-[1.5rem] leading-[1] text-black max-[400px]:text-[3vw] text-[11.5px] lg:text-[15px] pl-[.5rem]" >  
+                            <span class="writingAnimated w-full" data-typed-strings="  Pepe began as an artwork titled “Flight of the Peacefrog” that I made in 2004. It featured Pepe – an anthropomorphic frog in a colorful tracksuit – riding on the back of a bird. He came from my continued interest in drawing animal/human hybrids. People can relate to the frog because frogs are for everybody. They are a unique and beautiful cosmic wonder."></span>
+                        </p>
+
+                        <button class="h-auto w-auto relative pr-[.35rem] duration-100 hover:scale-90">
+                            <img src="./assets/images/send_btn2.png" alt="" class="h-[50px] w-auto object-contain">
+                        </button>
+
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="w-[98%] lg:w-[90%] h-auto py-[1rem] relative border-[2px] border-[#181818] rounded-[20px] bg-[#FAF460] flex justify-between items-center lg:pl-[.75rem]  max-[1023px]:pt-[.5rem]">
+
+                        <!-- by -->
+                        <div class="rounded-[7px] bg-[#BAFFC9] h-[23px] w-[72px] border-black border-[2px] max-[1024px]:ml-[1rem] px-[.2rem]">
+                        <p class="text-[#067EBA]  text-[12px]">MICHAEL</p>
+                        </div>
+                        <!-- mess -->
+                        <p class="w-full text-left  lg:w-[86%] max-[1023px]:px-[.5rem] lg:pr-[1.5rem] leading-[1] text-black max-[400px]:text-[3vw] text-[11.5px] lg:text-[15px] pl-[.5rem]" > 
+                           
+                            <span class="writingAnimated w-full" data-typed-strings=" Matt, you said in an interview with The Guardian that Pepe, along with your other characters, is an extension of yourself – did Pepe’s use in hate groups feel more personal than the use of a meme typically might?"></span>
+                        </p>
+
+                        <button class="h-auto w-auto relative pr-[.35rem] duration-100 hover:scale-90">
+                            <img src="./assets/images/send_btn1.png" alt="" class="h-[50px] w-auto object-contain">
+                        </button>
+
+                    </div>
+
+                        <!-- 2 -->
+                        <div class="w-[98%] h-auto relative border-[2px] border-[#181818] rounded-[20px] bg-[#BAFFC9] flex justify-between items-center lg:pl-[.75rem]  max-[1023px]:pt-[.5rem] py-[.65rem]">
+
+                            <!-- by -->
+                            <div class="rounded-[7px] bg-[#FAF460] h-[23px] w-[72px] border-black border-[2px] max-[1024px]:ml-[1rem] px-[.2rem]">
+                            <p class="text-[#509624]  text-[12px]">MATT</p>
+                            </div>
+                            
+                            <!-- mess -->
+                            <p class="w-full h-auto text-left  lg:w-[86%] max-[1023px]:px-[.5rem] lg:pr-[1.5rem] leading-[1] text-black max-[400px]:text-[3vw] text-[11.5px] lg:text-[15px] pl-[.5rem]" > 
+                              
+                                <span class="writingAnimated w-full" data-typed-strings="   It’s a great reminder that we have a lot of work to do. I, along with many others, was living in a reality that celebrates American diversity and creates peace and love in our day to day lives. Pepe is a symbolic reminder that we still have a long way to go to help others along the path."></span>
+                            </p>
+    
+                            <button class="h-auto w-auto relative pr-[.35rem] duration-100 hover:scale-90">
+                                <img src="./assets/images/send_btn2.png" alt="" class="h-[50px] w-auto object-contain">
+                            </button>
+    
+                        </div>
+                    
+                </div>
+
+                </div>
+
+                <!-- right -->
+                <div  class="max-w-[100%] flex items-center flex-col w-full lg:w-[22%]  h-full  gap-[1rem]  overflow-hidden lg:pl-[1rem]  "> 
+
+                    <div class="w-full h-[200px] flex justify-center items-center ">
+                        <img src="./images/hamule2.png" alt="" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="w-full h-[200px] flex justify-center items-center lg:mt-[2rem]">
+                        <img src="./images/hamule.png" alt="" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="w-full h-auto flex justify-center items-center bg-[#EF4343] px-[1.5rem]">
+                       <p class="text-[10px] text-black">Matt: It’s just the latest thing. The internet has so many unintended consequences. I never imagined people would listen to albums on Youtube. It has not changed the way I work as an artist. Art, for me, is therapeutic and meditative. It’s a way to enjoy the moment and be in a happy place. As long as I can draw I’ll always have that happy place, no matter what nonsense is going on on the internet. It’s important to detach from all of this information and just enjoy drawing like I used to as a kid. That said, my art isn’t just flowers and rainbows. I’m working on a series at the moment about factory farming that features Miss Piggies being mutilated on industrial levels by terminators. A Hell on Earth.</p>
+                    </div>
+
+                    <div class="w-full h-[200px] flex justify-center items-center  ">
+                        <img src="./images/logo.png" alt="" class="w-full h-full object-cover">
+                    </div>
+
+
+                </div>
+
+        </div>
+
+            <!-- pop up image -->
+        <div class="popUp_container w-full h-full  cursor-pointer absolute left-0 top-0 hidden justify-center items-center z-10">
+
+            <div class=" w-[90%] md:w-[600px] h-auto md:h-[700px] relative bg-white border-[2px] border-black ">
+                
+                <div class="close_btn z-10 absolute right-[-20px] top-[-20px] md:right-[-40px] md:top-[-40px] h-[40px] lg:h-[60px] w-[40px] lg:w-[60px] rounded-full border-[2px] border-black bg-white cursor-pointer flex justify-center items-center">
+                    <img src="./assets/images/close.svg" alt="" class="w-[50%] h-auto object-contain ">
+                </div>
+
+                <img src="./assets/images/browser_center1.png" alt="img" class="w-full h-full object-cover relative image_popUp">
+            </div>
+
+        </div>
+
+        </div>
+
+    
+
+    </div>
+
+ 
+ 
+ 
+
+  </section>
+
+
     <section id="tokenomics" class="tokenomics">
       <div class="tokenomics__container container">
         <div class="tokenomics__col">
@@ -153,7 +407,7 @@
           <p class="tokenomics__subtitle">Contract address</p>
 
           <div class="tokenomics__contract">
-            <p class="">
+            <p class="copyContract">
               000000000000000000000000000000DEAD</p>
               <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
           </div>
@@ -196,14 +450,14 @@
     <footer class="footer">
       <div class="footer__container container">
         <a class="footer__logo logo" href="#">
-          <img class="logo__icon" src="./images/logo.jpg" alt="">
+          <img class="logo__icon" src="./images/logo.png" alt="">
           <div class="logo__text">
             Vitalik
             <sub></sub>
           </div>
         </a>
         <div class="footer__contract">
-          <p class="">
+          <p class="copyContract">
             000000000000000000000000000000DEAD</p>
             <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
         </div>
@@ -233,6 +487,8 @@
 
   </div>
 
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/app.js"></script>
 
 </body>
