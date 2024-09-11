@@ -860,7 +860,7 @@ background-size: 100%;
 
 .tokenomics__container {
   padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1609,6 +1609,13 @@ a {
 }
 
 @media screen and (max-width:600px) {
+  .hero__container {
+    padding-bottom: 40px;
+  }
+  
+ 
+
+
   .hero_img{
     height: 80vw;
   }
