@@ -947,11 +947,15 @@ background-size: 100%;
   .tokenomics__text {
     font-size: 18px;
   }
+
+  .tokenomics__items{
+    margin-right: 0!important;
+  }
 }
 
 .tokenomics__subtitle {
   margin-bottom: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--primary);
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
