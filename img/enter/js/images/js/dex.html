@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from popdogtoken.fun/img/enter/js/images/js/dex.png by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 03:20:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  <style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="120x120" href="web2.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="web2.html">
+  <link rel="icon" type="image/png" sizes="16x16" href="web2.html">
+  <link rel="mask-icon" href="web2.html" color="#5bbad5">
+  <link rel="shortcut icon" href="web2.html">
+  <title>Popdog</title>
+  <link rel="stylesheet" href="css/main.html">
+  <script id="dataslayerLaunchMonitors">
+    // console.log('** dataslayer: injecting Launch monitors **');
+    window._satellite = window._satellite || {};
+    window._satellite._monitors = window._satellite._monitors || [];
+    window._satellite._monitors.push({
+      ruleTriggered: function (e) {
+        window.parent.postMessage(
+          {
+            type: 'dataslayer_launchruletriggered',
+            url: window == window.parent ? window.location.href : 'iframe',
+            data: JSON.parse(JSON.stringify(e.rule)),
+          },
+          '*'
+        );
+      },
+      ruleCompleted: function (e) {
+        // console.log('** dataslayer: Launch rule completed **', e.rule);
+        var rule = JSON.parse(JSON.stringify(e.rule));
+        var sendRule = function () {
+          if (window.dataslayer) {
+            window.parent.postMessage(
+              {
+                type: 'dataslayer_launchrulecompleted',
+                url: window == window.parent ? window.location.href : 'iframe',
+                data: rule,
+              },
+              '*'
+            );
+            // console.log('** dataslayer: posted rule '+rule+'**'); 
+          } else {
+            if (document.readyState === 'complete') {
+              // console.log('** dataslayer: giving up on launch **');
+              window._dataslayerQueue = window._dataslayerQueue || [];
+              window._dataslayerQueue.push({
+                type: 'dataslayer_launchrulecompleted',
+                url: window == window.parent ? window.location.href : 'iframe',
+                data: rule,
+              });
+              return;
+            } else {
+              // console.log('** dataslayer: waiting 250ms to repost rule **');
+              window.setTimeout(sendRule, 250);
+            }
+          }
+        }
+        sendRule();
+        if (
+          window._satellite &&
+          window._satellite._container &&
+          window._satellite._container.dataElements &&
+          true
+        ) {
+          var elementNames = Object.keys(
+            window._satellite._container.dataElements
+          ).sort(function (a, b) {
+            var nameA = a.toUpperCase();
+            var nameB = b.toUpperCase();
+
+            if (nameA < nameB) {
+              return -1;
+            } else if (nameA > nameB) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+
+          let launchElements = {};
+
+          for (const elementName of elementNames) {
+            var newElement = JSON.parse(
+              JSON.stringify(
+                window._satellite._container.dataElements[elementName]
+              )
+            );
+
+            let cleanValue = window._satellite.getVar(elementName);
+            if (typeof cleanValue === 'function') {
+              cleanValue = '(function)';
+            } else if (
+              cleanValue !== null &&
+              typeof cleanValue === 'object' &&
+              typeof cleanValue.then === 'function'
+            ) {
+              cleanValue = '(Promise)';
+            }
+            launchElements[elementName] = cleanValue;
+            // launchElements.push({
+            //   key: elementNames[i],
+            //   value: cleanValue,
+            //   element: newElement,
+            // });
+          }
+          try {
+            window.parent.postMessage(
+              {
+                type: 'dataslayer_launchdataelements',
+                data: 'found',
+                url: window == window.parent ? window.location.href : 'iframe',
+                elements: launchElements
+              },
+              '*'
+            );
+          } catch (e) {
+            console.warn(e);
+          }
+
+        }
+      },
+      ruleConditionFailed: function (e) {
+        window.parent.postMessage(
+          {
+            type: 'dataslayer_launchrulefailed',
+            url: window == window.parent ? window.location.href : 'iframe',
+            data: JSON.parse(JSON.stringify(e.rule)),
+          },
+          '*'
+        );
+      },
+    });
+  </script>
+</head>
+
+<body style="--mouse-x: 357px; --mouse-y: 143.5px;">
+  <!-- <audio autoplay="" hidden="" src="assets/audio/audio.mp3"></audio> -->
+  <!-- <div class="enter">
+    <div class="enter__top">
+      <img class="enter__logo" src="./assets/xxg.png" alt="">
+      <h1 class="enter__title text-outlined">LUMPY</h1>
+      <button class="enter__btn btn">Enter lumpy zone</button>
+      <img class="enter__hero enter__hero_1" src="./assets/lumpy.png" alt="">
+      <img class="enter__hero enter__hero_2" src="./assets/lumpy.png" alt="">
+      <img class="enter__hero enter__hero_3" src="./assets/lumpy.png" alt="">
+      <img class="enter__hero enter__hero_4" src="./assets/lumpy.png" alt="">
+    </div>
+  </div> -->
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" href="../../../../../index.html">
+          <img class="logo__icon" src="Icon.html" alt="">
+          <div class="logo__text">
+            Popdog
+            <sub></sub>
+          </div>
+        </a>
+        <p class="header__contract">
+          DbkpJ1T6FzEAawLGKaUQ27NubR7Kfg6VhEAqy3DTpump
+        </p>
+        <div class="header__actions">
+          <a class="btn btn_icon" href="https://t.me/PopdogProject" target="_blank">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+          <a class="btn btn_icon" href="https://x.com/PopdogProject" target="_blank">
+            <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                  fill="currentColor"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="btn" href="../../../../../index.html" target="_blank">Buy Now</a>
+        </div>
+        <div class="mobile-nav">
+          <div class="mobile-nav__actions">
+            <div class="mobile-nav__row">
+              <a class="btn btn_icon" href="https://t.me/PopdogProject" target="_blank">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <a class="btn btn_icon" href="https://x.com/PopdogProject" target="_blank">
+                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                      fill="currentColor"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <a class="btn" href="../../../../../index.html" target="_blank">Buy Token</a>
+          </div>
+        </div>
+        <div class="header__burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="hero">
+      <div class="hero__container container">
+        <h1 class="hero__title text-outlined">
+          <br><br>
+          WELCOME TO THE POPDOG
+        </h1>
+        <a class="hero__btn btn" href="../../../../../index.html" target="_blank">Buy POPDOG</a>
+      </div>
+    </section>
+    <section id="fan" class="fan">
+      <div class="fan__container container">
+        <h2 class="fan__title text-outlined">Popdog Fan Section</h2>
+        <p class="fan__text">
+          While the $Popdog token has no association with Mondo, Happy Tree Friends, or any other corporation, we love
+          sharing our love of Popdog and want to make it easier for everyone to enjoy this crazy moose!
+        </p>
+        <div class="fan__body">
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Learn</div>
+            <a target="_blank"><img src="web2.html" alt="learn" class="fan__img"></a>
+            <a target="_blank" class="fan__link">Fandom</a>
+          </div>
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Watch</div>
+            <a href="#" target="_blank"><img src="web3.html" alt="watch" class="fan__img"></a>
+            <a href="#" target="_blank" class="fan__link">Videos</a>
+          </div>
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Shop</div>
+            <a href="#" target="_blank"><img src="web4.html" alt="shop" class="fan__img"></a>
+            <a href="#" target="_blank" class="fan__link">Store</a>
+          </div>
+        </div>
+
+        <p class="fan__contract">
+          DbkpJ1T6FzEAawLGKaUQ27NubR7Kfg6VhEAqy3DTpump
+        </p>
+        <a class="fan__btn btn" href="../../../../../index.html" target="_blank">BUY POPDOG
+        </a>
+      </div>
+    </section>
+    <section id="about-us" class="about">
+      <img class="about__background" src="images/background.html" alt="">
+      <div class="about__container container">
+        <h2 class="about__title text-outlined">Abou Popdog <span>?</span></h2>
+        <p class="about__text">
+          Popdog is a unique memecoin project featuring a dog with its mouth wide open, emphasizing the distinct hole
+          inside its mouth. This playful and eye-catching design sets Popdog apart in the memecoin space, attracting
+          attention with its quirky and bold imagery. Perfect for meme enthusiasts and crypto investors alike!
+        </p>
+        <img src="web6.html" alt="" class="about__img">
+        <p class="about__text">
+        </p>
+      </div>
+    </section>
+    <section id="tokenomics" class="tokenomics">
+      <div class="tokenomics__container container">
+        <div class="tokenomics__col">
+          <h2 class="tokenomics__title text-outlined">Time of tokenomics</h2>
+
+          <p class="tokenomics__subtitle">Contract address</p>
+          <p class="tokenomics__contract">
+            DbkpJ1T6FzEAawLGKaUQ27NubR7Kfg6VhEAqy3DTpump
+          </p>
+        </div>
+        <div class="tokenomics__items">
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined"></p>
+            <strong class="tokenomics__value text-outlined">PRESALE 79%</strong>
+          </div>
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined">lIQUIDITY</p>
+            <strong class="tokenomics__value text-outlined">20%</strong>
+          </div>
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined">AIRDROP</p>
+            <strong class="tokenomics__value text-outlined"><span>1%</span><a href="https://twitter.com/IDOsolme"
+                target="_blank">(Claim)</a></strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-to-buy" class="buy">
+      <div class="buy__container container" style="max-width: none;">
+        <h2 class="buy__title text-outlined">Partners</h2>
+        <div
+          style="display: flex; justify-content: space-around; align-items: center; width:100% ;margin: 100px 0;flex-wrap: wrap;z-index: 123123; ">
+          <a target="_blank" href="https://dexscreener.com/solana/arymj8prkkamxc76ussh9f93xsmcsnwuhtpgqnz6xza8">
+            <img src="dex.html" style="height: 65px;object-fit: contain; ">
+          </a>
+          <a target="_blank"
+            href="https://www.dextools.io/app/en/solana/pair-explorer/ARymJ8prKKamXC76ussH9F93xsmCSnwuhtPgQnz6xZa8">
+            <img src="dext.html" style="height: 65px;object-fit: contain; z-index: 123123123;">
+          </a>
+          <a target="_blank" href="https://idosol.me/">
+            <img src="ido.html" style="height: 65px;object-fit: contain;">
+          </a>
+          <a target="_blank" href="https://coinmarketcap.com/">
+            <img src="cmc.html" style="height: 65px;object-fit: contain;">
+          </a>
+          <a target="_blank" href="https://volumesolana.com/">
+            <img src="vsb.html" style="height: 65px;object-fit: contain;">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="final" class="final">
+      <div class="final__container container">
+        <div class="final__col">
+          <h2 class="final__title text-outlined">
+            Join the Community !
+          </h2>
+          <a class="final__btn btn" href="../../../../../index.html" target="_blank">Get $Popdog</a>
+        </div>
+        <img class="final__img" src="web5.html" style="width: 500px;" alt="">
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a class="footer__logo logo" href="../../../../../index.html">
+          <img class="logo__icon" src="Icon.html" alt="">
+          <div class="logo__text">
+            Popdog
+            <sub></sub>
+          </div>
+        </a>
+        <p class="footer__contract">
+          DbkpJ1T6FzEAawLGKaUQ27NubR7Kfg6VhEAqy3DTpump </p>
+        <div class="footer__actions">
+          <a class="btn btn_icon" href="https://t.me/PopdogProject" target="_blank">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+          <a class="btn btn_icon" href="https://x.com/PopdogProject" target="_blank">
+            <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                  fill="currentColor"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="btn" href="../../../../../index.html" target="_blank">Buy Token</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.html"></script>
+
+</body>
+
+
+<!-- Mirrored from popdogtoken.fun/img/enter/js/images/js/dex.png by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 03:20:28 GMT -->
+</html>

@@ -1,232 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
+ <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/logo.png">  
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!-- AOS scroll effect cdn --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <!-- tailwind css cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- css link -->
-    <link rel="stylesheet" href="./static/css/style.css">
-    <title>Casper</title>
+
+  <style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.jpg">
+  <link rel="mask-icon" href="./images/logo.jpg" color="#5bbad5">
+  <link rel="shortcut icon" href="./images/logo.jpg">
+  <title>Hemule </title>
+  <link rel="stylesheet" href="css/main.css"> 
 </head>
-<body> 
 
-    <div class="w-full min-h-[100vh] h-auto   max-w-[100%] relative overflow-hidden">
+<body style="--mouse-x: 357px; --mouse-y: 143.5px;">
+  
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" >
+          <img class="logo__icon" src="./images/logo.jpg" alt="">
+          <div class="logo__text">
+            Popdog
+            <sub></sub>
+          </div>
+        </a>
+        <div class="header__contract">
+          <p class="">
+            000000000000000000000000000000DEAD</p>
+            <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
+        </div>
         
-        <!-- navbar -->
-         <header class="absolute left-0 top-0 w-full h-[10vw] min-h-[80px]  xl:h-[7vw] flex_center z-[99]">
+        <div class="header__actions">
+          <a class="btn btn_icon" href="https://t.me/HemulePortal" target="_blank">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="#7a98b8" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                fill="#e4ecfc"></path>
+            </svg>
+          </a>
+          <a class="btn btn_icon" href="https://x.com" target="_blank">
+            <svg width="25" height="21" viewBox="0 0 25 21" fill="#7a98b8" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                  fill="#e4ecfc"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="btn" href="index.html" target="_blank">Buy Now</a>
+        </div>
+        <div class="mobile-nav">
+          <div class="mobile-nav__actions">
+            <div class="mobile-nav__row">
+              <a class="btn btn_icon" href="https://t.me/HemulePortal" target="_blank">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <a class="btn btn_icon" href="https://x.com" target="_blank">
+                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                      fill="currentColor"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <a class="btn" href="index.html" target="_blank">Buy Token</a>
+          </div>
+        </div>
+        <div class="header__burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
 
-            <nav class="max-w-[2000px] w-[90%] lg:w-[80%] h-full flex_between">
+    <section id="hero" class="hero">
+      <div class="hero__container container">
+        <h1 class="hero__title text-outlined">
+          <br><br>
+          WELCOME TO THE Vitalik’s Cat 
+        </h1>
+        <a class="hero__btn btn" href="index.html" target="_blank">Buy Vitalik’s Cat </a>
+      </div>
+    </section>
 
-                <!-- left -->
-                 <div class="flex_center gap-10">
-                    <!-- logo -->
-                     <img src="./static/images/logo.png" alt="" class="h-auto object-contain w-[70px] lg:w-[8vw] mb-[-6vw] max-w-[400px]" data-aos="fade-right"
-                     data-aos-duration="600"
-                     data-aos-delay="300"
-                     >
-                    <!-- links -->
-                     <ul class="flex_center gap-6 max-lg:hidden">
-                        <li data-aos="fade-right"
-                        data-aos-duration="600"
-                        data-aos-delay="200"
-                        ><a class="duration-300 hover:text-white text-[20px] xl:text-[35.82px]" href="#home">HOME</a></li>
-                        <li data-aos="fade-right"
-                        data-aos-duration="600"
-                        data-aos-delay="100"
-                        ><a class="duration-300 hover:text-white text-[20px] xl:text-[35.82px]" href="#about">ABOUT US</a></li>
-                     </ul>
-                 </div>
+    <section id="fan" class="fan">
+      <div class="fan__container container">
+        <h2 class="fan__title text-outlined">Hemule Fan Section</h2>
+        <p class="fan__text">
+          Hemule, the beloved cat of Ethereum founder Vitalik Buterin, is a grey tabby cat with black stripes. Hemule’s eyes gleam with intelligence, reflecting a deep understanding of the blockchain world that surrounds him. This extraordinary cat, not merely content with the comforts of home, has ventured into the virtual realms of Ethereum alongside Vitalik.
+        </p>
+        <div class="fan__body">
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Learn</div>
+            <a target="_blank"><img src="./images/logo.jpg" alt="learn" class="fan__img"></a>
+            <a target="_blank" class="fan__link">Fandom</a>
+          </div>
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Watch</div>
+            <a href="#" target="_blank"><img src="web3.png" alt="watch" class="fan__img"></a>
+            <a href="#" target="_blank" class="fan__link">Videos</a>
+          </div>
+          <div class="fan__item">
+            <div class="fan__subtitle text-outlined">Shop</div>
+            <a href="#" target="_blank"><img src="web4.png" alt="shop" class="fan__img"></a>
+            <a href="#" target="_blank" class="fan__link">Store</a>
+          </div>
+        </div>
 
-                <!-- right -->
-                 <div class="flex_center gap-6">
-                   
-                   <div data-aos="fade-left"
-                   data-aos-duration="600"
-                   data-aos-delay="100">
-                    <a target="_blank" href="https://web.telegram.org" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] max-lg:hidden">
-                        <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
-                            <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
-                        </div> 
-                   </a>
-                   </div>
+        <div class="fan__contract">
+          <p class="">  000000000000000000000000000000DEAD</p>
+          <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
+        </div>
+       
+        <a class="fan__btn btn" href="index.html" target="_blank">BUY Vitalik’s Cat 
+        </a>
+      </div>
+    </section>
 
-                    <div data-aos="fade-left"
-                    data-aos-duration="600"
-                    data-aos-delay="200">
-                        <a target="_blank" href="https://x.com/" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] max-lg:hidden">
-                            <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
-                                <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
-                            </div> 
-                       </a>
-                    </div>
+    <section id="about-us" class="about">
+      <!-- <img class="about__background" src="images/background.svg" alt=""> -->
+      <div class="about__container container">
+        <h2 class="about__title text-outlined">About Vitalik’s Cat<span>?</span></h2>
+        <p class="about__text">
+          Vitalik Buterin is undeniably the biggest founder in the crypto space. Vitalik Buterin, the mind behind Ethereum, has revolutionized the realm of technology. Through his vision and unwavering commitment, he has opened doors to groundbreaking solutions and nurtured a global community. With his unwavering enthusiasm, Vitalik remains a source of inspiration, making an unforgettable impact on the world of cryptocurrency and beyond.
+        </p>
 
-                   <!-- buy btn -->
-                  <div data-aos="fade-left"
-                  data-aos-duration="600"
-                  data-aos-delay="300">
-                    <a target="_blank" href="
-                    https://uniswap.org" class="gradient_btn duration-200 hover:scale-105 flex_center rounded-md w-[140.08px] h-[56.08px] max-lg:h-[45px] relative  border-black border-[2px] pt-2"> 
-                        <span class="text-[37.95px]">BUY CASPER</span>
-                       </a>
-                  </div>
-
-                   <!-- menu btn -->
-                   <div class=" lg:hidden" data-aos="fade-left"
-                   data-aos-duration="600"
-                   data-aos-delay="400">
-                    <div class="menu-button duration-200 hover:scale-105 flex_center flex-col gap-1 rounded-md w-[45px] h-[45px] relative bg-[#71C9FF] border-black border-[1px]" >
-                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
-                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
-                        <span class="w-[70%] h-1 bg-black rounded-md"></span>
-                    </div>
-                   </div>
-
-                 </div>
-
-                 <!-- menu -->
-                  <div class="menu_container absolute   left-[50%] translate-x-[-50%] w-[95%] h-auto bg-[#76D1FF] rounded-lg border-black border-[2px] py-6" >
-                    <ul class="flex_center gap-6 flex-col">
-                        <li><a href="#home" class="text-[38px]">HOME</a></li>
-                        <li><a href="#about" class="text-[38px]">ABOUT US</a></li>
-                        <li class="flex_center gap-6">
-                            <a target="_blank" href="https://web.telegram.org" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] ">
-                                <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
-                                    <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
-                                </div> 
-                           </a>
+        <div class="about__img">
+          <img src="./images/hamule.png" alt="" class="">
+        </div>
         
-                            <a target="_blank" href="https://x.com/" class="duration-200 hover:scale-105 flex_center rounded-md w-[56.08px] h-[56.08px] relative gradient_btn  border-black border-[1px] ">
-                                <div class="flex_center rounded-md w-[80%] h-[80%] relative bg-[#71C9FF] border-black border-[1px]">
-                                    <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
-                                </div> 
-                           </a>
-                        </li>
-                    </ul>
-                  </div>
-
-            </nav>
-
-         </header>
-
-         <!-- hero -->
-          <section class="hero_section w-full h-[400px] sm:h-[500px] lg:h-[60vw] relative flex_center overflow-hidden"></section>
-
-          <!-- marquee -->
-           <section class="w-full h-auto overflow-hidden max-w-[100%] bg-[#BFD1FF] py-8 relative z-[99]">
-            <div class="marquee bordered  w-[100vw]">
-                <div class="marquee-el flex_center gap-30 w-[100vw]" > 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                 <img src="./static/images/marquee_star.svg" alt="" class="ml-[30px] w-[5vw] lg:w-[90px] h-auto object-contain"> 
-                 <img src="./static/images/marquee_text.svg" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                </div>   
-              </div>
-           </section>
-
-           <!-- about -->
-            <section id="about" class="about_section w-full h-[55.2vw] flex_center max-lg:flex-col max-lg:h-auto max-lg:py-9 lg:justify-start">
-                
-                <!-- image -->
-                 <div class="flex items-center w-full md:w-[80%] lg:w-[55%] lg:ml-[1vw]">
-                    <img src="./static/images/about_image.png" alt="" class="w-full h-auto object-contain lg:ml-[-2vw] float_animation" style="animation-duration: 12s;">
-                 </div>
-                 
-                <!-- about content -->
-                 <div class="flex_center flex-col w-[90%] lg:w-[45%] h-[90%] mt-6 gap-6 lg:ml-[-10vw]">
-
-                    <img src="./static/images/about_casper.png" alt="" class="w-[70vw] lg:w-[30vw] h-auto object-contain lg:ml-[-10vw] shake_animation ">
-
-                    <p class="text-center text-white w-[300px] max-w-[100%] xl:w-[80%] text-[20px] xl:text-[1.3vw]" data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="100">
-                        Meet Casper, Vitalik’s very own Memecoin creation: a logo for the Casper consensus algorithm (an implementation of proof of stake consensus algorithm in development for the Ethereum platform) inspired by Casper the Ghost who shares the same name. This is Vitalik’s very first Memecoin. 
-                    </p>
-
-                    <div class="flex_center justify-start copy-box  text-white text-[18px] xl:text-[1.3vw] gap-6 border-b-white border-b-[1px] cursor-pointer" data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="100">
-                        <p>CA : </p>
-                        <span class="text-ellipsis max-w-[70%] overflow-hidden copy-box__text copy-box__btn"> 000000000000000000000dead</span>
-                        <img src="./static/images/copy.svg" alt="" class="w-[30px] h-auto object-contain">
-                    </div>
-
-                    <!-- media social -->
-                     <div class="flex_center gap-6 w-full relative z-10" data-aos="fade-up"
-                     data-aos-duration="600"
-                     data-aos-delay="200">
-                        
-                        <a target="_blank" href="https://x.com/" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
-                            <img src="./static/images/twitter2.png" alt="" class="w-[60%] h-auto object-contain">
-                        </a>
-
-                        <a target="_blank" href="https://web.telegram.org" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
-                            <img src="./static/images/telegram2.png" alt="" class="w-[60%] h-auto object-contain">
-                        </a>
-
-                        <a target="_blank" href="https://www.dextools.io/" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
-                            <img src="./static/images/dextools.png" alt="" class="w-[60%] h-auto object-contain">
-                        </a>
-
-                        <a target="_blank" href="https://dexscreener.com/" class="w-[60px] h-[60px] relative flex_center border-black border-[1px] rounded-lg bg-white duration-300 hover:scale-90">
-                            <img src="./static/images/dexscreen.png" alt="" class="w-[60%] h-auto object-contain">
-                        </a>
-
-                     </div>
-
-                 </div>
-
-            </section>
-
-            <!-- footer -->
-             <footer class="w-full h-[15vw] xl:h-[10vw] flex_center">
-
-                <img src="./static/images/footer_title.png" alt="" class="w-[20%] h-auto object-contain">
-
-                <!-- left -->
-                <img src="./static/images/footer_left.png" alt="" class="w-[50%] lg:w-[23%] h-auto object-contain left-[-12%] lg:left-[-9%] bottom-[-8%] absolute float_animation">
-
-                <!-- right -->
-                <img src="./static/images/footer_right.png" alt="" class="w-[42%] lg:w-[29%] h-auto object-contain right-[-8%] lg:right-[-3%] bottom-[-3%] absolute float_animation" style="animation-delay: -3s;">
-
-             </footer>
-
-    </div>
-
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <!-- aos js library animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        
  
-    <script src="./static/js/index.js"></script>
+      </div>
+    </section>
+
+    <section id="tokenomics" class="tokenomics">
+      <div class="tokenomics__container container">
+        <div class="tokenomics__col">
+          <h2 class="tokenomics__title text-outlined">Time of tokenomics</h2>
+
+          <p class="tokenomics__subtitle">Contract address</p>
+
+          <div class="tokenomics__contract">
+            <p class="">
+              000000000000000000000000000000DEAD</p>
+              <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
+          </div>
+         
+        </div>
+        <div class="tokenomics__items">
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined">SUPPLY</p>
+            <strong class="tokenomics__value text-outlined">1,000,000,000</strong>
+          </div>
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined">lIQUIDITY</p>
+            <strong class="tokenomics__value text-outlined">Fully Burnt</strong>
+          </div>
+          <div class="tokenomics__item">
+            <p class="tokenomics__label text-outlined">TAX</p>
+            <strong class="tokenomics__value text-outlined"><span>0/0</span></strong>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+    <section id="final" class="final">
+      <div class="final__container container">
+        <div class="final__col">
+          <h2 class="final__title text-outlined">
+            Join the Community !
+          </h2>
+          <a class="final__btn btn" href="index.html" target="_blank">Get $Hemule</a>
+        </div>
+        
+        <div class="final__img">
+          <img class=" image_mirror" src="./images/hamule2.png"  alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container container">
+        <a class="footer__logo logo" href="#">
+          <img class="logo__icon" src="./images/logo.jpg" alt="">
+          <div class="logo__text">
+            Vitalik
+            <sub></sub>
+          </div>
+        </a>
+        <div class="footer__contract">
+          <p class="">
+            000000000000000000000000000000DEAD</p>
+            <img src="./images/BiCopy.svg" alt="" style="width: 20px;object-fit: contain;">
+        </div>
+      
+        <div class="footer__actions">
+          <a class="btn btn_icon" href="https://t.me/HemulePortal" target="_blank">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.4938 4.1545C21.4938 4.1545 23.4365 3.397 23.2746 5.23664C23.2206 5.99415 22.735 8.6454 22.3572 11.5131L21.0621 20.0079C21.0621 20.0079 20.9542 21.2524 19.9829 21.4688C19.0115 21.6852 17.5546 20.7113 17.2847 20.4949C17.0689 20.3326 13.2376 17.8977 11.8885 16.7074C11.5107 16.3827 11.079 15.7334 11.9424 14.9759L17.6085 9.56525C18.2561 8.91595 18.9036 7.40095 16.2055 9.2406L8.65073 14.3808C8.65073 14.3808 7.78733 14.9218 6.16848 14.4349L2.66089 13.3527C2.66089 13.3527 1.36579 12.5411 3.57826 11.7295C8.97453 9.18645 15.6119 6.5893 21.4938 4.1545Z"
+                fill="white"></path>
+            </svg>
+          </a>
+          <a class="btn btn_icon" href="https://x.com" target="_blank">
+            <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="M19.1642 0H22.8442L14.7642 8.91144L24.2042 21H16.7962L10.9962 13.6539L4.35617 21H0.676167L9.23617 11.4686L0.196167 0H7.78817L13.0282 6.7107L19.1642 0ZM17.8762 18.9077H19.9162L6.71617 2.01476H4.52417L17.8762 18.9077Z"
+                  fill="white"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="btn" href="#buy">Buy Token</a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
 
 </body>
+ 
 </html>
