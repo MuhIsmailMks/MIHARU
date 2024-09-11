@@ -1559,6 +1559,17 @@ a {
   font-size: 20px;
 }
 
+.centerImg{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.centerImg img{
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
 
 /* social */
 .join_container{
