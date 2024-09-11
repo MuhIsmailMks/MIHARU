@@ -1426,10 +1426,12 @@ a {
 }
  
 
-.about_tex{
+.about_text{
   color: var(--primary);
   text-align: center;
   width: 80%;
+  max-width: 1200px;
+  line-height: 1.5;
 
   font-size: 20px;
 }
