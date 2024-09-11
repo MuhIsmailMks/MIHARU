@@ -180,6 +180,11 @@ button {
 .wrapper {
   min-height: 100vh;
   overflow-x: hidden;
+
+  background: url("../images/background.svg");
+background-repeat: repeat-y;
+background-size: 100%;
+
 }
 
 .container {
@@ -520,12 +525,11 @@ button {
   }
 }
 
-.hero {
-  background: url("../web1.html\ \(11\).png");
-  /* min-height: 80vh; */
+.hero { /*  
+ background: url("../images/background.svg"); */
   background-repeat: no-repeat;
-  background-position: center top;
   background-size: cover;
+  background-position: center center;
 }
 
 .hero__container {
@@ -576,8 +580,11 @@ button {
   border: 2px solid black;
 }
 
-.about {
+#about {
   position: relative;
+    /* background: url("../images/background.svg"); */
+  background-repeat: repeat;
+  background-size: cover; 
 }
 
 .about__background {
@@ -660,7 +667,7 @@ button {
 }
 
 .fan {
-  background: url("../images/background.svg");
+  /* background: url("../images/background.svg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -839,7 +846,7 @@ button {
 }
 
 .tokenomics {
-  background: url("../images/background.svg");
+  /* background: url("../images/background.svg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1331,10 +1338,9 @@ button {
 
 .footer {
   margin-top: -40px;
-  /* background: url("../images/background_2.svg"); */
+  /* background: url("../images/background.svg"); */
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  background-size: cover; 
   padding-top: 60px;
   padding-bottom: 40px;
 }
