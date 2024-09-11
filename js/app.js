@@ -1,24 +1,7 @@
-// document.addEventListener('mousemove', function (event) {
-//   const x = event.clientX - window.innerWidth / 2;
-//   const y = event.clientY - window.innerHeight / 2;
-
-//   document.body.style.setProperty('--mouse-x', x + 'px');
-//   document.body.style.setProperty('--mouse-y', y + 'px');
-// });
-
-// const enterBtn = document.querySelector('.enter__btn');
-// const enterScreen = document.querySelector('.enter');
-// enterBtn.addEventListener('click', () => enter(false));
-
-// function enter(force = false) {
-//   enterScreen.classList.add('hide');
-//   if (!force)
-//     setTimeout(() => {
-//       enterScreen.remove();
-//     }, 1000);
-//   else enterScreen.remove();
-//   document.body.classList.remove('overflow-hidden');
-// }
+ // aos 
+ AOS.init({ 
+  once: true
+});   
 
 const burger = document.querySelector('.header__burger');
 const mobileNav = document.querySelector('.mobile-nav');
