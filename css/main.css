@@ -219,6 +219,19 @@ background-size: 100%;
   text-decoration: none;
   justify-content: center;
   border: 2px solid black;
+  transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  -webkit-transition: .1s;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .btn_icon {
@@ -1626,6 +1639,12 @@ a {
   -o-transform: rotate(360deg);
 }
 
+.text_AS{
+  color: var(--primary2);
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
 /* media screen */
 @media screen and (max-width:1000px) {
   .join_container{
@@ -1656,4 +1675,9 @@ a {
     width: 50px;
     height: 50px;
   }
+
+  .text_AS{ 
+    font-size: 20px; 
+  }
 }
+
