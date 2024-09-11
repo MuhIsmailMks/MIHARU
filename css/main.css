@@ -1447,8 +1447,39 @@ a {
   margin: 0 auto 2rem;
   position: relative;
 }
- 
+
+
 .hero_img::before{
+  content: "";
+  position: absolute;
+  width: 156%;
+  height: 156%;
+  background-color: var(--bodyClr);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  z-index: -1;
+  background-image: url('../images/rotate.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  animation: rotateImg 10s infinite linear;
+  -webkit-animation: rotateImg 10s infinite linear;
+}
+
+@keyframes rotateImg {
+  100%{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+}
+ 
+.hero_img::after{
   content: "";
   position: absolute;
   width: 106%;
@@ -1463,6 +1494,7 @@ a {
 
   border: 5px solid var(--primary);
 }
+
  
 
 .hero_img img{
