@@ -682,7 +682,7 @@ background-size: 100%;
 
 .fan__container {
   padding-top: 40px;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -870,7 +870,7 @@ background-size: 100%;
 @media screen and (max-width: 1023.98px) {
   .tokenomics__container {
     flex-direction: column;
-    padding-top: 180px;
+    padding-top: 100px;
   }
 }
 
@@ -991,6 +991,9 @@ background-size: 100%;
   display: flex;
   flex-direction: column;
   margin-right: 50px;
+
+  z-index: 999;
+
 }
 
 @media screen and (max-width: 1023.98px) {
@@ -1008,11 +1011,30 @@ background-size: 100%;
 }
 
 .tokenomics__item {
+}
+
+.tokenomics__item div{
+  transition: .1s ease-in;
+  -webkit-transition: .1s ease-in;
+  -moz-transition: .1s ease-in;
+  -ms-transition: .1s ease-in;
+  -o-transition: .1s ease-in;
   border-radius: 32px;
   border: 5px dashed var(--primary2);
   background: var(--primary);
   padding: 24px;
   width: 271px;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.tokenomics__item:hover div{
+  transform: scale(1.1) !important;
+  -webkit-transform: scale(1.1) !important;
+  -moz-transform: scale(1.1) !important;
+  -ms-transform: scale(1.1) !important;
+  -o-transform: scale(1.1) !important;
 }
 
 .tokenomics__item:nth-child(1) {
