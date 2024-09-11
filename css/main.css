@@ -1413,3 +1413,10 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.header__contract,
+.fan__contract,
+.tokenomics__contract,
+.footer__contract{
+  cursor: pointer;
+}

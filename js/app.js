@@ -80,3 +80,28 @@ popUp_container.classList.remove('flex')
 popUp_container.classList.add('hidden')
 })
 
+
+
+
+// contract copy
+const copybtns = document.querySelectorAll(".contractCopy");
+    
+copybtns.forEach(copybtn => {
+  copybtn.addEventListener("click", function() { 
+    let textSpan = copybtn.querySelector('.value');
+    let intervalId;
+        let addressText = document.querySelector(".value").getAttribute('data-set');
+        textSpan.innerHTML = 'COPIED';
+ 
+        if (intervalId) {  
+            clearInterval(intervalId);
+        }
+ 
+        intervalId = setInterval(() => {
+            textSpan.innerHTML = '00000000000000000000000000000000000000000DEAD'; 
+            clearInterval(intervalId);  
+        }, 1000);
+ 
+        navigator.clipboard.writeText(addressText);
+    }); 
+})
