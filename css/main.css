@@ -1654,11 +1654,22 @@ a {
 @media screen and (max-width:1000px) {
   .final__container{
     max-width: 100%;
-    
+    overflow: hidden;
   }
+
   .join_container{
     width: 80%;
     height: 80vw;  
+    max-width: 100%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .join_container::before{
+    width: 90%;
+    height: 90%;
   }
 }
 
