@@ -187,12 +187,12 @@ html {
   }
 
   to {
-    transform: translateX(630px);
-    -webkit-transform: translateX(630px);
-    -moz-transform: translateX(630px);
-    -ms-transform: translateX(630px);
-    -o-transform: translateX(630px);
-  }
+    transform: translateX(740px);
+    -webkit-transform: translateX(740px);
+    -moz-transform: translateX(740px);
+    -ms-transform: translateX(740px);
+    -o-transform: translateX(740px);
+}
 }
 
 
