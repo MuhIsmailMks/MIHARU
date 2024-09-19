@@ -84,6 +84,22 @@ html {
   line-height: 1;
 }
 
+.btnHover{
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+.btnHover:hover{
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
 .socialBtn{
    border: .2vw solid #191919;
    box-shadow: 4.42px 4.42px 0px -1.47px #191919,   11.78px 11.78px 1.47px -4.42px #00000033;
