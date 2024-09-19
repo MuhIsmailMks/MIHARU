@@ -166,7 +166,7 @@ html {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   z-index: 1;
-  -webkit-animation: scroll 5s linear infinite;
+  -webkit-animation: scroll 12s linear infinite;
 }
 
 .marquee-right .marquee-el {
@@ -187,11 +187,11 @@ html {
   }
 
   to {
-    transform: translateX(740px);
-    -webkit-transform: translateX(740px);
-    -moz-transform: translateX(740px);
-    -ms-transform: translateX(740px);
-    -o-transform: translateX(740px);
+    transform: translateX(60vw);
+    -webkit-transform: translateX(60vw);
+    -moz-transform: translateX(60vw);
+    -ms-transform: translateX(60vw);
+    -o-transform: translateX(60vw);
 }
 }
 
