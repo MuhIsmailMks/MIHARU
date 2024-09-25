@@ -156,7 +156,7 @@ html {
 
 .marquee-el {
   align-items: center;
-  animation: scroll 5s linear infinite;
+  animation: scroll 12s linear infinite;
   animation-delay: 0s;
   animation-play-state: running;
   display: flex;
@@ -187,11 +187,11 @@ html {
   }
 
   to {
-    transform: translateX(60vw);
-    -webkit-transform: translateX(60vw);
-    -moz-transform: translateX(60vw);
-    -ms-transform: translateX(60vw);
-    -o-transform: translateX(60vw);
+    transform: translateX(65vw);
+    -webkit-transform: translateX(65vw);
+    -moz-transform: translateX(65vw);
+    -ms-transform: translateX(65vw);
+    -o-transform: translateX(65vw);
 }
 }
 
