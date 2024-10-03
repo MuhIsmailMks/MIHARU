@@ -1,11 +1,19 @@
 const imageInput = document.getElementById('imageInput');
 const previewImage = document.getElementById('previewImage');
 const imageContainer = document.getElementById('imageContainer');
+const uploadImageContainer = document.getElementById('uploadImageContainer');
+const memeMakerContainer = document.getElementById('memeMakerContainer');
 
 const addImageContainer = document.querySelectorAll('.addImage');
 
 imageInput.addEventListener('change', function(event) {
   const file = event.target.files[0];
+
+  memeMakerContainer.classList.remove('hidden');
+  memeMakerContainer.classList.add('flex');
+  uploadImageContainer.classList.add('hidden');
+  uploadImageContainer.classList.remove('flex');
+
   if (file) {
     const reader = new FileReader();
 
