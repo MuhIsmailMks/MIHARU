@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="file" id="imageInput" accept="image/*" class="cursor-pointer">
+
+    <div id="imageContainer" class="imageContainer relative overflow-hidden bg-red-500 w-full">
+        <img id="previewImage" src="" alt="" class="w-full h-auto object-contain">
+    </div>
+    
+
+     <div class="flex flex-wrap w-[50%]">
+        <div class="w-[25%] relative cursor-pointer addImage">
+            <img src="./assets/images/Head/body-cup.png" alt="">
+        </div>
+
+        <div class="w-[25%] relative cursor-pointer addImage">
+            <img src="./assets/images/Head/body-levitating.png" alt="">
+        </div>
+
+        <div class="w-[25%] relative cursor-pointer addImage">
+            <img src="./assets/images/Head/body.png" alt="">
+        </div>
+     </div>
+
+ 
+
+        <img src="./assets/images/Head/brave-deebo.png" alt="" class="main_image w-full h-auto select-none  object-contain block">
+
+        <div class="settingImage absolute w-full h-full left-0 top-0">
+
+            <!-- left -->
+             <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[200px] top-[50%] translate-y-[-50%] rounded-md">
+
+                <div class="indexTop cursor-pointer w-[70%] relative">
+                    <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
+                </div>
+
+                <div class="indexBottom cursor-pointer w-[70%] relative">
+                    <img src="./assets/icons/indexBottom.svg" alt="" class="w-full h-auto object-contain">
+                </div>
+
+                <div class="mirrorMode cursor-pointer w-[70%] relative">
+                    <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain">
+                </div>
+
+                <div class="deleteBtn cursor-pointer w-[70%] relative">
+                    <img src="./assets/icons/deleteIcon.svg" alt="" class="w-full h-auto object-contain">
+                </div>
+
+             </div>
+
+            <!-- right -->
+             <div class="right-[0%] absolute h-full w-[25%] ">
+                
+                <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                    <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
+                </div>
+
+                <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                    <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
+                </div>
+
+             </div>
+
+        </div>
+
+     </div> 
+
+ 
+
+
+
+
+
+
+
+
+     bagaimana cara membuat ketika data-image tidak ada di container contohnya, '
+     <div id="canvasContainer" class="w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
+  
+      <div data-image="1" class="draggableOverlay" style="position: absolute; left: 369.8px; top: 555.5px;">
+         <img src="./assets/images/Head/body-cup.png" alt="" class="main_image">
+
+           <div class="settingImage absolute w-full h-full left-0 top-0">
+
+               <!-- left -->
+               <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[200px] top-[50%] translate-y-[-50%] rounded-md">
+
+                   <div class="indexTop cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                   <div class="indexBottom cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/indexBottom.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                   <div class="mirrorMode cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                    <div class="mirrorTopMode cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain rotate-[90deg]">
+                   </div>
+   
+
+                   <div class="deleteBtn cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/deleteIcon.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+               </div>
+
+               <!-- right -->
+               <div class="right-[0%] absolute h-full w-[25%] ">
+                   
+                   <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                       <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
+                   </div>
+
+                   <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                       <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
+                   </div>
+
+               </div>
+
+           </div>
+        </div>
+
+    <div data-image="2" class="draggableOverlay" style="position: absolute; left: 486.8px; top: 381.5px;">
+         <img src="./assets/images/Head/body-levitating.png" alt="" class="main_image">
+
+           <div class="settingImage absolute w-full h-full left-0 top-0">
+
+               <!-- left -->
+               <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[200px] top-[50%] translate-y-[-50%] rounded-md">
+
+                   <div class="indexTop cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                   <div class="indexBottom cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/indexBottom.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                   <div class="mirrorMode cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+                    <div class="mirrorTopMode cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain rotate-[90deg]">
+                   </div>
+   
+
+                   <div class="deleteBtn cursor-pointer w-[70%] relative">
+                       <img src="./assets/icons/deleteIcon.svg" alt="" class="w-full h-auto object-contain">
+                   </div>
+
+               </div>
+
+               <!-- right -->
+               <div class="right-[0%] absolute h-full w-[25%] ">
+                   
+                   <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                       <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
+                   </div>
+
+                   <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                       <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
+                   </div>
+
+               </div>
+
+           </div>
+    </div>
+        
+    </div>
+     
+     <div data-image="1" class="relative cursor-pointer addImage active">
+        <img src="./assets/images/Head/body-cup.png" alt="">
+    </div>
+
+    <div data-image="2" class="relative cursor-pointer addImage active">
+        <img src="./assets/images/Head/body-levitating.png" alt="">
+    </div>
+
+    <div data-image="3" class="relative cursor-pointer addImage">
+        <img src="./assets/images/Head/body.png" alt="">
+    </div>', mereka memiliki data-image yang sama tapi jika saya hapus data image yang ke 1 di canvasContainer misalnya'  <div id="canvasContainer" class="w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
+  
+      <div data-image="2" class="draggableOverlay" style="position: absolute; left: 486.8px; top: 381.5px;">
+           <img src="./assets/images/Head/body-levitating.png" alt="" class="main_image">
+  
+             <div class="settingImage absolute w-full h-full left-0 top-0">
+  
+                 <!-- left -->
+                 <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[200px] top-[50%] translate-y-[-50%] rounded-md">
+  
+                     <div class="indexTop cursor-pointer w-[70%] relative">
+                         <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
+                     </div>
+  
+                     <div class="indexBottom cursor-pointer w-[70%] relative">
+                         <img src="./assets/icons/indexBottom.svg" alt="" class="w-full h-auto object-contain">
+                     </div>
+  
+                     <div class="mirrorMode cursor-pointer w-[70%] relative">
+                         <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain">
+                     </div>
+  
+                      <div class="mirrorTopMode cursor-pointer w-[70%] relative">
+                         <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain rotate-[90deg]">
+                     </div>
+     
+  
+                     <div class="deleteBtn cursor-pointer w-[70%] relative">
+                         <img src="./assets/icons/deleteIcon.svg" alt="" class="w-full h-auto object-contain">
+                     </div>
+  
+                 </div>
+  
+                 <!-- right -->
+                 <div class="right-[0%] absolute h-full w-[25%] ">
+                     
+                     <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                         <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
+                     </div>
+  
+                     <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                         <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
+                     </div>
+  
+                 </div>
+  
+             </div>
+      </div>
+          
+      </div>
+      ', akan remove class active di addImage '<div data-image="1" class="relative cursor-pointer addImage">
+        <img src="./assets/images/Head/body-cup.png" alt="">
+    </div>'. 
+
+
+
+
+
+
+
+    pada kode saya '  const deleteBtn = draggableOverlay.querySelector('.deleteBtn');
+    deleteBtn.addEventListener('click', () => {
+      
+      draggableOverlay.remove();
+   
+      const dataImage = draggableOverlay.getAttribute('data-image'); 
+      
+      const addImageElement = document.querySelector(`.addImage[data-image="${dataImage}"]`);
+      
+      if (addImageElement) {
+        addImageElement.classList.remove('active'); 
+      }
+  
+    });'. ini berhasil mengembalikan class active, tapi apakah bisa jika data-image benar benar tidak ada di canvasContainer, karena saya memiliki draggableOverlay lebih dari 1 dengan data-image yang sama ,maka akan remove class active, bukan remove class active jika setiap tombol ditekan.
+ 
+</body>
+</html>

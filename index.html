@@ -2,349 +2,437 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/logo.png">  
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-    <!-- AOS scroll effect cdn --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- css link -->
-    <link rel="stylesheet" href="./static/css/style.css">
-    <title>ISHI</title>
+    
+    <!-- css -->
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Image Generator</title>
 </head>
-<body> 
 
-    <div class="w-full min-h-[100vh] h-auto   max-w-[100%] relative overflow-hidden">
-        
-        <!-- navbar -->
-         <header class="absolute left-0 top-0 w-full h-[10vw] min-h-[80px]  xl:h-[7vw] flex_center z-[99]">
+<body class="bg-[#75DED9]">
+    
+   <div class="py-[100px] flex flex-col items-center  max-w-[100%] overflow-x-hidden relative">
 
-            <nav class="max-w-[2000px] w-[90%] lg:w-[80%] h-full flex_between">
-
-                <!-- left -->
-                 <div class="flex_center gap-[1vw] logo" data-aos="fade-right"
-                 data-aos-duration="600"
-                 data-aos-delay="100">
-                  
-                    <!-- logo -->
-                     <div class="w-auto relative">
-                        <img src="./static/images/logo.png" alt="" class="h-auto object-contain w-[50px] lg:w-[4vw] max-w-[400px] float_animation2"  
-                        >
-                     </div>
-
-                     <p class="LonelyFont text-[5vw] lg:text-[3vw]">ISHI</p>
-                     
-                 </div>
-
-                <!-- right -->
-                 <div class="flex_center gap-3 md:gap-6">
-                   
-                    <!-- telegram -->
-                   <div data-aos="fade-left"
-                   data-aos-duration="600"
-                   data-aos-delay="100">
-                    <a target="_blank" href="https://web.telegram.org" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                        <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
-                   </a>
-                   </div> 
-                   
-                    <!-- twitter -->
-                   <div data-aos="fade-left"
-                   data-aos-duration="600"
-                   data-aos-delay="100">
-                    <a target="_blank" href="https://x.com" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                        <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
-                   </a>
-                   </div> 
-                   
-                    <!-- dexscreen -->
-                   <div data-aos="fade-left"
-                   data-aos-duration="600"
-                   data-aos-delay="100">
-                    <a target="_blank" href="https://dexscreen.com" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                        <img src="./static/images/dexscreenIcon.svg" alt="" class="w-[50%] h-auto object-contain">
-                   </a>
-                   </div> 
+    <h1 class="text-center text-white text-[5vw]">Image Generator</h1>
  
+    <!-- input image -->
+    <div class="w-[95%] max-w-[1500px] flex h-[550px] uploadImageContainer cursor-pointer relative  justify-center items-center rounded-[20px] border-black border-[4px]">
 
-                 </div>
+       <input type="file" id="imageInput" accept="image/*" class="w-full h-full cursor-pointer absolute z-10 opacity-0">
 
-            </nav>
+       <div class="absolute top-[5%] flex flex-col items-center z-10 text-white">
+           <img src="./assets/icons/uploadIcon.svg" alt="upload" class="w-[50px] h-auto object-contain">
+           <p class="text-[1.5em]">Drag & drop an image here,</p>
+           <p class="text-[1.5em]">or click to select one</p>
+           <p class="text-[.95em] lowercase">(Only *.jpeg and *.png images will be accepted)            </p>
+       </div>
 
-         </header>
+       <img src="./assets/images/bgInput.webp" alt="" class="bottom-0 w-full h-auto object-contain absolute z-0">
 
-         <!-- hero -->
-          <section class="w-full relative h-[70vw] xl:h-[55vw] flex_center">
-
-            <!-- background -->
-             <div class="w-full h-auto absolute top-0 left-0">
- 
-                <!-- wave -->
-                <img src="./static/images/topHero.svg" alt="heroBg" class="w-full h-auto object-cover absolute top-0 left-0 z-20">
-
-                 <!-- sun -->
-              <div class="w-[12%] absolute left-[10%] top-[0%] flex_center">
-                <img src="./static/images/sun.svg" alt="" class="w-full" data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="100">
-                <img src="./static/images/bird.svg" alt="" class="w-[50%] absolute bottom-0 right-[-10%] float_animation" >
-              </div>
-
-                <!-- langit -->
-                <img src="./static/images/topImgHero.png" alt="heroBg" class="w-full h-full object-cover">
-
-             </div>
-
-            
-
-             <!-- background bottom -->
-             <div class="w-full h-auto bottom-0 absolute z-20">
-                <img src="./static/images/bottomHero.png" alt="heroBg" class="w-full h-auto object-cover absolute bottom-0" loading="lazy">
-             </div>
-
-             <!-- center image -->
-              <div class="flex_center w-full z-10 absolute h-[50%] ">
-                
-
-                 <div class="left-[-6%] w-[12%] flex_center absolute top-[-20%] z-0">
-                    <img src="./static/images/star.png" alt="star" class="w-full object-contain">
-                </div>
-
-                <!-- text -->
-                 <div class="w-[50%] absolute right-[10%] lg:right-[3%]">
-                    <div class="w-full rotate-[-10deg]">
-                        <img src="./static/images/heroText.png" alt="heroText" class="w-full lg:w-[80%] object-contain" data-aos="zoom-in"
-                        data-aos-duration="600"
-                        data-aos-delay="100">
-                    </div>
-                 </div>
-
-                 <!-- right -->
-                  <div class="w-[20%] absolute right-[-5%] bottom-[10%] xl:bottom-[20%]">
-                    <div class="w-full shake_animation">
-                        <img src="./static/images/heroRight.png" alt="dogi" loading="lazy" class="rotate-[-20deg] ">
-                    </div>
-                  </div>
-
-              </div>
-              
-
-          </section>
-
-
-          <!-- marquee -->
-          <section class="w-full h-auto overflow-hidden max-w-[100%] bg-[#FFF1D5] py-2 lg:py-8 relative z-[99] marqueeContainer mt-[-1vw]">
-            <div class="marquee bordered  w-[100vw]">
-                <div class="marquee-el flex_center  lg:gap-30 w-[100vw]" > 
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain"> 
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                
-                 <img src="./static/images/marquee_text.png" alt="" class="ml-[30px] w-[34vw] lg:w-[300px] h-auto object-contain">
-                </div>   
-              </div>
-           </section>
-
-
-          <!-- about -->
-           <section class="aboutContainer w-full h-auto py-[4rem] lg:py-[6vw] bg-[#FFECC6] relative flex_center flex-wrap max-lg:flex-col-reverse lg:gap-[5vw]">
-
-            <!-- background -->
-             <div class="w-full h-full absolute z-0">
-
-                <!-- cloud -->
-                 <div class="w-[20%] absolute left-[-10%] top-[5%]">
-                    <img src="./static/images/cloud.png" alt="cloud" class="w-full object-contain float_animation">
-                 </div>
-
-                <!-- right -->
-                <img src="./static/images/aboutBg2.png" alt="about bg" class="w-[60%] h-auto absolute bottom-0 right-0 object-contain">
-
-             </div>
-
-            <!-- left -->
-            <div class="aboutContent w-[90%] lg:w-[40%] flex_center flex-col gap-4 lg:gap-[2vw] lg:items-star t max-lg:mt-[3rem] relative">
-
-                <h2 class="about_title text-[10vw] lg:text-[5vw] LonelyFont w-full max-lg:text-center">
-                    what is <br> $ISHI coin?
-                </h2>
-
-                <p class="text-[1em] lg:text-[1.5vw] text-[#3C3C3C]">
-                    Welcome to ISHI, the meme coin that's here to shake up the crypto world! Born out of a love for memes and the magic of blockchain, ISHI is not just another cryptocurrency—it’s a community-driven movement.
-                </p>
-
-                <div class="social_container flex_center bg-[#FFF1D5] rounded-[4vw] lg:rounded-[1vw] border-black border-[.2vw] p-[3vw] lg:p-[1vw] gap-[5vw] lg:gap-[2vw]">
-                    
-                   <div class="relative">
-                     <div class="btnHover rotate-[-10deg]">
-                        <a href="https://x.com" target="_blank" class="socialBtn flex_center">
-                            <img src="./static/images/twitter.png" alt="" class="w-[50%] lg:w-[2vw] object-contain">
-                        </a>
-                     </div>
-                   </div>
-
-                      
-                   <div class="relative">
-                    <div class="btnHover rotate-[3deg]">
-                       <a href="https://telegram.org" target="_blank" class="socialBtn flex_center">
-                           <img src="./static/images/telegram2.png" alt="" class="w-[50%] lg:w-[2vw] object-contain">
-                       </a>
-                    </div>
-                  </div>
-
-                     
-                  <div class="relative">
-                    <div class="btnHover rotate-[-5deg]">
-                       <a href="#"  class="socialBtn flex_center">
-                           <img src="./static/images/social3.svg" alt="" class="w-[50%] lg:w-[2vw] object-contain">
-                       </a>
-                    </div>
-                  </div>
-
-                     
-                  <div class="relative">
-                    <div class="btnHover rotate-[5deg]">
-                       <a href="https://dexscreener.com/" target="_blank" class="socialBtn flex_center">
-                           <img src="./static/images/dexscreenIconAbout.svg" alt="" class="w-[50%] lg:w-[2vw] object-contain">
-                       </a>
-                    </div>
-                  </div>
-                     
-
-                </div>
-
-            </div>
-
-            <!-- right -->
-            <div class="aboutContent  w-[90%] lg:w-[43%] flex_center gap-[2vw] flex-col relative">
-
-                <div class="w-[100%] flex_center">
-                    <img src="./static/images/aboutImg.png" loading="lazy" alt="ISHI about" class="w-full float_animation" style="animation-duration: 15s;">
-                </div>
-
-                <!-- contract -->
-                 <div class="w-[100%] bg-[#FFECC6] border-[.2vw] lg:border-[.13vw] border-[#FF9A00] rounded-[3vw] lg:rounded-[1vw] p-[4vw] lg:p-[1vw] mt-[-5vw] relative z-10">
-                    <p class="LonelyFont uppercase text-[#303030] text-[1rem] lg:text-[1vw]">Contract Address</p>
-
-                    <div class="w-full bg-[#FDC238] londrinaFont flex_center gap-[2vw] py-[2vw] lg:py-[1vw] rounded-[1vw] border-black border-[.15vw] mt-2 lg:mt-4">
-                        <p class="text-[1rem] lg:text-[1.5vw] text-[#1A1A1A] max-w-[80%] overflow-hidden text-ellipsis copy-box__text">ULwSJmmpxmnRfpu6BjnK6rprKXqD5jXUmPpS1FxHXFy</p>
-
-                        <span class="w-[4%] cursor-pointer copy-box">
-                            <img src="./static/images/copy.svg" alt="" class="w-full object-contain">
-                        </span>
-
-                    </div>
-
-                 </div>
-
-            </div>
-
-           </section>
-
-
-           <!-- footer -->
-            <footer class="relative w-full flex_center h-[90vw] lg:h-[40vh] xl:h-[60vh] bg-[#FDC238] lg:min-h-[500px] pb-[50vw] lg:pt-[5vw] lg:pb-[5vw] overflow-hidden">
-             
-                <h2 class="absolute opacity-30 text-white titleFooter text-[33vw]  LonelyFont">ISHI</h2>
-
-                <div class="w-[30%] relative flex_center xl:pb-[5vw]">
-
-                    <div class="w-[40%] absolute z-10">
-                        <img src="./static/images/logo.png" alt="ISHI" class="w-full float_animation">
-                    </div>
-
-                    <div class="w-full relative">
-                        <img src="./static/images/bgImgFooter.svg" alt="footer" class="w-full object-contain rotate_img">
-                    </div>
-                </div>
-
-                <!-- disclaimer -->
-                 <div class="disclaimer absolute bottom-0 left-0 w-full h-auto lg:h-[30%] xl:h-[40%] min-[1500px]:h-[50%] flex_center max-lg:py-[5vw]">
-
-                    <!-- bg -->
-                     <div class="w-full absolute bottom-[2vw] lg:bottom-0 left-0 flex_center">
-                        <img src="./static/images/cloudFooter.png" alt="footer" class="w-full h-auto object-contain cloudFooter zoomIn_animation">
-                     </div>
-
-                    <!-- content -->
-                    <div class="relative z-10 w-full flex_between h-full  items-end px-[10vw] pb-[2vw] max-lg:flex-col max-lg:items-center max-lg:pt-[20vw] max-lg:gap-4" data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="100"
-                    >
-
-                        <div class="w-[90%] lg:w-[50%] text-[#353535] max-lg:text-center">
-                            <h2 class="text-[2rem] lg:text-[1.4vw]">DISCLAIMER </h2>
-                            <p class="text-[2vw] lg:text-[.75vw]">
-
-                                $PREZT is a meme coin created for fun with absolutely no intrinsic value or any expectation of financial return. The token for entertainment purposes only and we take zero responsibility for the value of this token. Don’t risk money if you’re not prepared to lose investment. The price can rise or fall. We are not responsible for the token's price movements.</p>
-                        </div>
-
-                        <div class="flex_center gap-3 md:gap-6 relative z-10">
-                   
-                            <!-- telegram -->
-                           <div
-                           >
-                            <a target="_blank" href="https://web.telegram.org" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                                <img src="./static/images/telegram.png" alt="" class="w-[50%] h-auto object-contain">
-                           </a>
-                           </div> 
-                           
-                            <!-- twitter -->
-                           <div
-                           >
-                            <a target="_blank" href="https://x.com" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                                <img src="./static/images/twitter.png" alt="" class="w-[50%] h-auto object-contain">
-                           </a>
-                           </div> 
-                           
-                            <!-- dexscreen -->
-                           <div
-                           >
-                            <a target="_blank" href="https://dexscreen.com" class="duration-200 hover:scale-105 flex_center rounded-md w-[40px] h-[40px] md:w-[56.08px] md:h-[56.08px] relative   border-black border-[2px] btnStyle">
-                                <img src="./static/images/dexscreenIcon.svg" alt="" class="w-[50%] h-auto object-contain">
-                           </a>
-                           </div> 
-         
-        
-                         </div>
-
-                    </div>
-
-                 </div>
-
-            </footer>
     </div>
- 
- 
- 
-     <!-- aos js library animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
- 
-    <script src="./static/js/index.js"></script>
+   
+   <div class="memeMakerContainer w-[95%] min-[1400px]:w-[85vw] min-h-[80vw]  xl:min-h-[67vw] min-[1800px]:min-h-[55vw] max-w-[1500px]  ">
+       
+       <!-- canvas -->
+       <div id="canvasContainer" class="w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
 
+         <div id="imageContainer" class="imageContainer relative h-auto max-h-[90%] overflow-hidden w-full">
+
+            <img id="previewImage" src="./assets/images/hero_image.png" alt="" class="w-full h-auto object-contain select-none"> 
+
+         </div>
+
+         <div class="draggableOverlay hidden">
+
+            <img src="./assets/images/Head/brave-deebo.png" alt="" class="main_image ">
+    
+            <div class="settingImage absolute w-full h-full left-0 top-0">
+    
+                <!-- left -->
+                 <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[250px] top-[50%] translate-y-[-50%] rounded-md">
+    
+                    <div class="indexTop cursor-pointer w-[70%] relative">
+                        <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
+                    </div>
+    
+                    <div class="indexBottom cursor-pointer w-[70%] relative">
+                        <img src="./assets/icons/indexBottom.svg" alt="" class="w-full h-auto object-contain">
+                    </div>
+    
+                    <div class="mirrorMode cursor-pointer w-[70%] relative">
+                        <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain ">
+                    </div>
+    
+                    <div class="mirrorTopMode cursor-pointer w-[70%] relative">
+                        <img src="./assets/icons/mirror.svg" alt="" class="w-full h-auto object-contain rotate-[90deg]">
+                    </div>
+    
+                    <div class="deleteBtn cursor-pointer w-[70%] relative">
+                        <img src="./assets/icons/deleteIcon.svg" alt="" class="w-full h-auto object-contain">
+                    </div>
+    
+                 </div>
+    
+                <!-- right -->
+                 <div class="right-[0%] absolute h-full w-[25%] ">
+                    
+                    <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                        <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
+                    </div>
+    
+                    <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                        <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
+                    </div>
+    
+                 </div>
+    
+            </div>
+    
+         </div>  
+ 
+
+       </div>
+
+       <!-- buttons settings -->
+       <div class="settingContainer absolute top-0 right-0 w-[30%] flex flex-wrap gap-4 justify-center min-h-full pt-4 border-l-[2px] border-black z-10 bg-white">
+
+          <div class="settingContainerRow relative flex flex-col items-center gap-10 px-3">
+
+            <div class="choiseBtnContainer w-full flex justify-between rounded-full border-black border-[1px] h-[40px]">
+
+                <button data-btn="head" class="active">HEAD</button>
+                <button data-btn="accessories">ACCESSORIES</button>
+                <button data-btn="extras">EXTRAS</button>
+ 
+            </div>
+ 
+            <!-- choise meme -->
+             <!-- head -->
+           <div id="head" class="choiseMemes px-2 active w-full justify-center items-start flex-wrap gap-2 h-auto">
+ 
+            <div data-image="1" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/body-cup.png" alt="">
+            </div>
+ 
+            <div data-image="2" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/body-levitating.png" alt="">
+            </div>
+ 
+            <div data-image="3" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/body.png" alt="">
+            </div>
+ 
+            <div data-image="4" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/bogdanoff.png" alt="">
+            </div>
+ 
+            <div data-image="5" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/brave-deebo.png" alt="">
+            </div>
+ 
+            <div data-image="6" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/cashgun.png" alt="">
+            </div>
+ 
+            <div data-image="7" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/deebo-pose-jump.png" alt="">
+            </div>
+ 
+            <div data-image="8" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/deebo-pose-standing.png" alt="">
+            </div>
+ 
+            <div data-image="9" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/eyes.png" alt="">
+            </div>
+ 
+            <div data-image="10" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/face.png" alt="">
+            </div>
+ 
+            <div data-image="11" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/gmer.png" alt="">
+            </div>
+ 
+            <div data-image="12" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/gunner.png" alt="">
+            </div>
+ 
+            <div data-image="13" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-angry.png" alt="">
+            </div>
+ 
+            <div data-image="14" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-confused.png" alt="">
+            </div>
+ 
+            <div data-image="15" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-dreamy.png" alt="">
+            </div>
+ 
+            <div data-image="16" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-happy.png" alt="">
+            </div>
+ 
+            <div data-image="17" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-laughing.png" alt="">
+            </div>
+ 
+            <div data-image="18" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-open.png" alt="">
+            </div>
+ 
+            <div data-image="19" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-sad.png" alt="">
+            </div>
+ 
+            <div data-image="20" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-sayan.png" alt="">
+            </div>
+ 
+            <div data-image="21" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-side.png" alt="">
+            </div>
+ 
+            <div data-image="22" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-spartan.png" alt="">
+            </div>
+ 
+            <div data-image="23" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head-tongue.png" alt="">
+            </div>
+ 
+            <div data-image="24" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/head.png" alt="">
+            </div>
+ 
+            <div data-image="25" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/joker-deebo.png" alt="">
+            </div>
+ 
+            <div data-image="26" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/left-eye.png" alt="">
+            </div>
+ 
+            <div data-image="27" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/normal-mouth.png" alt="">
+            </div>
+ 
+            <div data-image="28" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/pop-mouth.png" alt="">
+            </div>
+ 
+            <div data-image="29" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/precious.png" alt="">
+            </div>
+ 
+            <div data-image="30" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/right-eye.png" alt="">
+            </div>
+ 
+            <div data-image="31" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/rodeo.png" alt="">
+            </div>
+ 
+            <div data-image="32" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/saxo-body.png" alt="">
+            </div>
+ 
+            <div data-image="33" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/smoker.png" alt="">
+            </div>
+ 
+            <div data-image="34" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Head/wow-mouth.png" alt="">
+            </div>
+ 
+           </div>
+ 
+           <!-- accessories -->
+           <div id="accessories" class="choiseMemes px-2 w-full justify-center items-start flex-wrap gap-2 h-auto">
+ 
+            <div data-image="35" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/army-helmet.png" alt="">
+            </div> 
+ 
+            <div data-image="36" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/bandage.png" alt="">
+            </div> 
+ 
+            <div data-image="37" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/bandana.png" alt="">
+            </div> 
+ 
+            <div data-image="38" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/beanie.png" alt="">
+            </div> 
+ 
+            <div data-image="39" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/bubble.png" alt="">
+            </div> 
+ 
+            <div data-image="40" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/cap.png" alt="">
+            </div> 
+ 
+            <div data-image="41" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/chain-dol.png" alt="">
+            </div> 
+ 
+            <div data-image="42" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/chain.png" alt="">
+            </div> 
+ 
+            <div data-image="43" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/cheff.png" alt="">
+            </div> 
+ 
+            <div data-image="44" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/crown.png" alt="">
+            </div> 
+ 
+            <div data-image="45" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/eyepatch.png" alt="">
+            </div> 
+ 
+            <div data-image="46" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/fwog-hat.png" alt="">
+            </div> 
+ 
+            <div data-image="47" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/glasses-sup.png" alt="">
+            </div> 
+ 
+            <div data-image="48" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/headphones.png" alt="">
+            </div> 
+ 
+            <div data-image="49" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/joint.png" alt="">
+            </div> 
+ 
+            <div data-image="50" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/megachain.png" alt="">
+            </div> 
+ 
+            <div data-image="51" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/naruto.png" alt="">
+            </div> 
+ 
+            <div data-image="52" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/pixel-glasses.png" alt="">
+            </div> 
+ 
+            <div data-image="53" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/sayan-glasses.png" alt="">
+            </div> 
+ 
+            <div data-image="54" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/sleeping-hat.png" alt="">
+            </div> 
+ 
+            <div data-image="55" class="relative cursor-pointer addImage" data-class="v1">
+                <img src="./assets/images/Accessories/snow-glasses.png" alt="">
+            </div> 
+ 
+            <div data-image="56" class="relative cursor-pointer addImage" data-class="v2">
+                <img src="./assets/images/Accessories/space-helmet.png" alt="">
+            </div> 
+  
+ 
+           </div>
+ 
+            <!-- extras -->
+            <div id="extras" class="choiseMemes px-2 w-full justify-center items-start flex-wrap gap-2 h-auto">
+ 
+                <div data-image="57" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/bee.png" alt="">
+                </div>  
+ 
+                <div data-image="58" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/butterfly-tor.png" alt="">
+                </div>  
+ 
+                <div data-image="59" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/butterfly-yellow.png" alt="">
+                </div>  
+ 
+                <div data-image="60" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/cash-side.png" alt="">
+                </div>  
+ 
+                <div data-image="61" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/cash.png" alt="">
+                </div>  
+ 
+                <div data-image="62" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/coin-deebo.png" alt="">
+                </div>  
+ 
+                <div data-image="63" class="relative cursor-pointer addImage" data-class="v1">
+                    <img src="./assets/images/Extras/coins.png" alt="">
+                </div>  
+ 
+                <div data-image="64" class="relative cursor-pointer addImage" data-class="v1">
+                    <img src="./assets/images/Extras/floating-cash.png" alt="">
+                </div>  
+ 
+                <div data-image="65" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/gm.png" alt="">
+                </div>  
+ 
+                <div data-image="66" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/plantbar.png" alt="">
+                </div>  
+ 
+                <div data-image="67" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/rocket.png" alt="">
+                </div>  
+ 
+                <div data-image="68" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/stone-dex.png" alt="">
+                </div>  
+ 
+                <div data-image="68" class="relative cursor-pointer addImage" data-class="v2">
+                    <img src="./assets/images/Extras/honey.png" alt="">
+                </div>  
+    
+                
+            </div>
+ 
+ 
+           <!-- start and download -->
+            <div class="btnChoise w-full flex justify-center items-center gap-4">
+ 
+                <button id="restartButton" class=" ">Start Over</button>
+ 
+                <button id="downloadBtn">Download</button>
+ 
+             
+            </div> 
+ 
+          </div>
+
+       </div>
+     
+
+   </div>
+ 
+
+   </div>
+
+   <div class="h-[100vh] w-full min-[1200px]:hidden relative hidden justify-center items-center  ">
+    <h1 class="text-center text-white text-[5vw]">not available on mobile</h1>
+   </div>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/addImage.js"></script>
+    <script src="./assets/js/generator.js"></script>
 </body>
+
 </html>
