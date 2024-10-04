@@ -23,7 +23,7 @@
 
        <input type="file" id="imageInput" accept="image/*" class="w-full h-full cursor-pointer absolute z-10 opacity-0">
 
-       <div class="absolute top-[5%] flex flex-col items-center z-10 text-white">
+       <div class="absolute top-[5%] flex flex-col items-center z-[5] text-white text-center px-5">
            <img src="./assets/icons/uploadIcon.svg" alt="upload" class="w-[50px] h-auto object-contain">
            <p class="text-[1.5em]">Drag & drop an image here,</p>
            <p class="text-[1.5em]">or click to select one</p>
@@ -34,7 +34,7 @@
 
     </div>
    
-   <div id="memeMakerContainer" class="memeMakerContainer w-[95%] min-[1400px]:w-[85vw] min-h-[80vw] xl:min-h-[67vw] min-[1800px]:min-h-[60vw] max-w-[1500px] min-[3000px]:min-h-[30vw]">
+   <div id="memeMakerContainer" class="memeMakerContainer hidden w-[95%] min-[1400px]:w-[85vw] min-h-[80vw] xl:min-h-[67vw] min-[1800px]:min-h-[60vw] max-w-[1500px] min-[3000px]:min-h-[30vw]">
        
        <!-- canvas -->
        <div id="canvasContainer" class=" w-full lg:w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
@@ -45,7 +45,7 @@
 
          </div>
 
-         <div class="draggableOverlay hidden">
+         <div class="draggableOverlay">
 
             <img src="./assets/images/Head/brave-deebo.png" alt="" class="main_image ">
     

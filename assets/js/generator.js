@@ -110,6 +110,7 @@ function makeDraggable(draggableOverlay) {
     offsetY = e.touches[0].clientY - rect.top;
 
     draggableOverlay.style.cursor = 'grabbing';
+ 
 
     document.addEventListener('touchmove', onDragTouch);
     document.addEventListener('touchend', stopDragTouch);
@@ -208,6 +209,7 @@ function makeDraggable(draggableOverlay) {
   
     document.addEventListener('touchmove', onRotateTouch);
     document.addEventListener('touchend', stopRotateTouch);
+    
   });
   
   function onRotate(e) {

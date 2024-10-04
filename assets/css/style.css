@@ -239,7 +239,7 @@ body{
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
-    gap: .25rem;
+    gap: .45rem;
 
     height: auto;
   }
