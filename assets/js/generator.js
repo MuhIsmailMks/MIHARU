@@ -99,6 +99,22 @@ function makeDraggable(draggableOverlay) {
     document.addEventListener('mouseup', stopDrag);
   });
 
+  // Support for touch devices
+  draggableOverlay.addEventListener('touchstart', (e) => {
+    if (isRotating || isResizing) return;
+
+    isDragging = true;
+
+    const rect = draggableOverlay.getBoundingClientRect();
+    offsetX = e.touches[0].clientX - rect.left;
+    offsetY = e.touches[0].clientY - rect.top;
+
+    draggableOverlay.style.cursor = 'grabbing';
+
+    document.addEventListener('touchmove', onDragTouch);
+    document.addEventListener('touchend', stopDragTouch);
+  });
+
   function onDrag(e) {
     if (!isDragging || isRotating || isResizing) return;
 
@@ -110,12 +126,31 @@ function makeDraggable(draggableOverlay) {
     draggableOverlay.style.top = `${newTop}px`;
   }
 
+  function onDragTouch(e) {
+    if (!isDragging || isRotating || isResizing) return;
+
+    const containerRect = container.getBoundingClientRect();
+    let newLeft = e.touches[0].clientX - containerRect.left - offsetX;
+    let newTop = e.touches[0].clientY - containerRect.top - offsetY;
+
+    draggableOverlay.style.left = `${newLeft}px`;
+    draggableOverlay.style.top = `${newTop}px`;
+  }
+
   function stopDrag() {
     isDragging = false;
     draggableOverlay.style.cursor = 'grab';
     document.removeEventListener('mousemove', onDrag);
     document.removeEventListener('mouseup', stopDrag);
   }
+
+  function stopDragTouch() {
+    isDragging = false;
+    draggableOverlay.style.cursor = 'grab';
+    document.removeEventListener('touchmove', onDragTouch);
+    document.removeEventListener('touchend', stopDragTouch);
+  }
+
 
 
 
