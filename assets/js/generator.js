@@ -195,7 +195,7 @@ function makeDraggable(draggableOverlay) {
 
     let newSize = Math.max(newWidth, newHeight);
 
-    if (newSize > 100) {
+    if (newSize > 50) {
       draggableOverlay.style.width = `${newSize}px`;
       draggableOverlay.style.height = `${newSize}px`;
     }

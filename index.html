@@ -14,7 +14,7 @@
 
 <body class="bg-[#75DED9]">
     
-   <div class="py-[100px] hidden min-[1200px]:flex flex-col items-center  max-w-[100%] overflow-x-hidden relative">
+   <div class="py-[100px] flex min-[1200px]:flex flex-col items-center  max-w-[100%] overflow-x-hidden relative">
 
     <h1 class="text-center text-white text-[5vw]">Image Generator</h1>
  
@@ -34,10 +34,10 @@
 
     </div>
    
-   <div id="memeMakerContainer" class="memeMakerContainer w-[95%] min-[1400px]:w-[85vw] min-h-[80vw] xl:min-h-[67vw] min-[1800px]:min-h-[55vw] max-w-[1500px] hidden ">
+   <div id="memeMakerContainer" class="memeMakerContainer w-[95%] min-[1400px]:w-[85vw] min-h-[80vw] xl:min-h-[67vw] min-[1800px]:min-h-[60vw] max-w-[1500px] min-[3000px]:min-h-[30vw] hidden">
        
        <!-- canvas -->
-       <div id="canvasContainer" class="w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
+       <div id="canvasContainer" class=" w-full lg:w-[70%] min-h-full h-auto z-10 relative flex justify-center items-center">
 
          <div id="imageContainer" class="imageContainer relative h-auto max-h-[90%] overflow-hidden w-full">
 
@@ -52,7 +52,7 @@
             <div class="settingImage absolute w-full h-full left-0 top-0">
     
                 <!-- left -->
-                 <div class="left bg-[#726749] absolute w-[20%] min-w-[40px] max-w-[50px] h-full max-h-[300px] left-[0%] flex flex-col items-center justify-center gap-3 min-h-[250px] top-[50%] translate-y-[-50%] rounded-md">
+                 <div class="left">
     
                     <div class="indexTop cursor-pointer w-[70%] relative">
                         <img src="./assets/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
@@ -79,11 +79,11 @@
                 <!-- right -->
                  <div class="right-[0%] absolute h-full w-[25%] ">
                     
-                    <div class="rotate rounded-lg bg-[#726749] w-[50px] h-[50px] absolute top-0 right-0 cursor-nw-resize flex justify-center items-center">
+                    <div class="rotate rotateResizeElement rounded-lg  top-0">
                         <img src="./assets/icons/rotate.svg" alt="" class="w-[70%] h-auto object-contain">
                     </div>
     
-                    <div class="resize rounded-lg bg-[#726749] w-[50px] h-[50px] absolute bottom-0 right-0 cursor-nw-resize flex justify-center items-center">
+                    <div class="resize rotateResizeElement rounded-lg  bottom-0">
                         <img src="./assets/icons/resize.svg" alt="" class="w-[70%] h-auto object-contain mirror_image">
                     </div>
     
@@ -97,9 +97,9 @@
        </div>
 
        <!-- buttons settings -->
-       <div class="settingContainer absolute top-0 right-0 w-[30%] flex flex-wrap gap-4 justify-center min-h-full pt-4 border-l-[2px] border-black z-10 bg-white">
+       <div class="settingContainer ">
 
-          <div class="settingContainerRow relative flex flex-col items-center gap-10 px-3">
+          <div class="settingContainerRow relative flex flex-col items-center gap-10 px-3 w-full">
 
             <div class="choiseBtnContainer w-full flex justify-between rounded-full border-black border-[1px] h-[40px]">
 
@@ -424,7 +424,7 @@
 
    </div>
 
-   <div class="h-[100vh] w-full min-[1200px]:hidden relative flex justify-center items-center  ">
+   <div class="h-[100vh] w-full min-[1200px]:hidden relative hidden justify-center items-center  ">
     <h1 class="text-center text-white text-[5vw]">not available on mobile</h1>
    </div>
 

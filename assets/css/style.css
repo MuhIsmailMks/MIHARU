@@ -124,8 +124,7 @@ body{
     left: 20%;
     top: 30%;
 
-    cursor: grab;
-    /* opacity: 0.95; */
+    cursor: grab; 
     padding: .25rem;
 
     width: 200px;
@@ -160,6 +159,71 @@ body{
   .draggableOverlay .main_image.v2{ 
     width: auto;
     height: 90%;
+  }
+
+  .draggableOverlay .settingImage .left{
+    background-color: var(--primariClr);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .85rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    width: 20%;
+    min-width: 40px;
+    max-width: 50px;
+    height: 100%;
+    min-height: 250px;
+    max-height: 350px;
+}
+
+
+.rotateResizeElement{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primariClr);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  right: 0;
+  cursor: nw-resize;
+}
+
+
+  /* settingContainer */
+  .settingContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    min-height: 100%;
+    padding-top: 1rem;
+
+    border-left: 2px solid black;
+    z-index: 10;
+    background-color: white;
   }
   
  /* choise button memes*/
@@ -250,9 +314,9 @@ body{
 
 @media screen and (max-width:1400px) {
   .choiseMemes .addImage{
-    height: 70px;
+    height: 60px;
     width: 20%;
-}
+  }
 }
 
 @media screen and (max-width:1200px) {
@@ -264,4 +328,62 @@ body{
     /* padding: .35rem .5rem; */
     font-size: .8rem;
   }
+
+  .choiseMemes .addImage{
+    max-width: 90px;
+  }
+  
+}
+
+
+@media screen and (max-width:1024px) {
+  .memeMakerContainer{
+    flex-direction: column;
+  }
+
+  .settingContainer{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; 
+
+    border-left: 0px solid black;
+    border-top: 2px solid black; 
+
+    padding-bottom: 1rem;
+  }
+
+}
+
+@media screen and (max-width:786px) {
+  .choiseMemes .addImage{
+    height: 80px;
+    width: 22%;
+  }
+
+  .memeMakerContainer{
+    min-height: 0;
+  }
+
+  .draggableOverlay{
+    position: absolute;
+    border: 1px solid var(--primariClr);
+    left: 20%;
+    top: 30%;
+ 
+
+    width: 140px;
+    height: 140px; 
+  }
+
+  .draggableOverlay .settingImage .left{
+    min-width: 30px;
+    min-height: 200px;
+  }
+
+  .rotateResizeElement{ 
+    width: 30px;
+    height: 30px; 
+  }
+
 }
