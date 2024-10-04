@@ -162,7 +162,7 @@ body{
   }
 
   .draggableOverlay .settingImage .left{
-    background-color: var(--primariClr);
+    background-color: white;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -194,8 +194,9 @@ body{
 .rotateResizeElement{
   position: absolute;
   width: 50px;
+  color: #242424;
   height: 50px;
-  background-color: var(--primariClr);
+  background-color:white;
 
   display: flex;
   justify-content: center;
