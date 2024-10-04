@@ -84,165 +84,212 @@ function makeDraggable(draggableOverlay) {
   let lastRotation = 0;
     
   // draggable function
-// draggable function
-draggableOverlay.addEventListener('mousedown', (e) => {
-  if (isRotating || isResizing) return; // Jika sedang melakukan rotasi atau resize, tidak bisa drag
+  draggableOverlay.addEventListener('mousedown', (e) => {
+    if (isRotating || isResizing) return; // Jika sedang melakukan rotasi atau resize, tidak bisa drag
 
-  isDragging = true;
+    isDragging = true;
 
-  const rect = draggableOverlay.getBoundingClientRect();
-  offsetX = e.clientX - rect.left;
-  offsetY = e.clientY - rect.top;
+    const rect = draggableOverlay.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
 
-  draggableOverlay.style.cursor = 'grabbing';
+    draggableOverlay.style.cursor = 'grabbing';
 
-  document.addEventListener('mousemove', onDrag);
-  document.addEventListener('mouseup', stopDrag);
-});
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', stopDrag);
+  });
 
-// Support for touch devices
-draggableOverlay.addEventListener('touchstart', (e) => {
-  if (isRotating || isResizing) return;
+  function onDrag(e) {
+    if (!isDragging || isRotating || isResizing) return;
 
-  isDragging = true;
+    const containerRect = container.getBoundingClientRect();
+    let newLeft = e.clientX - containerRect.left - offsetX;
+    let newTop = e.clientY - containerRect.top - offsetY;
 
-  const rect = draggableOverlay.getBoundingClientRect();
-  offsetX = e.touches[0].clientX - rect.left;
-  offsetY = e.touches[0].clientY - rect.top;
+    draggableOverlay.style.left = `${newLeft}px`;
+    draggableOverlay.style.top = `${newTop}px`;
+  }
 
-  draggableOverlay.style.cursor = 'grabbing';
-
-  document.addEventListener('touchmove', onDragTouch);
-  document.addEventListener('touchend', stopDragTouch);
-});
-
-function onDrag(e) {
-  if (!isDragging || isRotating || isResizing) return;
-
-  const containerRect = container.getBoundingClientRect();
-  let newLeft = e.clientX - containerRect.left - offsetX;
-  let newTop = e.clientY - containerRect.top - offsetY;
-
-  draggableOverlay.style.left = `${newLeft}px`;
-  draggableOverlay.style.top = `${newTop}px`;
-}
-
-function onDragTouch(e) {
-  if (!isDragging || isRotating || isResizing) return;
-
-  const containerRect = container.getBoundingClientRect();
-  let newLeft = e.touches[0].clientX - containerRect.left - offsetX;
-  let newTop = e.touches[0].clientY - containerRect.top - offsetY;
-
-  draggableOverlay.style.left = `${newLeft}px`;
-  draggableOverlay.style.top = `${newTop}px`;
-}
-
-function stopDrag() {
-  isDragging = false;
-  draggableOverlay.style.cursor = 'grab';
-  document.removeEventListener('mousemove', onDrag);
-  document.removeEventListener('mouseup', stopDrag);
-}
-
-function stopDragTouch() {
-  isDragging = false;
-  draggableOverlay.style.cursor = 'grab';
-  document.removeEventListener('touchmove', onDragTouch);
-  document.removeEventListener('touchend', stopDragTouch);
-}
-
+  function stopDrag() {
+    isDragging = false;
+    draggableOverlay.style.cursor = 'grab';
+    document.removeEventListener('mousemove', onDrag);
+    document.removeEventListener('mouseup', stopDrag);
+  }
 
 
 
   // rotate function
   const rotateHandle = draggableOverlay.querySelector('.rotate');
 
+  // For desktop
   rotateHandle.addEventListener('mousedown', (e) => {
-      e.preventDefault();
-      isRotating = true;
-
-      const rect = draggableOverlay.getBoundingClientRect();
-      
-      centerX = rect.left + rect.width / 2;
-      centerY = rect.top + rect.height / 2;
-
-      const currentTransform = window.getComputedStyle(draggableOverlay).transform;
-      
-
-      // Cek jika ada transformasi matriks yang valid
-      if (currentTransform !== 'none') {
-          const matrix = currentTransform.match(/matrix\((.+)\)/);
-          
-          if (matrix) { // Pastikan hasil match tidak null
-              const values = matrix[1].split(', ');
-              initialRotation = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
-          }
-      } else {
-          initialRotation = 0; // Jika tidak ada transformasi, mulai dari rotasi 0
+    e.preventDefault();
+    isRotating = true;
+  
+    const rect = draggableOverlay.getBoundingClientRect();
+    
+    centerX = rect.left + rect.width / 2;
+    centerY = rect.top + rect.height / 2;
+  
+    const currentTransform = window.getComputedStyle(draggableOverlay).transform;
+  
+    // Check for valid transform matrix
+    if (currentTransform !== 'none') {
+      const matrix = currentTransform.match(/matrix\((.+)\)/);
+      if (matrix) {
+        const values = matrix[1].split(', ');
+        initialRotation = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
       }
-
-      document.addEventListener('mousemove', onRotate);
-      document.addEventListener('mouseup', stopRotate);
-      
+    } else {
+      initialRotation = 0;
+    }
+  
+    document.addEventListener('mousemove', onRotate);
+    document.addEventListener('mouseup', stopRotate);
   });
-
+  
+  // For touch devices
+  rotateHandle.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    isRotating = true;
+  
+    const rect = draggableOverlay.getBoundingClientRect();
+    
+    centerX = rect.left + rect.width / 2;
+    centerY = rect.top + rect.height / 2;
+  
+    const currentTransform = window.getComputedStyle(draggableOverlay).transform;
+  
+    if (currentTransform !== 'none') {
+      const matrix = currentTransform.match(/matrix\((.+)\)/);
+      if (matrix) {
+        const values = matrix[1].split(', ');
+        initialRotation = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
+      }
+    } else {
+      initialRotation = 0;
+    }
+  
+    document.addEventListener('touchmove', onRotateTouch);
+    document.addEventListener('touchend', stopRotateTouch);
+  });
+  
   function onRotate(e) {
     if (!isRotating) return;
-
+  
     const currentMouseX = e.clientX;
     const currentMouseY = e.clientY;
-
+  
     const angle = Math.atan2(currentMouseY - centerY, currentMouseX - centerX) * (180 / Math.PI);
     draggableOverlay.style.transform = `rotate(${angle - initialRotation}deg)`;
   }
-
+  
+  function onRotateTouch(e) {
+    if (!isRotating) return;
+  
+    const currentMouseX = e.touches[0].clientX;
+    const currentMouseY = e.touches[0].clientY;
+  
+    const angle = Math.atan2(currentMouseY - centerY, currentMouseX - centerX) * (180 / Math.PI);
+    draggableOverlay.style.transform = `rotate(${angle - initialRotation}deg)`;
+  }
+  
   function stopRotate() {
     isRotating = false;
     document.removeEventListener('mousemove', onRotate);
     document.removeEventListener('mouseup', stopRotate);
   }
-
-
-
-  // resize function
-  const resizeHandle = draggableOverlay.querySelector('.resize');
-  resizeHandle.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    isResizing = true;
-
-    initialWidth = draggableOverlay.offsetWidth;
-    initialHeight = draggableOverlay.offsetHeight;
-    initialMouseX = e.clientX;
-    initialMouseY = e.clientY;
-
-    document.addEventListener('mousemove', onResize);
-    document.addEventListener('mouseup', stopResize);
-  });
-
-  function onResize(e) {
-    if (!isResizing) return;
-
-    const dx = e.clientX - initialMouseX;
-    const dy = e.clientY - initialMouseY;
-
-    let newWidth = initialWidth + dx;
-    let newHeight = initialHeight + dy;
-
-    let newSize = Math.max(newWidth, newHeight);
-
-    if (newSize > 50) {
-      draggableOverlay.style.width = `${newSize}px`;
-      draggableOverlay.style.height = `${newSize}px`;
-    }
-
+  
+  function stopRotateTouch() {
+    isRotating = false;
+    document.removeEventListener('touchmove', onRotateTouch);
+    document.removeEventListener('touchend', stopRotateTouch);
   }
+  
 
-  function stopResize() {
-    isResizing = false;
-    document.removeEventListener('mousemove', onResize);
-    document.removeEventListener('mouseup', stopResize);
+
+// resize function
+const resizeHandle = draggableOverlay.querySelector('.resize');
+resizeHandle.addEventListener('mousedown', (e) => {
+  e.preventDefault();
+  isResizing = true;
+
+  initialWidth = draggableOverlay.offsetWidth;
+  initialHeight = draggableOverlay.offsetHeight;
+  initialMouseX = e.clientX;
+  initialMouseY = e.clientY;
+ 
+
+  document.addEventListener('mousemove', onResize);
+  document.addEventListener('mouseup', stopResize);
+});
+
+// Support for touch devices
+resizeHandle.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  isResizing = true;
+
+  initialWidth = draggableOverlay.offsetWidth;
+  initialHeight = draggableOverlay.offsetHeight;
+  initialMouseX = e.touches[0].clientX;
+  initialMouseY = e.touches[0].clientY;
+ 
+
+  document.addEventListener('touchmove', onResizeTouch);
+  document.addEventListener('touchend', stopResizeTouch);
+});
+
+function onResize(e) {
+  if (!isResizing) return;
+
+  const dx = e.clientX - initialMouseX;
+  const dy = e.clientY - initialMouseY;
+
+  let newWidth = initialWidth + dx;
+  let newHeight = initialHeight + dy;
+
+  let newSize = Math.max(newWidth, newHeight);
+
+  if (newSize > 50) {
+    draggableOverlay.style.width = `${newSize}px`;
+    draggableOverlay.style.height = `${newSize}px`;
   }
+}
+
+function onResizeTouch(e) {
+  if (!isResizing) return;
+
+  const dx = e.touches[0].clientX - initialMouseX;
+  const dy = e.touches[0].clientY - initialMouseY;
+
+  let newWidth = initialWidth + dx;
+  let newHeight = initialHeight + dy;
+
+  let newSize = Math.max(newWidth, newHeight);
+
+  if (newSize > 50) {
+    draggableOverlay.style.width = `${newSize}px`;
+    draggableOverlay.style.height = `${newSize}px`;
+  }
+}
+
+function stopResize() {
+  isResizing = false;
+   
+
+  document.removeEventListener('mousemove', onResize);
+  document.removeEventListener('mouseup', stopResize);
+}
+
+function stopResizeTouch() {
+  isResizing = false;
+ 
+
+  document.removeEventListener('touchmove', onResizeTouch);
+  document.removeEventListener('touchend', stopResizeTouch);
+}
+
 
 
     
