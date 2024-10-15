@@ -7,7 +7,12 @@
 
 @font-face {
     font-family: "LonelyCoffee";
-    src: url("../fonts/LonelyCoffee.ttf") format("truetype");
+    src: url("../fonts/1c929e8cf8b92e846987d3a7fc62f9ad.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "LonelyCoffee2";
+    src: url("../fonts/17abc1e1c227f8b226c01526988310a9.woff2") format("truetype");
 }
  
 :root{
@@ -238,6 +243,8 @@
 
   /* settingContainer */
   .settingContainer{
+    
+  font-family: "LonelyCoffee2", sans-serif;
     position: absolute;
     top: 0;
     right: 0;
