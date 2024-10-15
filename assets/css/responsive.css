@@ -1,0 +1,21 @@
+@media screen and (max-width:1300px) {
+    .contract img{ 
+      height: 300px !important; 
+      width: auto !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .contract{
+        padding: 3rem 1rem;
+    }
+
+    .contract img{ 
+      height: auto !important; 
+      width: 90% !important;
+    }
+
+    .contract h3{ 
+        font-size: 3rem; 
+      }
+}
