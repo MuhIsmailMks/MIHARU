@@ -10,6 +10,11 @@
 //     }
 // };
 
+AOS.init({
+    once: true
+});
+ 
+
 const copyAddresses = document.querySelectorAll('.copy-box'); // Ambil semua elemen dengan class 'copy-box'
 
 copyAddresses.forEach(copyAddress => {
