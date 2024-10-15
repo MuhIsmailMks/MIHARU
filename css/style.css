@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "LonelyCoffee";
+    src: url("../fonts/LonelyCoffee.ttf") format("truetype");
+}
+ 
+:root{
+    --primariClr:#6db7da;
+    --seconClr:#578ff7;
+    --thirdClr:#080808; 
+}
+
+.mirror_image{
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+.memeMakerSection{
+  font-family: "LonelyCoffee", sans-serif;
+  background-color: #94bade;
+}
+
+/* memeMakerContainer */
+.memeMakerContainer{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: auto;
+
+  border: 2px solid black;
+  background-color: var(--primariClr);
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+/* upload image */
+.imageContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadImageContainer{
+    background: linear-gradient(180deg, var(--seconClr) 0%, #65DBF7 100%);
+    transition: .4s ease-out;
+    -webkit-transition: .4s ease-out;
+    -moz-transition: .4s ease-out;
+    -ms-transition: .4s ease-out;
+    -o-transition: .4s ease-out;
+}
+
+.uploadImageContainer:hover{
+    transform: scale(0.99) rotate(-2deg);
+    -webkit-transform: scale(0.99) rotate(-2deg);
+    -moz-transform: scale(0.99) rotate(-2deg);
+    -ms-transform: scale(0.99) rotate(-2deg);
+    -o-transform: scale(0.99) rotate(-2deg);
+}
+
+.backgroundCanvasContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  z-index: 0;
+
+  top: 0;
+  left: 0;
+}
+
+.backgroundCanvas{
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative; 
+  object-fit: cover;
+}
+
+.choiseBtnContainer button{
+    color: white;
+    padding: .45rem 1em;
+    height: 100%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.choiseBtnContainer button.active{
+    background-color:white;
+    border: 1px solid black;
+    color: var(--seconClr);
+}
+
+.btnChoise button{
+     background-color: white;
+     color: var(--seconClr);
+
+     width: 150px;
+     height: 70px;
+
+     font-size: .95rem;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     border: 4px solid var(--primariClr);
+ 
+     transition: 0.1s ease-in;
+     -webkit-transition: 0.1s ease-in;
+     -moz-transition: 0.1s ease-in;
+     -ms-transition: 0.1s ease-in;
+     -o-transition: 0.1s ease-in;
+}
+
+.btnChoise button:nth-child(1){
+     background-color: white; 
+     color: var(--thirdClr);
+}
+
+.btnChoise button:hover:nth-child(1){ 
+  background-color: var(--thirdClr);
+  color: var(--primariClr);
+}
+
+.btnChoise button:hover:nth-child(2){ 
+    background-color: var(--thirdClr);
+}
+
+
+
+  /* draggableOverlay */
+  .draggableOverlay{
+    position: absolute;
+    border: 1px solid var(--primariClr);
+    left: 20%;
+    top: 30%;
+
+    cursor: grab; 
+    padding: .25rem;
+
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+  }
+
+  .draggableOverlay .settingImage{
+    opacity: 0.7;
+  }
+
+  .draggableOverlay:hover .settingImage{
+    opacity: 1;
+  }
+
+  .draggableOverlay .main_image{
+    max-width: 95%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .draggableOverlay .main_image.v1{ 
+    height: auto;
+    width: 90%;
+  }
+
+  .draggableOverlay .main_image.v2{ 
+    width: auto;
+    height: 90%;
+  }
+
+  .draggableOverlay .settingImage .left{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .85rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    width: 20%;
+    min-width: 40px;
+    max-width: 50px;
+    height: 100%;
+    min-height: 250px;
+    max-height: 350px;
+}
+
+
+.rotateResizeElement{
+  position: absolute;
+  width: 50px;
+  color: #242424;
+  height: 50px;
+  background-color:white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  right: 0;
+  cursor: nw-resize;
+}
+
+
+  /* settingContainer */
+  .settingContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    min-height: 100%;
+    padding-top: 1rem;
+
+    border-left: 2px solid black;
+    z-index: 10;
+    background-color: var(--primariClr);
+  }
+  
+ /* choise button memes*/
+ .choiseMemes{
+    display: none;
+  }
+
+  .choiseMemes .choiseMemeContainer{
+    padding: 0 .25rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: .45rem;
+
+    height: auto;
+  }
+
+  .choiseMemes.active{
+    display: flex;
+  }
+
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage{
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    position: relative; 
+}
+
+
+.choiseMemes .addImage{   
+  padding: .25rem 0;
+  z-index: 10;
+}
+
+ 
+.bgChoiseBtn::before,
+.addImage::before{
+    content: "✓";
+    position: absolute;
+    font-size: .75rem;
+    right: -5px;
+    top: -5px;
+    width: 19px;
+    height: 19px;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    background-color: #14b614;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.bgChoiseBtn.active::before,
+.addImage.active::before{
+    opacity: 1;
+}
+
+.bgChoiseBtn:hover,
+.addImage:hover{
+    transform: scale(.95);
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+}
+ 
+.addImage img{
+    width: 90%;
+    max-height: 90%; 
+    object-fit: contain;
+}
+
+ 
+.bgChoiseBtn img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+ 
+
+
+
+
+/* media screen */
+@media screen and (min-width:1700px) {
+  .choiseMemes .bgChoiseBtn,
+    .choiseMemes .addImage{
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage{
+    height: 70px;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .btnChoise button{
+    width: 120px;
+  }
+
+  .choiseBtnContainer button{ 
+    font-size: .8rem;
+  }
+
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage{
+    max-width: 90px;
+  }
+
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage{
+    height: 60px; 
+  }
+  
+}
+
+
+@media screen and (max-width:1024px) {
+  .memeMakerContainer{
+    flex-direction: column;
+  }
+
+  .settingContainer{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; 
+
+    border-left: 0px solid black;
+    border-top: 2px solid black; 
+
+    padding-bottom: 1rem;
+  }
+
+  .btnChoise button,
+  .choiseBtnContainer button{
+    font-size: 2vw;
+  }
+
+}
+
+@media screen and (max-width:786px) {
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage{
+    height: 80px;
+    width: 22%;
+  }
+
+  .memeMakerContainer{
+    min-height: 0;
+  }
+
+  .draggableOverlay{
+    position: absolute;
+    border: 1px solid var(--primariClr);
+    left: 20%;
+    top: 30%;
+ 
+
+    width: 140px;
+    height: 140px; 
+  }
+
+  .draggableOverlay .settingImage .left{
+    min-width: 30px;
+    min-height: 200px;
+  }
+
+  .rotateResizeElement{ 
+    width: 30px;
+    height: 30px; 
+  }
+ 
+ 
+  .choiseMemes .choiseMemeContainer{ 
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: auto;
+    justify-content: start;
+  }
+
+  .choiseMemes .bgChoiseBtn,
+  .choiseMemes .addImage {
+    aspect-ratio: 1 / 1; 
+    flex: none; 
+    display: flex;
+
+    height: 120px;
+    width: 100px;
+
+    min-width: 120px;
+    margin: 0 .5vw;
+  }
+
+  .choiseMemes .addImage{
+    padding: .55rem;
+  }
+
+  
+  .btnChoise button,
+  .choiseBtnContainer button{
+    font-size: 3vw;
+  }
+
+}
+
+.titleWeb{
+  -webkit-text-stroke: 2px black;
+}
