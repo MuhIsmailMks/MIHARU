@@ -42,16 +42,12 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
   const oldBorders = [];
   const oldOpacities = [];
   const oldDisplays = [];
-
-  // Simpan border, opacity, dan display lama setiap elemen draggableOverlay
+ 
   draggableOverlays.forEach((draggableOverlay, index) => {
-      oldBorders[index] = draggableOverlay.style.border;
-      // oldOpacities[index] = draggableOverlay.style.opacity;
+      oldBorders[index] = draggableOverlay.style.border; 
       oldDisplays[index] = settingImages[index].style.display;
-
-      // Hilangkan border sebelum mengambil screenshot
-      draggableOverlay.style.border = 'none';
-      // draggableOverlay.style.opacity = 1;
+ 
+      draggableOverlay.style.border = 'none'; 
       settingImages[index].style.display = 'none';
   });
 
@@ -64,8 +60,7 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
 
       // Kembalikan border, opacity, dan display seperti semula
       draggableOverlays.forEach((draggableOverlay, index) => {
-          draggableOverlay.style.border = oldBorders[index];
-          // draggableOverlay.style.opacity = oldOpacities[index];
+          draggableOverlay.style.border = oldBorders[index]; 
           settingImages[index].style.display = oldDisplays[index];
       });
   });
