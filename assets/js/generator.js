@@ -385,6 +385,7 @@ function stopResizeTouch() {
     draggableOverlay.remove();
   
     const dataImage = draggableOverlay.getAttribute('data-image');
+    const dataclass = draggableOverlay.getAttribute('data-class');
   
     // Mengecek apakah masih ada elemen lain dengan data-image yang sama di dalam canvasContainer
     const remainingElements = document.querySelectorAll(`#canvasContainer [data-image="${dataImage}"]`);
