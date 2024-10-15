@@ -12,6 +12,11 @@
 
 body{
     font-family: "LonelyCoffee", sans-serif;
+
+    background-image: url('../images/bgBody.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
   
 
