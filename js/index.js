@@ -10,6 +10,28 @@
 //     }
 // };
 
+const copyAddresses = document.querySelectorAll('.copy-box'); // Ambil semua elemen dengan class 'copy-box'
+
+copyAddresses.forEach(copyAddress => {
+    let text = copyAddress.querySelector('.copy-box__text'); // Ambil elemen teks dalam setiap 'copy-box'
+    let btnText = text.textContent;
+    let timeout;
+
+    copyAddress.addEventListener('click', () => {
+        navigator.clipboard.writeText(text.textContent).then(function () {
+            text.textContent = 'Copied';
+
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                text.textContent = btnText;
+            }, 2000);
+        }).catch(function (err) {
+            console.error('Failed to copy text: ', err);
+        });
+    });
+});
+
+
 
 // choise button
  // Seleksi semua tombol di dalam container
