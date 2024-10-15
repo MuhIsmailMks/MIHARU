@@ -56,7 +56,7 @@
 }
 
 .uploadImageContainer{
-    background: linear-gradient(180deg, var(--seconClr) 0%, #65DBF7 100%);
+    background: linear-gradient(180deg, var(--seconClr) 40%, #765ef4 100%);
     transition: .4s ease-out;
     -webkit-transition: .4s ease-out;
     -moz-transition: .4s ease-out;
