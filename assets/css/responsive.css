@@ -37,4 +37,15 @@
     .contract h3{ 
         font-size: 3rem; 
     }
+
+    .buttonSocial{
+      max-width: 200px;
+      width: 40%;
+    }
+
+    .buttonSocial .wpr-button-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }

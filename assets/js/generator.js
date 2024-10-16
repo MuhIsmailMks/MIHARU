@@ -74,7 +74,8 @@ function makeDraggable(draggableOverlay) {
   let initialRotation = 0, centerX, centerY, initialWidth, initialHeight, initialMouseX, initialMouseY;
  
      
- 
+
+  // Add event listener for click to enable/disable dragging
   draggableOverlay.addEventListener('click', () => { 
     isDragging = !isDragging; // Toggle dragging state
   
