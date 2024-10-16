@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style> 
+      canvas {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+    </style>
+
+<canvas id="myCanvas"></canvas>
+
+    
+<script>
+    // Inisialisasi canvas
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+// Sesuaikan ukuran canvas agar memenuhi layar
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Array gambar yang akan dianimasikan
+const images = [
+  '../images/drop1.png', 
+  '../images/drop2.png', 
+  '../images/drop3.png', 
+  '../images/drop4.png', 
+  '../images/drop5.png', 
+];
+
+// Array untuk menyimpan objek gambar yang sudah dimuat
+let loadedImages = [];
+
+// Fungsi untuk memuat gambar
+function loadImages(imagePaths, callback) {
+  let imagesLoaded = 0;
+  for (let i = 0; i < imagePaths.length; i++) {
+    const img = new Image();
+    img.src = imagePaths[i];
+    img.onload = function() {
+      loadedImages.push(img);
+      imagesLoaded++;
+      if (imagesLoaded === imagePaths.length) {
+        callback(); // Panggil callback setelah semua gambar dimuat
+      }
+    };
+  }
+}
+
+// Tentukan jumlah gambar yang ingin dianimasikan
+const numberOfImages = 10; // Ubah sesuai kebutuhan
+
+// Array untuk menyimpan gambar yang jatuh
+let fallingImages = [];
+
+// Fungsi untuk membuat gambar dengan posisi, kecepatan, dan gambar acak
+function createFallingImages() {
+  for (let i = 0; i < numberOfImages; i++) {
+    fallingImages.push({
+      x: Math.random() * canvas.width,  // Posisi x acak
+      y: Math.random() * -canvas.height, // Mulai dari posisi acak di luar layar atas
+      speed: 2 + Math.random() * 3,      // Kecepatan acak
+      image: loadedImages[Math.floor(Math.random() * loadedImages.length)] // Gambar acak
+    });
+  }
+}
+
+// Fungsi untuk menggambar semua gambar di canvas
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Bersihkan canvas
+  for (let i = 0; i < fallingImages.length; i++) {
+    let imgData = fallingImages[i];
+    ctx.drawImage(imgData.image, imgData.x, imgData.y, 100, 100); // Gambar pada posisi
+  }
+}
+
+// Fungsi untuk memperbarui posisi semua gambar
+function update() {
+  for (let i = 0; i < fallingImages.length; i++) {
+    let imgData = fallingImages[i];
+    imgData.y += imgData.speed; // Posisi y bertambah
+    if (imgData.y > canvas.height) { 
+      // Jika sudah di luar layar bawah, kembalikan ke atas
+      imgData.y = -100;
+      imgData.x = Math.random() * canvas.width; // Posisi x acak
+      imgData.speed = 2 + Math.random() * 3;    // Kecepatan acak
+      imgData.image = loadedImages[Math.floor(Math.random() * loadedImages.length)]; // Gambar acak
+    }
+  }
+}
+
+// Fungsi utama untuk menjalankan animasi
+function animate() {
+  draw();   // Gambar ulang
+  update(); // Perbarui posisi
+  requestAnimationFrame(animate); // Jalankan animasi lagi
+}
+
+// Memuat gambar dan memulai animasi setelah gambar dimuat
+loadImages(images, function() {
+  createFallingImages(); // Buat semua gambar jatuh
+  animate(); // Mulai animasi
+});
+
+</script>
+  
+</body>
+</html>
