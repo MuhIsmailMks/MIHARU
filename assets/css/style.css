@@ -372,17 +372,18 @@
     object-fit: contain;
 }
 
- 
+
 .bgChoiseBtn img{
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   object-fit: cover;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
 }
+
 
  
 
