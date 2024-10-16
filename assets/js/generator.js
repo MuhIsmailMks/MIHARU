@@ -72,52 +72,41 @@ const container = document.getElementById('canvasContainer');
 function makeDraggable(draggableOverlay) {
   let offsetX = 0, offsetY = 0, isDragging = false, isRotating = false, isResizing = false;
   let initialRotation = 0, centerX, centerY, initialWidth, initialHeight, initialMouseX, initialMouseY;
- 
-     
 
-  // Add event listener for click to enable/disable dragging
-  draggableOverlay.addEventListener('click', () => { 
-    isDragging = !isDragging; // Toggle dragging state
-  
-    // Ubah cursor tergantung state drag
-    if (isDragging) {
-      draggableOverlay.style.cursor = 'grabbing';
-    } else {
-      draggableOverlay.style.cursor = 'grab';
-    }
-  });
-  
-  // Event untuk menggerakkan elemen saat mouse bergerak
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging || isRotating || isResizing) return;  
-    const containerRect = container.getBoundingClientRect();
-    const rect = draggableOverlay.getBoundingClientRect();
+  let lastRotation = 0;
     
-    // Hitung posisi baru berdasarkan posisi mouse
-    let newLeft = e.clientX - containerRect.left - (rect.width / 2);
-    let newTop = e.clientY - containerRect.top - (rect.height / 2);
-  
-    // Update posisi elemen
-    draggableOverlay.style.left = `${newLeft}px`;
-    draggableOverlay.style.top = `${newTop}px`;
+  // draggable function
+  draggableOverlay.addEventListener('mousedown', (e) => {
+    if (isRotating || isResizing) return; // Jika sedang melakukan rotasi atau resize, tidak bisa drag
+
+    isDragging = true;
+
+    const rect = draggableOverlay.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    draggableOverlay.style.cursor = 'grabbing';
+
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', stopDrag);
   });
-  
+
   // Support for touch devices
-  document.addEventListener('touchmove', (e) => {
-    if (!isDragging || isRotating || isResizing) return;  
-   
-    const containerRect = container.getBoundingClientRect();
+  draggableOverlay.addEventListener('touchstart', (e) => {
+    if (isRotating || isResizing) return;
+
+    isDragging = true;
+
     const rect = draggableOverlay.getBoundingClientRect();
-    
-    // Hitung posisi baru berdasarkan posisi touch
-    let newLeft = e.touches[0].clientX - containerRect.left - (rect.width / 2);
-    let newTop = e.touches[0].clientY - containerRect.top - (rect.height / 2);
-  
-    // Update posisi elemen
-    draggableOverlay.style.left = `${newLeft}px`;
-    draggableOverlay.style.top = `${newTop}px`;
+    offsetX = e.touches[0].clientX - rect.left;
+    offsetY = e.touches[0].clientY - rect.top;
+
+    draggableOverlay.style.cursor = 'grabbing';
+ 
+
+    document.addEventListener('touchmove', onDragTouch);
+    document.addEventListener('touchend', stopDragTouch);
   });
-  
 
   function onDrag(e) {
     if (!isDragging || isRotating || isResizing) return;
@@ -190,8 +179,6 @@ function makeDraggable(draggableOverlay) {
   
   // For touch devices
   rotateHandle.addEventListener('touchstart', (e) => {
-  if (isRotating || isResizing) return; // Tambahkan cek isResizing
-
     e.preventDefault();
     isRotating = true;
   
