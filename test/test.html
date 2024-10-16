@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p>
+
+
+        
+        pada potongan kode saya "
+        function makeDraggable(draggableOverlay) {
+            let offsetX = 0, offsetY = 0, isDragging = false, isRotating = false, isResizing = false;
+            let initialRotation = 0, centerX, centerY, initialWidth, initialHeight, initialMouseX, initialMouseY;
+          
+             
+            // draggable function
+            draggableOverlay.addEventListener('mousedown', (e) => {
+              if (isRotating || isResizing) return; // Jika sedang melakukan rotasi atau resize, tidak bisa drag
+          
+              isDragging = true;
+          
+              const rect = draggableOverlay.getBoundingClientRect();
+              offsetX = e.clientX - rect.left;
+              offsetY = e.clientY - rect.top;
+          
+              draggableOverlay.style.cursor = 'grabbing';
+          
+              document.addEventListener('mousemove', onDrag);
+              document.addEventListener('mouseup', stopDrag);
+            });
+          
+            // Support for touch devices
+            draggableOverlay.addEventListener('touchstart', (e) => {
+              if (isRotating || isResizing) return;
+          
+              isDragging = true;
+          
+              const rect = draggableOverlay.getBoundingClientRect();
+              offsetX = e.touches[0].clientX - rect.left;
+              offsetY = e.touches[0].clientY - rect.top;
+          
+              draggableOverlay.style.cursor = 'grabbing';
+           
+          
+              document.addEventListener('touchmove', onDragTouch);
+              document.addEventListener('touchend', stopDragTouch);
+            });
+          
+            function onDrag(e) {
+              if (!isDragging || isRotating || isResizing) return;
+          
+              const containerRect = container.getBoundingClientRect();
+              let newLeft = e.clientX - containerRect.left - offsetX;
+              let newTop = e.clientY - containerRect.top - offsetY;
+          
+              draggableOverlay.style.left = `${newLeft}px`;
+              draggableOverlay.style.top = `${newTop}px`;
+            }
+          
+            function onDragTouch(e) {
+              if (!isDragging || isRotating || isResizing) return;
+          
+              const containerRect = container.getBoundingClientRect();
+              let newLeft = e.touches[0].clientX - containerRect.left - offsetX;
+              let newTop = e.touches[0].clientY - containerRect.top - offsetY;
+          
+              draggableOverlay.style.left = `${newLeft}px`;
+              draggableOverlay.style.top = `${newTop}px`;
+            }
+          
+            function stopDrag() {
+              isDragging = false;
+              draggableOverlay.style.cursor = 'grab';
+              document.removeEventListener('mousemove', onDrag);
+              document.removeEventListener('mouseup', stopDrag);
+            }
+          
+            function stopDragTouch() {
+              isDragging = false;
+              draggableOverlay.style.cursor = 'grab';
+              document.removeEventListener('touchmove', onDragTouch);
+              document.removeEventListener('touchend', stopDragTouch);
+            }
+
+            // kode lainnya
+          
+        };, bagaimana cara membuat fungsi drag dengan cara element ditekan bukan ditahan, dan ketika sudah ditekan element bisa dipindahkan.
+
+        "
+
+
+  
+
+
+    </p>
+
+
+</body>
+</html>

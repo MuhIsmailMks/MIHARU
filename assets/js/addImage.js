@@ -27,7 +27,7 @@ addImageElements.forEach(item => {
 
           	  <div class="settingImage absolute w-full h-full left-0 top-0">
 			  
-						  <div class="left">
+						  <div class="left settingsContainer">
 
 							  <div class="indexTop cursor-pointer w-[70%] relative">
 								  <img src="./assets/images/icons/indexTop.svg" alt="" class="w-full h-auto object-contain">
