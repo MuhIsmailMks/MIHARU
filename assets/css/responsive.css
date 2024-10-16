@@ -1,9 +1,9 @@
 .navText{
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: .5px black;
 }
 
 .navMenu{ 
-  border: 2px solid black; 
+  border: 1px solid black; 
 }
 
 .popUpMobile{
