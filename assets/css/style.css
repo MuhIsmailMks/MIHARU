@@ -50,42 +50,8 @@
 
 .heroSection{
   margin-top: -3rem;
-}
-
-.heroTitle h2{
-  font-family: "LonelyCoffee", sans-serif !important;  
-  font-size: 16vw !important;
-  text-shadow: 10px 0px black;
-  color: #5bf4fc;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-
-
-
-.aboutMiharu{
-  text-shadow: 10px 0px black;
-  font-family: "LonelyCoffee", sans-serif !important;
-  font-size: 8.8rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}  
+ 
 
 /* memeMakerContainer */
 .memeMakerContainer{

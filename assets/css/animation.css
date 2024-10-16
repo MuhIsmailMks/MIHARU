@@ -1,0 +1,138 @@
+
+
+
+.buttonSocial{
+  background-color: #3AC7CF;
+  border: 2px solid white ;
+  transition: .3s all ease-in;
+  -webkit-transition: .3s all ease-in;
+  -moz-transition: .3s all ease-in;
+  -ms-transition: .3s all ease-in;
+  -o-transition: .3s all ease-in;
+  margin: 0 .5rem;
+  padding: .85rem 1rem; 
+ 
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+
+
+.buttonSocial a{
+  color: white;
+  font-family: "LonelyCoffee", sans-serif !important;
+  transition: .3s all ease-in;
+  -webkit-transition: .3s all ease-in;
+  -moz-transition: .3s all ease-in;
+  -ms-transition: .3s all ease-in;
+  -o-transition: .3s all ease-in;  
+  text-align: center;
+
+  font-size: .75rem;
+}
+
+.buttonSocial.join a{
+  font-size: 1rem;
+}
+
+.buttonSocial .icon{
+  height: 40px;
+  width: auto; 
+  object-fit: cover;
+  margin-left: .5rem;
+}
+
+
+.buttonSocial .icon.dex{
+  height: 35px;
+}
+
+.buttonSocial:hover{
+  background-color: white;
+}
+
+.buttonSocial:hover a{
+  color: #3AC7CF;
+}
+
+.buttonSocial .icon path{
+  transition: .3s all ease-in;
+  -webkit-transition: .3s all ease-in;
+  -moz-transition: .3s all ease-in;
+  -ms-transition: .3s all ease-in;
+  -o-transition: .3s all ease-in;  
+}
+
+.buttonSocial:hover .icon path{
+  fill: #3AC7CF;
+}
+
+   /* animation */   
+.heroTitle h2{
+  font-family: "LonelyCoffee", sans-serif !important;  
+  font-size: 16vw !important;
+  text-shadow: 10px 0px black;
+  color: #5bf4fc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+   .heroTitle h2 span{
+    animation: text_heroTitle 3s linear infinite;
+    -webkit-animation: text_heroTitle 3s linear infinite;
+}
+  
+  .heroTitle h2 span:nth-child(1),
+  .heroTitle h2 span:nth-child(3),
+  .heroTitle h2 span:nth-child(5),
+  .heroTitle h2 span:nth-child(7),
+  .heroTitle h2 span:nth-child(9){
+    rotate: -10deg;
+  }
+  
+  .heroTitle h2 span:nth-child(2),
+  .heroTitle h2 span:nth-child(4),
+  .heroTitle h2 span:nth-child(6),
+  .heroTitle h2 span:nth-child(8){
+    rotate: 10deg;
+  }
+  
+  .heroTitle h2 span:nth-child(1){
+    animation-delay: .2s;
+  }
+  .heroTitle h2 span:nth-child(2){
+    animation-delay: .4s;
+  }
+  .heroTitle h2 span:nth-child(3){
+    animation-delay: .1s;
+  }
+  .heroTitle h2 span:nth-child(4){
+    animation-delay: .6s;
+  }
+  .heroTitle h2 span:nth-child(5){
+    animation-delay: .5s;
+  }
+  .heroTitle h2 span:nth-child(6){
+    animation-delay: .3s;
+  }
+  .heroTitle h2 span:nth-child(7){
+    animation-delay: .5s;
+  }
+  .heroTitle h2 span:nth-child(8){
+    animation-delay: .7s;
+  }
+  
+  @keyframes text_heroTitle {
+    0%,100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-5%);
+    }
+  }

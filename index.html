@@ -7,6 +7,7 @@
     <meta name="robots" content="max-image-preview:large" />
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/responsive.css">
+	<link rel="stylesheet" href="./assets/css/animation.css">
 	
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -895,11 +896,11 @@
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
-                        <div class="elementor-widget-container">
+                        <div class="elementor-widget-container ">
                           <h2
                             class="elementor-heading-title elementor-size-default"
                           >
-                            MIHARU
+                          MIHARU
                           </h2>
                         </div>
                       </div>
@@ -1120,11 +1121,17 @@
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
-                        <div class="elementor-widget-container">
+                        <div class="elementor-widget-container heroTitle">
                           <h2
-                            class="elementor-heading-title elementor-size-default"
+                            class="elementor-heading-title elementor-size-default "
                           >
-                            MIHARU
+                            
+                          <span>M</span>
+                          <span>I</span>
+                          <span>H</span>
+                          <span>A</span>
+                          <span>R</span>
+                          <span>U</span>
                           </h2>
                         </div>
                       </div>
@@ -1240,7 +1247,10 @@
                 data-id="343917c"
                 data-element_type="section"
               >
-                <div class="elementor-container elementor-column-gap-default">
+
+              <div id="particles-js" class="absolute w-[100%] h-[100%]"></div>
+
+                <div class="elementor-container elementor-column-gap-default z-[99]">
                   <div
                     class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1102168b elementor-invisible"
                     data-id="1102168b"
@@ -1335,6 +1345,7 @@
                     </div>
                   </div>
                 </div>
+
               </section>
               <section
                 class="elementor-section elementor-inner-section elementor-element elementor-element-25a5a38 elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no elementor-invisible"
@@ -2206,39 +2217,23 @@
                           /> -->
                         </div>
                       </div>
-                      <div
-                        class="elementor-element elementor-element-59b2776d wpr-button-icon-style-inline wpr-button-icon-position-right elementor-invisible elementor-widget elementor-widget-wpr-button"
-                        data-id="59b2776d"
-                        data-element_type="widget"
-                        data-settings='{"_animation":"fadeInUp"}'
-                        data-widget_type="wpr-button.default"
-                      >
-                        <div class="elementor-widget-container">
-                          <div class="wpr-button-wrap elementor-clearfix">
-                            <a
-                              class="wpr-button wpr-button-effect wpr-button-isi-left"
-                              data-text="Go"
-                              href="https://t.me/ogmiharusol"
-							  target="_blank"
-                            >
-                              <span class="wpr-button-content">
-                                <span class="wpr-button-text">JOIN NOW</span>
+                     
 
-                                <span class="wpr-button-icon"
-                                  ><svg
-                                    class="e-font-icon-svg e-fas-external-link-alt"
-                                    viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                                    ></path>
-									</svg></span>
-                              </span>
-                            </a>
+                      <div class="buttonSocial join">
+                        <a
+                        data-text="Go"
+                        href="https://t.me/ogmiharusol">
+                        <span class="wpr-button-content">
+                          <span class="wpr-button-text">JOIN NOW</span>
+ 
+                          <div class="icon mt-[.3rem]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20"><path fill="currentColor" d="M12.75 17.5a.75.75 0 0 0 0-1.5H6.5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6.25a.75.75 0 0 0 0-1.5H6.5A3.5 3.5 0 0 0 3 6v8a3.5 3.5 0 0 0 3.5 3.5zm.991-11.301a.75.75 0 0 1 1.06.042l3 3.25a.75.75 0 0 1 0 1.018l-3 3.25A.75.75 0 1 1 13.7 12.74l1.838-1.991H7.75a.75.75 0 0 1 0-1.5h7.787l-1.838-1.991a.75.75 0 0 1 .042-1.06"/></svg>
                           </div>
-                        </div>
+
+                        </span>
+                      </a>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -2320,127 +2315,92 @@
                       </div>
                     </div>
                   </div>
+
                   <div
                     class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-48f14c2a"
                     data-id="48f14c2a"
                     data-element_type="column"
                   >
-                    <div
-                      class="elementor-widget-wrap elementor-element-populated"
-                    >
-                      <div
-                        class="elementor-element elementor-element-2a9bee9f elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
-                        data-id="2a9bee9f"
-                        data-element_type="widget"
-                        data-widget_type="wpr-button.default"
-                      >
-                        <div class="elementor-widget-container">
-                          <div class="wpr-button-wrap elementor-clearfix">
-                            <a
-                              class="wpr-button wpr-button-effect wpr-button-isi-left"
-                              data-text="Go"
-                              href="https://t.me/ogmiharusol"
-                            >
-                              <span class="wpr-button-content">
-                                <span class="wpr-button-text">TELEGRAM</span>
-
-                                <span class="wpr-button-icon"
-                                  ><svg
-                                    class="e-font-icon-svg e-fab-telegram-plane"
-                                    viewBox="0 0 448 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
-                                    ></path></svg></span>
-                              </span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="elementor-element elementor-element-42713e30 elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
-                        data-id="42713e30"
-                        data-element_type="widget"
-                        data-widget_type="wpr-button.default"
-                      >
-                        <div class="elementor-widget-container">
-                          <div class="wpr-button-wrap elementor-clearfix">
-                            <a
-                              class="wpr-button wpr-button-effect wpr-button-isi-left"
-                              data-text="Go"
-                              href="https://x.com/miharuonsol"
-
-                            >
-                              <span class="wpr-button-content">
-                                <span class="wpr-button-text">TWITTER</span>
-
-                                <span class="wpr-button-icon"
-                                  ><svg
-                                    class="e-font-icon-svg e-fab-x-twitter"
-                                    viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                                    ></path></svg></span>
-                              </span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="elementor-element elementor-element-bebbf7a elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
-                        data-id="bebbf7a"
-                        data-element_type="widget"
-                        data-widget_type="wpr-button.default"
-                      >
-                        <div class="elementor-widget-container">
-                          <div class="wpr-button-wrap elementor-clearfix">
-                            <a
-                              class="wpr-button wpr-button-effect wpr-button-isi-left"
-                              data-text="Go"
-                              href="https://dexscreener.com/solana/6pBsZHV9eqv1LnjsnGtQfHM8fUnthLeQM4PtqfzQN8k7"  target="_blank"
-                            >
-                              <span class="wpr-button-content">
-                                <span class="wpr-button-text">DEXSCREEN</span>
+                    <div class="elementor-widget-wrap elementor-element-populated  socialContainer"  >
+                      
+                      
+                      <div class="buttonSocial">
+                        <a
+                        data-text="Go"
+                        href="https://t.me/ogmiharusol">
+                        <span class="wpr-button-content">
+                          <span class="wpr-button-text">TELEGRAM</span>
  
-                                    
-                              </span>
-                            </a>
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="white"/></svg>
                           </div>
-                        </div>
-                      </div>
-                      <div
-                        class="elementor-element elementor-element-4fa7abbe elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
-                        data-id="4fa7abbe"
-                        data-element_type="widget"
-                        data-widget_type="wpr-button.default"
-                      >
-                        <div class="elementor-widget-container">
-                          <div class="wpr-button-wrap elementor-clearfix">
-                            <a
-                              class="wpr-button wpr-button-effect wpr-button-isi-left"
-                              data-text="Go"
-                              href="https://raydium.io/swap/?inputMint=sol&outputMint=2eCVVZ4tomqn4eyuA9Gh5PSKrjNXGwgMhPALGtAkpump" target="_blank"
-                            >
-                              <span class="wpr-button-content">
-                                <span class="wpr-button-text">RAYDIUM </span>
 
-                                <span class="wpr-button-icon"
-                                  ><svg
-                                    class="e-font-icon-svg e-fas-chart-line"
-                                    viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"
-                                    ></path></svg></span>
-                              </span>
-                            </a>
-                          </div>
-                        </div>
+                        </span>
+                      </a>
                       </div>
+
+                      <div class="buttonSocial">
+                        <a 
+                        href="https://x.com/miharuonsol"
+
+                      >
+                        <span class="wpr-button-content">
+                          <span class="wpr-button-text">TWITTER</span>
+
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"/></svg>
+                          </div>
+                          
+                        </span>
+                      </a>
+                      </div>
+
+                      <div class="buttonSocial">
+                        <a
+                        data-text="Go"
+                        href="https://dexscreener.com/solana/6pBsZHV9eqv1LnjsnGtQfHM8fUnthLeQM4PtqfzQN8k7"  target="_blank"
+                      >
+                        <span class="wpr-button-content">
+                          <span class="wpr-button-text">DEXSCREEN</span>
+
+                          <div class="icon dex">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#fff" fill-rule="evenodd" viewBox="0 0 252 300" focusable="false" class="chakra-icon custom-euf446"><path d="M151.818 106.866c9.177-4.576 20.854-11.312 32.545-20.541 2.465 5.119 2.735 9.586 1.465 13.193-.9 2.542-2.596 4.753-4.826 6.512-2.415 1.901-5.431 3.285-8.765 4.033-6.326 1.425-13.712.593-20.419-3.197m1.591 46.886l12.148 7.017c-24.804 13.902-31.547 39.716-39.557 64.859-8.009-25.143-14.753-50.957-39.556-64.859l12.148-7.017a5.95 5.95 0 003.84-5.845c-1.113-23.547 5.245-33.96 13.821-40.498 3.076-2.342 6.434-3.518 9.747-3.518s6.671 1.176 9.748 3.518c8.576 6.538 14.934 16.951 13.821 40.498a5.95 5.95 0 003.84 5.845zM126 0c14.042.377 28.119 3.103 40.336 8.406 8.46 3.677 16.354 8.534 23.502 14.342 3.228 2.622 5.886 5.155 8.814 8.071 7.897.273 19.438-8.5 24.796-16.709-9.221 30.23-51.299 65.929-80.43 79.589-.012-.005-.02-.012-.029-.018-5.228-3.992-11.108-5.988-16.989-5.988s-11.76 1.996-16.988 5.988c-.009.005-.017.014-.029.018-29.132-13.66-71.209-49.359-80.43-79.589 5.357 8.209 16.898 16.982 24.795 16.709 2.929-2.915 5.587-5.449 8.814-8.071C69.31 16.94 77.204 12.083 85.664 8.406 97.882 3.103 111.959.377 126 0m-25.818 106.866c-9.176-4.576-20.854-11.312-32.544-20.541-2.465 5.119-2.735 9.586-1.466 13.193.901 2.542 2.597 4.753 4.826 6.512 2.416 1.901 5.432 3.285 8.766 4.033 6.326 1.425 13.711.593 20.418-3.197"></path><path d="M197.167 75.016c6.436-6.495 12.107-13.684 16.667-20.099l2.316 4.359c7.456 14.917 11.33 29.774 11.33 46.494l-.016 26.532.14 13.754c.54 33.766 7.846 67.929 24.396 99.193l-34.627-27.922-24.501 39.759-25.74-24.231L126 299.604l-41.132-66.748-25.739 24.231-24.501-39.759L0 245.25c16.55-31.264 23.856-65.427 24.397-99.193l.14-13.754-.016-26.532c0-16.721 3.873-31.578 11.331-46.494l2.315-4.359c4.56 6.415 10.23 13.603 16.667 20.099l-2.01 4.175c-3.905 8.109-5.198 17.176-2.156 25.799 1.961 5.554 5.54 10.317 10.154 13.953 4.48 3.531 9.782 5.911 15.333 7.161 3.616.814 7.3 1.149 10.96 1.035-.854 4.841-1.227 9.862-1.251 14.978L53.2 160.984l25.206 14.129a41.926 41.926 0 015.734 3.869c20.781 18.658 33.275 73.855 41.861 100.816 8.587-26.961 21.08-82.158 41.862-100.816a41.865 41.865 0 015.734-3.869l25.206-14.129-32.665-18.866c-.024-5.116-.397-10.137-1.251-14.978 3.66.114 7.344-.221 10.96-1.035 5.551-1.25 10.854-3.63 15.333-7.161 4.613-3.636 8.193-8.399 10.153-13.953 3.043-8.623 1.749-17.689-2.155-25.799l-2.01-4.175z"></path></svg>
+                          </div>
+                              
+                        </span>
+                      </a>
+                      </div>
+ 
+                    
+                      <div class="buttonSocial">
+                        <a
+                        data-text="Go"
+                        href="https://raydium.io/swap/?inputMint=sol&outputMint=2eCVVZ4tomqn4eyuA9Gh5PSKrjNXGwgMhPALGtAkpump" target="_blank"
+                      >
+                        <span class="wpr-button-content">
+                          <span class="wpr-button-text">RAYDIUM </span>
+  
+                          <div class="icon">
+                          
+                            <svg width="31" height="37" viewBox="0 0 31 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.333008 9.05462V27.0507L15.333 36.0527L30.333 27.0507V12.629L28.7671 13.5633V26.1163L15.333 34.176L1.89146 26.1163V9.9891L15.333 1.92165L25.6577 8.1202L27.2162 7.18571L15.333 0.0527352L0.333008 9.05462Z" fill="white"/>
+                              <path d="M9.32422 10.3389V12.7218H16.8168C17.1671 12.7193 17.5142 12.7906 17.8374 12.9312C18.1606 13.0716 18.4531 13.2785 18.6973 13.5395C18.9499 13.7923 19.1499 14.096 19.2852 14.4323C19.4205 14.7684 19.4881 15.1298 19.4841 15.494C19.4822 16.2309 19.2013 16.9372 18.7021 17.4603C18.2029 17.9836 17.5256 18.2815 16.8168 18.2896H9.32422V26.1235H11.572V20.6725H16.0675C16.9774 20.6798 17.8825 20.5378 18.7498 20.2519C19.6258 19.8704 20.3756 19.2317 20.9077 18.4141C21.4858 17.5597 21.7923 16.5387 21.7843 15.494C21.7765 14.1294 21.2513 12.8229 20.3229 11.8578C19.3943 10.8929 18.1372 10.3471 16.8242 10.3389H9.32422Z" fill="white"/>
+                              <path d="M17.0859 22.2615L19.1089 25.9292H21.7313L19.4311 21.7632C18.6757 22.0427 17.8862 22.2106 17.0859 22.2615Z" fill="url(#paint0_linear_432_12)"/>
+                              <path d="M27.2012 9.06203V10.9544L28.7521 11.8499L30.3031 10.9544V9.06203L28.7521 8.12755L27.2012 9.06203Z" fill="white"/>
+                              <defs>
+                              <linearGradient id="paint0_linear_432_12" x1="33.8108" y1="18.173" x2="1.67363" y2="30.5383" gradientUnits="userSpaceOnUse">
+                              <stop offset="1" stop-color="white"/>
+                              </linearGradient>
+                              </defs>
+                              </svg>
+                              
+                              
+                          </div>
+
+                        </span>
+                      </a>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -2718,11 +2678,14 @@
     ></script>
 
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="./assets/js/index.js"></script>
 	<script src="./assets/js/generator.js"></script>
 	<script src="./assets/js/addImage.js"></script>
+	<script src="./assets/js/animation.js"></script>
 
   </body>
 
