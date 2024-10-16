@@ -9,6 +9,7 @@
 //         return false;
 //     }
 // };
+ 
 
 AOS.init({
     once: true
@@ -36,7 +37,20 @@ copyAddresses.forEach(copyAddress => {
     });
 });
 
+// noUploadInMobile
+const noUploadInMobile = document.querySelector('.noUploadInMobile');
+const popUpMobile = document.querySelector('.popUpMobile'); 
 
+noUploadInMobile.addEventListener('click', () => {
+    popUpMobile.classList.remove('hidden')
+})
+
+popUpMobile.addEventListener('click', (e) => {
+    let targ = e.target 
+    if (targ.tagName === 'IMG') { 
+        popUpMobile.classList.add('hidden');
+    }
+})
 
 // choise button
  // Seleksi semua tombol di dalam container
