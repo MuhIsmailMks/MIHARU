@@ -13,6 +13,15 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+
+  .howToBuy{
+    padding: 0 2rem;
+    background-color: red;
+  }
+
+  .maxWidth{
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width:500px) {
