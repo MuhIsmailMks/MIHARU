@@ -14,8 +14,16 @@
 AOS.init({
     once: true
 });
- 
 
+// lockscreen
+// const lockScreen = document.querySelector('.lockScreen');
+
+
+// lockScreen.addEventListener('click', () => {
+//     document.body.classList.toggle('active')
+// })
+
+// address 
 const copyAddresses = document.querySelectorAll('.copy-box'); // Ambil semua elemen dengan class 'copy-box'
 
 copyAddresses.forEach(copyAddress => {

@@ -80,6 +80,7 @@ function makeDraggable(draggableOverlay) {
     if (isRotating || isResizing) return; // Jika sedang melakukan rotasi atau resize, tidak bisa drag
 
     isDragging = true;
+    document.body.classList.add('active')
 
     const rect = draggableOverlay.getBoundingClientRect();
     offsetX = e.clientX - rect.left;
@@ -96,6 +97,7 @@ function makeDraggable(draggableOverlay) {
     if (isRotating || isResizing) return;
 
     isDragging = true;
+    document.body.classList.add('active')
 
     const rect = draggableOverlay.getBoundingClientRect();
     offsetX = e.touches[0].clientX - rect.left;
@@ -132,13 +134,17 @@ function makeDraggable(draggableOverlay) {
 
   function stopDrag() {
     isDragging = false;
+    document.body.classList.remove('active');
+
     draggableOverlay.style.cursor = 'grab';
     document.removeEventListener('mousemove', onDrag);
     document.removeEventListener('mouseup', stopDrag);
   }
 
   function stopDragTouch() {
-    isDragging = false;
+    isDragging = false; 
+    document.body.classList.remove('active');
+
     draggableOverlay.style.cursor = 'grab';
     document.removeEventListener('touchmove', onDragTouch);
     document.removeEventListener('touchend', stopDragTouch);
