@@ -52,7 +52,7 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
  
   html2canvas(document.getElementById('canvasContainer')).then(function(canvas) {
       var link = document.createElement('a');
-      link.download = 'container.png';
+      link.download = 'miharuMeme.png';
       link.href = canvas.toDataURL();
       link.click();
   
